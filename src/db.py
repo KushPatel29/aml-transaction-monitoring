@@ -16,9 +16,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
-
 import config as cfg  # noqa: E402
+
+from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
 
 SCHEMA_SQL = cfg.SQL_DIR / "01_schema.sql"
 FEATURES_SQL = cfg.SQL_DIR / "02_features.sql"

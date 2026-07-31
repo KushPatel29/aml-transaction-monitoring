@@ -27,9 +27,9 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
-
 import config as cfg  # noqa: E402
+
+from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
 
 SORT_KEYS = ["entity_id", "txn_epoch", "transaction_id"]
 
@@ -52,9 +52,9 @@ def _entity_slices(entity_ids: np.ndarray) -> list[tuple[int, int]]:
         return []
     codes = pd.factorize(entity_ids, sort=False)[0]
     cuts = np.flatnonzero(np.diff(codes)) + 1
-    return list(
-        zip(np.concatenate([[0], cuts]).tolist(), np.concatenate([cuts, [len(codes)]]).tolist())
-    )
+    starts = np.concatenate([[0], cuts]).tolist()
+    stops = np.concatenate([cuts, [len(codes)]]).tolist()
+    return list(zip(starts, stops, strict=True))
 
 
 # ---------------------------------------------------------------------------

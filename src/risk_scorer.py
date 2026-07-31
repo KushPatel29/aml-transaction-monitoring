@@ -29,10 +29,10 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
 
-from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
-
 import config as cfg  # noqa: E402
 from src import cost_model
+
+from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
 
 
 def compute_risk_scores(rule_hits: pd.DataFrame, model_scores: pd.DataFrame,

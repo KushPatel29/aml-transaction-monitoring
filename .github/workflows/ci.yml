@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    name: Pipeline and tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # The whole point of C4: one command has to rebuild everything.
+      - name: Run the pipeline end to end
+        run: python run_pipeline.py
+
+      # gzip mtime is pinned, so a re-run of the generator must reproduce the
+      # committed data byte for byte. If this step shows a diff in
+      # data/generated/, the pipeline is not reproducible and the committed
+      # artefacts no longer describe what the code produces.
+      - name: Assert the generated data is reproducible
+        run: |
+          git diff --exit-code --stat -- data/generated/ \
+            || (echo "::error::regenerating produced different data" && exit 1)
+
+      - name: Run the test suite
+        run: pytest -q
+
+      - name: Run the slow reproducibility tests
+        run: pytest -q -m slow
+
+      - name: Render README figures
+        run: python docs/make_figures.py
+
+      # The app must import and build its frames without Streamlit running --
+      # a broken dashboard should fail here, not on Community Cloud.
+      - name: Smoke-test the dashboard
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          import config as cfg
+          from app import streamlit_app as app
+
+          scored = pd.read_csv(cfg.SCORED_PATH, keep_default_na=False)
+          entities = pd.read_csv(cfg.ENTITIES_PATH, keep_default_na=False)
+          queue = app.build_case_queue(scored, entities, threshold=39.6)
+          assert not queue.empty, "case queue is empty at the operating threshold"
+
+          entity_id = queue["entity_id"].iloc[0]
+          assert not app.build_entity_timeline(scored, entity_id).empty
+          assert not app.build_feature_profile(scored, entity_id).empty
+          app.build_counterparty_network(scored, entity_id)
+          app.baseline_comparison_frame(scored, 39.6)
+          print(f"dashboard OK: {len(queue)} entities in the queue")
+          PY
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install ruff==0.15.21
+      - run: ruff check .

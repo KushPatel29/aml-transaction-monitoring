@@ -17,7 +17,8 @@ import re
 import pytest
 
 import config as cfg
-from src import features as feature_module, rules_engine
+from src import features as feature_module
+from src import rules_engine
 from tests.fixtures import hand_built_cases as fixtures
 
 

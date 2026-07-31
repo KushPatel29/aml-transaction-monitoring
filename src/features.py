@@ -25,9 +25,9 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
-
 import config as cfg  # noqa: E402
+
+from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
 
 SORT_KEYS = ["entity_id", "txn_epoch", "transaction_id"]
 
@@ -40,7 +40,7 @@ def _entity_slices(entity_ids: np.ndarray) -> list[tuple[int, int]]:
     cuts = np.flatnonzero(np.diff(codes)) + 1
     starts = np.concatenate([[0], cuts])
     stops = np.concatenate([cuts, [len(codes)]])
-    return list(zip(starts.tolist(), stops.tolist()))
+    return list(zip(starts.tolist(), stops.tolist(), strict=True))
 
 
 def _window_bounds(epochs: np.ndarray, seconds: int) -> tuple[np.ndarray, np.ndarray]:

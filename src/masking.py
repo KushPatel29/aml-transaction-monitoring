@@ -16,9 +16,9 @@ from __future__ import annotations
 
 import pandas as pd
 
-from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
-
 import config as cfg  # noqa: E402
+
+from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
 
 # Mask who, not what.
 #

@@ -28,6 +28,12 @@ DOCS_DIR = ROOT / "docs"
 # CI regenerate them and assert nothing changed.
 GZIP = {"method": "gzip", "mtime": 0}
 
+# pandas defaults to_csv's line terminator to os.linesep, so artefacts written
+# on Windows carry CRLF and the same code on Linux CI writes LF. Byte-identical
+# regeneration is a cross-platform claim or it is not a claim, so every write
+# pins this.
+CSV_WRITE_OPTIONS = {"index": False, "compression": GZIP, "lineterminator": "\n"}
+
 ENTITIES_PATH = DATA_DIR / "entities.csv.gz"
 COUNTERPARTIES_PATH = DATA_DIR / "counterparties.csv.gz"
 TRANSACTIONS_PATH = DATA_DIR / "transactions.csv.gz"

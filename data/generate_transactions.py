@@ -141,7 +141,7 @@ def _poisson_count(rng: np.random.Generator, annual_rate: float) -> int:
 def _emit(out: list, entity_id: str, cp_ids, epochs, amounts_cents,
           direction: str, channel: str, is_cash: int) -> None:
     cp_list = [None] * len(epochs) if cp_ids is None else cp_ids
-    for cp, epoch, amount in zip(cp_list, epochs, amounts_cents):
+    for cp, epoch, amount in zip(cp_list, epochs, amounts_cents, strict=True):
         out.append(
             (entity_id, cp, int(epoch), int(amount), direction, channel,
              is_cash, 0, None, None, None)
@@ -321,7 +321,8 @@ def _gen_individual(rng, ent, wallet, out) -> None:
             channels = rng.choice(["etransfer", "bill_payment", "cheque"],
                                   size=n_disc, p=[0.6, 0.3, 0.1])
             for cp, epoch, amount, channel in zip(
-                cps, _epochs(rng, days, HOURS_CONSUMER), amounts, channels
+                cps, _epochs(rng, days, HOURS_CONSUMER), amounts, channels,
+                strict=True,
             ):
                 out.append((eid, cp, int(epoch), int(amount), "outbound",
                             str(channel), 0, 0, None, None, None))
@@ -401,6 +402,7 @@ def _gen_business(rng, ent, wallet, out) -> None:
                 _epochs(rng, days, HOURS_BUSINESS),
                 _lognormal_cents(rng, 5_800, 1.0, n_in),
                 channels,
+                strict=True,
             ):
                 out.append((eid, cp, int(epoch), int(amount), "inbound",
                             str(channel), 0, 0, None, None, None))
@@ -436,6 +438,7 @@ def _gen_business(rng, ent, wallet, out) -> None:
             _epochs(rng, days, HOURS_BUSINESS),
             amounts,
             channels,
+            strict=True,
         ):
             out.append((eid, cp, int(epoch), int(amount), "outbound",
                         str(channel), 0, 0, None, None, None))
@@ -493,7 +496,7 @@ def inject_structuring(rng, eid, wallet, hist, case_id) -> tuple[list, dict]:
 
     rows = [
         (eid, None, int(e), int(a), "inbound", "cash_deposit", 1, 0, None, None, None)
-        for e, a in zip(epochs, amounts)
+        for e, a in zip(epochs, amounts, strict=True)
     ]
     return _case_rows(rows, "structuring", variant, case_id), {"variant": variant}
 
@@ -527,7 +530,7 @@ def inject_layering(rng, eid, wallet, hist, case_id, mule_pool) -> tuple[list, d
     inbound_cp = rng.choice(mule_pool if use_pool else source)
     rows = [(eid, inbound_cp, t0, lump_cents, "inbound", "wire", 0, 0, None, None, None)]
     channels = rng.choice(["wire", "eft", "etransfer"], size=k, p=[0.4, 0.4, 0.2])
-    for cp, offset, amount, channel in zip(legs_cp, offsets, leg_cents, channels):
+    for cp, offset, amount, channel in zip(legs_cp, offsets, leg_cents, channels, strict=True):
         rows.append((eid, cp, int(t0 + offset), int(amount), "outbound",
                      str(channel), 0, 0, None, None, None))
 
@@ -551,7 +554,7 @@ def inject_smurfing(rng, eid, wallet, hist, case_id, sender_pool) -> tuple[list,
 
     rows = [
         (eid, cp, int(t0 + off), int(amt), "inbound", "etransfer", 0, 0, None, None, None)
-        for cp, off, amt in zip(senders, offsets, amounts)
+        for cp, off, amt in zip(senders, offsets, amounts, strict=True)
     ]
     return _case_rows(rows, "smurfing", None, case_id), {"n_senders": m}
 
@@ -584,6 +587,7 @@ def inject_round_dollar(rng, eid, wallet, hist, case_id) -> tuple[list, dict]:
             rng.choice(pool, size=j),
             np.sort(_epochs(rng, days, HOURS_BUSINESS)),
             amounts_cents,
+            strict=True,
         )
     ]
     return _case_rows(rows, "round_dollar", None, case_id), {"median_cad": median}
@@ -615,7 +619,7 @@ def inject_dormant_reactivation(rng, eid, wallet, hist, case_id) -> tuple[list, 
     directions = rng.choice(["outbound", "inbound"], size=n, p=[0.6, 0.4])
     rows = [
         (eid, cp, int(e), int(a), str(d), "wire", 0, 0, None, None, None)
-        for cp, e, a, d in zip(rng.choice(pool, size=n), epochs, amounts, directions)
+        for cp, e, a, d in zip(rng.choice(pool, size=n), epochs, amounts, directions, strict=True)
     ]
     return _case_rows(rows, "dormant_reactivation", None, case_id), {
         "silence_start": int(silence_start),
@@ -657,7 +661,7 @@ def inject_typologies(txns: pd.DataFrame, entities: pd.DataFrame,
     entity_positions = {eid: g.index.to_numpy() for eid, g in txns.groupby("entity_id", sort=False)}
     case_records = []
 
-    for i, (eid, typology) in enumerate(zip(chosen, assigned)):
+    for i, (eid, typology) in enumerate(zip(chosen, assigned, strict=True)):
         case_id = f"CASE-{i + 1:04d}"
         wallet = wallets[eid]
         hist = grouped.get(eid, {"epochs": np.array([]), "amounts_cents": np.array([1_000])})
@@ -771,10 +775,10 @@ def main() -> pd.DataFrame:
     txns, cases = inject_typologies(txns, entities, counterparties, wallets, rng)
     txns = finalise(txns)
 
-    entities.to_csv(cfg.ENTITIES_PATH, index=False, compression=cfg.GZIP)
-    counterparties.to_csv(cfg.COUNTERPARTIES_PATH, index=False, compression=cfg.GZIP)
-    txns.to_csv(cfg.TRANSACTIONS_PATH, index=False, compression=cfg.GZIP)
-    cases.to_csv(cfg.CASES_PATH, index=False, compression=cfg.GZIP)
+    entities.to_csv(cfg.ENTITIES_PATH, **cfg.CSV_WRITE_OPTIONS)
+    counterparties.to_csv(cfg.COUNTERPARTIES_PATH, **cfg.CSV_WRITE_OPTIONS)
+    txns.to_csv(cfg.TRANSACTIONS_PATH, **cfg.CSV_WRITE_OPTIONS)
+    cases.to_csv(cfg.CASES_PATH, **cfg.CSV_WRITE_OPTIONS)
 
     suspicious = int(txns["is_suspicious"].sum())
     print(

@@ -34,9 +34,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import StandardScaler
 
-from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
-
 import config as cfg  # noqa: E402
+
+from . import _ROOT  # noqa: F401  (side effect: repo root on sys.path)
 
 UNSUPERVISED_MODELS = ["isolation_forest", "local_outlier_factor", "mahalanobis"]
 SUPERVISED_MODELS = ["supervised_logistic", "supervised_gbm"]

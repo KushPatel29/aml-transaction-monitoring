@@ -1,0 +1,8 @@
+# The pipeline asserts it can regenerate data/generated/ byte for byte, and CI
+# runs on Linux while this was built on Windows. That claim only holds if line
+# endings are pinned everywhere rather than left to the platform.
+* text=auto eol=lf
+
+*.gz  binary
+*.png binary
+*.db  binary

@@ -19,15 +19,16 @@ import json
 import platform
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 
-import config as cfg  # noqa: E402
 from sklearn.metrics import average_precision_score, roc_auc_score  # noqa: E402
+
+import config as cfg  # noqa: E402
 from src import anomaly_model, cost_model, db, risk_scorer, rules_engine  # noqa: E402
 
 
@@ -210,7 +211,7 @@ def main(skip_generate: bool = False) -> dict:
     # ------------------------------------------------------------------- sweep
     _step("Sweeping the alert threshold from 0 to 100")
     sweep_frame = risk_scorer.sweep(risk, y_true, entity_ids)
-    sweep_frame.to_csv(cfg.SWEEP_PATH, index=False)
+    sweep_frame.to_csv(cfg.SWEEP_PATH, index=False, lineterminator="\n")
 
     entity_threshold = risk_scorer.cost_minimising_threshold(sweep_frame, level="entity")
     txn_threshold = risk_scorer.cost_minimising_threshold(sweep_frame, level="txn")
@@ -305,7 +306,7 @@ def main(skip_generate: bool = False) -> dict:
     # reads, and it takes several megabytes off the committed artefact.
     float_columns = scored.select_dtypes("float").columns
     scored[float_columns] = scored[float_columns].round(6)
-    scored.to_csv(cfg.SCORED_PATH, index=False, compression=cfg.GZIP)
+    scored.to_csv(cfg.SCORED_PATH, **cfg.CSV_WRITE_OPTIONS)
 
     metrics = {
         "_disclaimer": (
@@ -315,7 +316,7 @@ def main(skip_generate: bool = False) -> dict:
             "real institution's data is involved. The cost constants are "
             "illustrative -- see config.py."
         ),
-        "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "generated_at_utc": datetime.now(UTC).isoformat(timespec="seconds"),
         "generated_by": "python run_pipeline.py",
         "python_version": platform.python_version(),
         "dataset": {
@@ -393,7 +394,7 @@ def main(skip_generate: bool = False) -> dict:
     _step("Done")
     print(f"  results/metrics.json           ({cfg.METRICS_PATH.stat().st_size / 1024:.0f} KB)")
     print(f"  results/scored_transactions.csv.gz ({cfg.SCORED_PATH.stat().st_size / 1e6:.1f} MB)")
-    print(f"  results/threshold_sweep.csv")
+    print("  results/threshold_sweep.csv")
     print(f"  total {timings['total_seconds']:.1f}s")
     return metrics
 
