@@ -762,10 +762,10 @@ def main() -> pd.DataFrame:
     txns, cases = inject_typologies(txns, entities, counterparties, wallets, rng)
     txns = finalise(txns)
 
-    entities.to_csv(cfg.ENTITIES_PATH, index=False, compression="gzip")
-    counterparties.to_csv(cfg.COUNTERPARTIES_PATH, index=False, compression="gzip")
-    txns.to_csv(cfg.TRANSACTIONS_PATH, index=False, compression="gzip")
-    cases.to_csv(cfg.CASES_PATH, index=False, compression="gzip")
+    entities.to_csv(cfg.ENTITIES_PATH, index=False, compression=cfg.GZIP)
+    counterparties.to_csv(cfg.COUNTERPARTIES_PATH, index=False, compression=cfg.GZIP)
+    txns.to_csv(cfg.TRANSACTIONS_PATH, index=False, compression=cfg.GZIP)
+    cases.to_csv(cfg.CASES_PATH, index=False, compression=cfg.GZIP)
 
     suspicious = int(txns["is_suspicious"].sum())
     print(
