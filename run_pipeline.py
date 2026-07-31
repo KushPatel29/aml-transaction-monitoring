@@ -389,7 +389,12 @@ def main(skip_generate: bool = False) -> dict:
     timings["total_seconds"] = time.perf_counter() - started
     metrics["runtime_seconds"]["total"] = round(timings["total_seconds"], 2)
 
-    cfg.METRICS_PATH.write_text(json.dumps(metrics, indent=2), encoding="utf-8")
+    # newline="\n" for the same reason every to_csv pins its line terminator:
+    # this file is committed, and it should not differ because of the OS that
+    # wrote it.
+    cfg.METRICS_PATH.write_text(
+        json.dumps(metrics, indent=2) + "\n", encoding="utf-8", newline="\n"
+    )
 
     _step("Done")
     print(f"  results/metrics.json           ({cfg.METRICS_PATH.stat().st_size / 1024:.0f} KB)")
