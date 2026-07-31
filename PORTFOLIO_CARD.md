@@ -3,6 +3,9 @@
 Blurb and ready-to-paste markup for [kushpatel29.github.io](https://kushpatel29.github.io),
 matching the existing `card-grid` component in `portfolio-site/index.html`.
 
+**Live:** https://aml-transaction-monitoring.streamlit.app
+**Repo:** https://github.com/KushPatel29/aml-transaction-monitoring
+
 ---
 
 ## The two-line blurb
@@ -47,6 +50,7 @@ matching the existing `card-grid` component in `portfolio-site/index.html`.
       <div><div class="stat-v">−90%</div><div class="stat-k">EXPECTED COST</div></div>
     </div>
     <p class="proof"><span class="proof-tick" aria-hidden="true">✓</span> 17 SQL features proven equal to their Python twins on all 100,299 rows; precision, recall and cost floors gate every push.</p>
+    <a class="card-open" href="https://aml-transaction-monitoring.streamlit.app" target="_blank" rel="noopener"><span>OPEN LIVE APP</span><span aria-hidden="true">↗</span></a>
     <a class="card-open" href="https://github.com/KushPatel29/aml-transaction-monitoring" target="_blank" rel="noopener"><span>OPEN REPO</span><span aria-hidden="true">↗</span></a>
   </div>
 </article>

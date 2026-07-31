@@ -16,7 +16,7 @@
 > institution, case, or regulatory filing is referenced anywhere in this
 > repository. The cost constants are invented; see [`config.py`](config.py).
 
-**Live demo:** _(pending — see [Deploying](#deploying))_
+**▶ Live demo: [aml-transaction-monitoring.streamlit.app](https://aml-transaction-monitoring.streamlit.app)**
 
 ---
 
@@ -335,11 +335,17 @@ the committed artefacts, so it starts cold without a pipeline run.
 
 ### Deploying
 
-The app is built for **Streamlit Community Cloud** on the free tier: no API
-keys, no paid services, no database server, and a test asserts the source
-contains no secrets or network calls. Deploying needs a Streamlit account —
-point it at this repo with `app/streamlit_app.py` as the entrypoint, then the
-live link goes at the top of this README.
+Live on **Streamlit Community Cloud** free tier at
+[aml-transaction-monitoring.streamlit.app](https://aml-transaction-monitoring.streamlit.app):
+no API keys, no paid services, no database server, and a test asserts the source
+contains no secrets or network calls. It reads the committed artefacts, so it
+starts cold without running the pipeline.
+
+To redeploy it yourself: point Streamlit Cloud at this repo, branch `main`,
+entrypoint `app/streamlit_app.py`, and **set the Python version to 3.12 under
+Advanced settings**. That last part matters — Streamlit currently defaults new
+apps to 3.14, and the pinned versions in `requirements.txt` have no wheels for
+it, so the build fails on install before Streamlit is ever reached.
 
 ### Porting to PostgreSQL
 
