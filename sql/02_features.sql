@@ -235,7 +235,16 @@ SELECT
     -- SQLite's %w and Postgres' DOW share the 0=Sunday coding.
     CAST(strftime('%H', s.txn_datetime) AS INTEGER)         AS hour_of_day,
     CASE WHEN strftime('%w', s.txn_datetime) IN ('0', '6')
-         THEN 1 ELSE 0 END                                  AS is_weekend
+         THEN 1 ELSE 0 END                                  AS is_weekend,
+
+    -- Rule support ------------------------------------------------------------
+    -- R4 and R5 need the entity's prior history, which the z-score already
+    -- computed above. Exposing it here rather than recomputing it privately in
+    -- the rules engine means these two are covered by the same parity contract
+    -- as everything else. They are NOT model features -- see
+    -- config.RULE_SUPPORT_COLUMNS.
+    s.prior_n                                               AS prior_txn_count,
+    COALESCE(s.prior_mean, 0.0)                             AS prior_mean_cents
 
 FROM stats s;
 

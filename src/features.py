@@ -112,6 +112,8 @@ def compute_features(transactions: pd.DataFrame) -> pd.DataFrame:
     out_48h = np.zeros(n, np.int64)
     in_48h = np.zeros(n, np.int64)
     zscore = np.zeros(n, np.float64)
+    prior_count = np.zeros(n, np.int64)
+    prior_mean_cents = np.zeros(n, np.float64)
     days_since_prev = np.zeros(n, np.float64)
     distinct_cp_7d = np.zeros(n, np.int64)
     new_cp_count_7d = np.zeros(n, np.int64)
@@ -163,6 +165,10 @@ def compute_features(transactions: pd.DataFrame) -> pd.DataFrame:
         zscore[start:stop] = np.where(
             usable, (amounts_f - prior_mean) / np.where(prior_sd > 0, prior_sd, 1.0), 0.0
         )
+        prior_count[start:stop] = prior_n.astype(np.int64)
+        # Matches COALESCE(prior_mean, 0.0): an entity's first transaction has
+        # no prior history, and prior_sum is 0.0 there, so this lands on 0.0.
+        prior_mean_cents[start:stop] = prior_mean
 
         # ---- days since previous ------------------------------------------
         gaps = np.empty(size, np.float64)
@@ -248,6 +254,8 @@ def compute_features(transactions: pd.DataFrame) -> pd.DataFrame:
             # same weekend.
             "hour_of_day": timestamps.dt.hour.astype(np.int64),
             "is_weekend": timestamps.dt.dayofweek.isin([5, 6]).astype(np.int64),
+            "prior_txn_count": prior_count,
+            "prior_mean_cents": prior_mean_cents,
         }
     )
     return out

@@ -204,6 +204,14 @@ FEATURE_COLUMNS = [
     "is_weekend",
 ]
 
+# Entity history that R4 and R5 need. Computed in the same SQL pass and covered
+# by the same parity contract, but deliberately NOT model features -- they are
+# raw history rather than behavioural signal, and the z-score already carries
+# what the model needs from them.
+RULE_SUPPORT_COLUMNS = ["prior_txn_count", "prior_mean_cents"]
+
+PARITY_COLUMNS = FEATURE_COLUMNS + RULE_SUPPORT_COLUMNS
+
 # Ground-truth columns. These must never reach the model feature matrix; a test
 # asserts the intersection is empty.
 GROUND_TRUTH_COLUMNS = ["is_suspicious", "typology", "typology_variant", "case_id"]

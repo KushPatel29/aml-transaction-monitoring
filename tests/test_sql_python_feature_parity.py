@@ -49,7 +49,7 @@ def test_both_engines_produce_the_same_rows(parity_frames, transactions):
     assert sql_features["transaction_id"].equals(python_features["transaction_id"])
 
 
-@pytest.mark.parametrize("feature", cfg.FEATURE_COLUMNS)
+@pytest.mark.parametrize("feature", cfg.PARITY_COLUMNS)
 def test_feature_matches_between_sql_and_python(parity_frames, feature):
     sql_features, python_features = parity_frames
     assert feature in sql_features.columns, f"{feature} missing from sql/02_features.sql"
