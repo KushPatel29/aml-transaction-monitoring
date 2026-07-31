@@ -334,6 +334,34 @@ ANALYST_HOURS_PER_WEEK = 30.0
 NAIVE_BASELINE_THRESHOLD_CAD = 10_000.00
 
 # --------------------------------------------------------------------------
+# Test floors
+# --------------------------------------------------------------------------
+# REGRESSION GUARDS, not targets. Each is set at roughly 90% of what the first
+# clean run actually produced, so a real degradation breaks the build while
+# ordinary variation does not. They were written down AFTER measuring; nothing
+# in the pipeline was tuned to clear them.
+#
+#   observed on the run these were set from:
+#     entity recall     1.000     entity precision  0.164
+#     txn recall        0.920     txn precision     0.252
+#     PR-AUC            0.774     PR-AUC CI low     0.689
+#     nested recall     0.967     cost reduction    90.1%
+METRIC_FLOORS = {
+    "entity_recall": 0.90,
+    "entity_precision": 0.14,
+    "txn_recall": 0.82,
+    "txn_precision": 0.22,
+    "pr_auc": 0.68,
+    "pr_auc_ci_low": 0.60,
+    "nested_mean_recall": 0.85,
+    "baseline_cost_reduction_pct": 70.0,
+    # The layered system must beat the naive rule on both, or it has not
+    # earned the complexity it costs (C8).
+    "precision_multiple_over_baseline": 1.8,
+    "recall_at_least_baseline": True,
+}
+
+# --------------------------------------------------------------------------
 # Dashboard
 # --------------------------------------------------------------------------
 MASK_VISIBLE_CHARS = 4

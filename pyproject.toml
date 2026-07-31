@@ -1,0 +1,22 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: regenerates data or otherwise takes real time; run in CI as its own step",
+]
+filterwarnings = ["error::FutureWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# Modules that bootstrap sys.path before importing config necessarily import
+# below the top of the file.
+"src/*.py" = ["E402"]
+"data/generate_transactions.py" = ["E402"]
+"run_pipeline.py" = ["E402"]
+"app/streamlit_app.py" = ["E402"]
+"tests/*.py" = ["E402"]

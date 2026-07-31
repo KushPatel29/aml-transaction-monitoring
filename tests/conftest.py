@@ -47,3 +47,18 @@ def counterparties() -> pd.DataFrame:
 @pytest.fixture(scope="session")
 def cases() -> pd.DataFrame:
     return _read(cfg.CASES_PATH)
+
+
+@pytest.fixture(scope="session")
+def scored() -> pd.DataFrame:
+    """Transactions joined to features, rule hits and risk scores."""
+    return _read(cfg.SCORED_PATH)
+
+
+@pytest.fixture(scope="session")
+def metrics_json() -> dict:
+    import json
+
+    if not cfg.METRICS_PATH.exists():
+        pytest.skip("results/metrics.json missing -- run `python run_pipeline.py` first")
+    return json.loads(cfg.METRICS_PATH.read_text(encoding="utf-8"))

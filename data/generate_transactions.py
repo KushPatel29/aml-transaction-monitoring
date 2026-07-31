@@ -686,6 +686,15 @@ def inject_typologies(txns: pd.DataFrame, entities: pd.DataFrame,
         new_rows.extend(rows)
         amounts = [r[3] for r in rows]
         epochs = [r[2] for r in rows]
+        # Round the per-typology metadata. A raw float renders as seventeen
+        # significant digits in CSV, which is both unreadable and an unbroken
+        # digit run long enough to trip the account-number checks in
+        # tests/test_no_pii_in_data.py.
+        details = {
+            k: round(v, 4) if isinstance(v, float) else v
+            for k, v in meta.items()
+            if k not in ("silence_start", "silence_end")
+        }
         case_records.append(
             {
                 "case_id": case_id,
@@ -697,7 +706,7 @@ def inject_typologies(txns: pd.DataFrame, entities: pd.DataFrame,
                 "first_txn_epoch": min(epochs),
                 "last_txn_epoch": max(epochs),
                 "span_days": round((max(epochs) - min(epochs)) / 86_400.0, 2),
-                **{k: v for k, v in meta.items() if k not in ("silence_start", "silence_end")},
+                **details,
             }
         )
 
