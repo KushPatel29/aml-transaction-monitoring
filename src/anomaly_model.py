@@ -226,7 +226,7 @@ def top_feature_deviations(features: pd.DataFrame, transaction_id: str,
     if row.empty:
         return pd.DataFrame(columns=["feature", "value", "population_mean", "deviation_sigma"])
 
-    deviation = ((row.iloc[0] - means) / stds).fillna(0.0)
+    deviation = ((row.iloc[0].astype(float) - means) / stds).fillna(0.0)
     ordered = deviation.abs().sort_values(ascending=False).head(top_n).index
     return pd.DataFrame(
         {

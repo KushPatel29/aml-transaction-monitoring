@@ -1,0 +1,14 @@
+# Theme only. No secrets, no API keys, nothing that would stop this deploying
+# to Streamlit Community Cloud on the free tier (C5).
+[theme]
+base = "light"
+primaryColor = "#6750a4"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f4f2f7"
+textColor = "#1c1b1f"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
