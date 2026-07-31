@@ -22,6 +22,12 @@ SRC_DIR = ROOT / "src"
 RESULTS_DIR = ROOT / "results"
 DOCS_DIR = ROOT / "docs"
 
+# gzip stamps the current time into its header by default, so a re-run with
+# byte-identical content still produces a different file and shows up as a diff.
+# Pinning mtime makes the committed artefacts reproducible, which is what lets
+# CI regenerate them and assert nothing changed.
+GZIP = {"method": "gzip", "mtime": 0}
+
 ENTITIES_PATH = DATA_DIR / "entities.csv.gz"
 COUNTERPARTIES_PATH = DATA_DIR / "counterparties.csv.gz"
 TRANSACTIONS_PATH = DATA_DIR / "transactions.csv.gz"
@@ -31,7 +37,9 @@ CASES_PATH = DATA_DIR / "cases.csv.gz"
 # from the CSVs on every pipeline run and is gitignored.
 DB_PATH = RESULTS_DIR / "aml_monitoring.db"
 
-FEATURES_PATH = RESULTS_DIR / "features.csv.gz"
+# One scored artefact carrying transactions, features, rule hits and risk
+# scores together -- it is what the Streamlit app reads and what the README
+# numbers are computed from, so splitting it invites the two drifting apart.
 SCORED_PATH = RESULTS_DIR / "scored_transactions.csv.gz"
 SWEEP_PATH = RESULTS_DIR / "threshold_sweep.csv"
 METRICS_PATH = RESULTS_DIR / "metrics.json"
@@ -204,6 +212,12 @@ FEATURE_COLUMNS = [
     "is_weekend",
 ]
 
+# What the models actually see. Deliberately the parity-tested feature set plus
+# the raw amount and nothing else -- no entity metadata, no counterparty type,
+# no engineered extras that escape the SQL/Python contract. If a model input is
+# not in sql/02_features.sql, it does not exist.
+MODEL_FEATURE_COLUMNS = FEATURE_COLUMNS + ["amount_cents"]
+
 # Entity history that R4 and R5 need. Computed in the same SQL pass and covered
 # by the same parity contract, but deliberately NOT model features -- they are
 # raw history rather than behavioural signal, and the z-score already carries
@@ -285,7 +299,12 @@ MODEL_WEIGHT = 0.40
 # Number of simultaneously firing rules at which the rule component saturates.
 RULE_SATURATION = 2
 
-THRESHOLD_SWEEP = list(range(0, 101))
+# Swept at 0.1 resolution rather than in integer steps. The cost surface is not
+# smooth -- it steps every time a case crosses -- and a coarse grid can hide a
+# cheaper operating point in the gap between two integers. It did, on the first
+# run: three cases sat at 39.6-39.7 and an integer sweep reported 67 as optimal
+# while a threshold of 39.6 was 19% cheaper.
+THRESHOLD_SWEEP = [round(x * 0.1, 1) for x in range(0, 1001)]
 
 # --------------------------------------------------------------------------
 # ILLUSTRATIVE COST MODEL  (C9)
