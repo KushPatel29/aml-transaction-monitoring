@@ -1,0 +1,13 @@
+# Pinned to the versions this project is tested against.
+# Everything here is free and installable on Streamlit Community Cloud (C5) --
+# no paid services, no API keys, no database server.
+pandas==2.2.0
+numpy==1.26.3
+scikit-learn==1.4.0
+scipy==1.12.0
+Faker==40.28.1
+networkx==3.2.1
+streamlit==1.59.2
+altair==6.2.2
+matplotlib==3.8.2
+pytest==9.1.1

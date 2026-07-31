@@ -345,3 +345,98 @@ of a slightly bigger repo. Say the word or I'll go with the default.
   deploy-ready and verify the app boots headless locally, but the deploy click and
   the live URL for the README are yours. I'll leave the README link as a clearly
   marked placeholder until you paste it back.
+
+---
+
+## 13. Addendum — decisions confirmed, scope raised
+
+Answers received: **plant the slow variant**, keep the name
+**`aml-transaction-monitoring`**, and scale to **100,000 transactions**. What that
+changes:
+
+### 13.1 Scale and the per-entity arithmetic
+
+100k transactions across the brief's 800–1,500 entities means ~67 transactions per
+entity per year. Two consequences worth stating rather than burying:
+
+- **N_ENTITIES = 1,500** (top of the brief's range), ~6,000 counterparties.
+- The transaction set is **monitored payment activity** — deposits, transfers,
+  wires, cheques, e-transfers, bill payments — **not retail card spend**. Real
+  monitoring systems scope out POS card noise, and it's the only way 67
+  transactions/entity/year reads as realistic rather than sparse. Individuals run
+  ~4–5 monitored payments/month, businesses ~9–12.
+- **`TYPOLOGY_ENTITY_RATE = 0.04`** (top of the brief's 2–4%) → **60 planted cases**,
+  ~0.5% of transactions labelled suspicious. That base rate is punishing, and it is
+  supposed to be — the precision problem *is* the problem in this domain.
+
+### 13.2 How 60 cases get evaluated honestly
+
+Sixty cases is too few for a single 70/30 split to say anything stable, so the
+70/30 split in §5 is replaced by:
+
+- **5-fold entity-disjoint cross-validation.** Every model, scaler and score
+  normaliser is fit on train-fold entities and applied to held-out entities. Pooling
+  the out-of-fold predictions yields one honest scored set covering **all 100k
+  transactions and all 60 cases**, each held out exactly once.
+- **Bootstrap 95% confidence intervals** (2,000 resamples, resampled *by entity*)
+  on every headline metric. With 60 cases, a bare point estimate for PR-AUC or
+  precision is close to meaningless — the README quotes intervals.
+- **Nested threshold selection as an honesty check.** The cost-minimising threshold
+  chosen on pooled out-of-fold data is mildly optimistic, because that data chose
+  it. So the pipeline also selects the threshold on the *training* folds and applies
+  it to the held-out fold, and reports the gap. Whatever that gap is, it goes in the
+  README.
+
+### 13.3 Alert consolidation — a correction to the brief's cost model
+
+C8/Phase 5 specify `cost = FP × cost_per_investigation + FN × cost_per_miss` at the
+transaction level. Taken literally that overcharges: one entity with six flagged
+transactions is **one** investigation, not six. Both are computed and reported:
+
+- **Transaction-level** metrics, exactly as specified — precision, recall, PR-AUC.
+- **Entity-level (consolidated alert)** metrics, where an alert is an entity whose
+  peak risk score crosses the threshold, and the cost model runs on *those* counts.
+
+The README says which one drives the cost conclusion and why. Same treatment for
+the naive baseline, so the comparison is like-for-like.
+
+### 13.4 Model bake-off, not a single model
+
+Following the house pattern of reporting losses: **IsolationForest vs
+LocalOutlierFactor vs a plain statistical z-score baseline**, all unsupervised, all
+under the same CV. Then the supervised logistic-regression ceiling on top. If
+IsolationForest loses to the dumb z-score baseline, that's the finding and it gets
+the headline.
+
+### 13.5 Counterparty network layer
+
+The counterparty pool is generated with a realistic degree distribution —
+**employers, utilities and landlords are legitimate high-degree hubs**, so
+"talks to many entities" is not by itself a signal. Against that noise:
+
+- ~40% of layering cases draw their outbound legs from a **shared mule pool** of
+  ~30 counterparties, which is how these networks actually behave.
+- Three network features join the parity-tested set (F11–F13 below), all computed
+  **as-of the transaction timestamp** — a full-period counterparty degree would leak
+  the future into the past. A test asserts the as-of property directly.
+- `src/network.py` builds the bipartite entity↔counterparty graph (networkx) and
+  surfaces ring components in the dashboard drill-down.
+
+### 13.6 Final feature list — 15, all parity-tested
+
+F1–F10 as in §6, plus:
+
+| # | Feature | Definition |
+|---|---|---|
+| F11 | `counterparty_entity_degree_asof` | distinct monitored entities this counterparty has transacted with **up to and including** this timestamp |
+| F12 | `counterparty_age_days` | days since this counterparty's first appearance in the data, as-of |
+| F13 | `new_counterparty_ratio_7d` | share of the entity's trailing-7d transactions whose counterparty was first seen within 7 days |
+| F14 | `hour_of_day` | `strftime('%H', ...)` → `EXTRACT(HOUR FROM ...)` in Postgres |
+| F15 | `is_weekend` | `strftime('%w', ...)` ∈ {0,6} |
+
+### 13.7 Storage
+
+100k rows of raw transactions plus a scored set with 15 features exceeds what
+belongs in a git repo as plain CSV. Committed artefacts are **gzipped CSV**
+(`.csv.gz`, read natively by pandas — no pyarrow dependency added to the
+Streamlit Cloud image). Expected total ≈ 8–12 MB.
