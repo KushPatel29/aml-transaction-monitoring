@@ -41,6 +41,22 @@ jobs:
       - name: Run the test suite
         run: pytest -q
 
+      # The README badge is a claim about this suite, and nothing used to
+      # compare the two. healthcare's badge sat at 182 while its suite had
+      # grown to 345 -- the number was counting test functions, not collected
+      # cases, and no check could see the difference. This fails the build if
+      # the badge and the suite ever disagree again.
+      - name: The README test badge must match what the suite collects
+        run: |
+          collected=$(python -m pytest --collect-only -q 2>/dev/null             | grep -oE '[0-9]+ tests? collected' | grep -oE '^[0-9]+')
+          claimed=$(grep -oE 'badge/tests-[0-9%C,]+%20passing' README.md | head -1             | sed -E 's|badge/tests-||; s|%20passing||; s|%2C||g; s|,||g')
+          echo "suite collects: ${collected:-<none>}   README badge: ${claimed:-<none>}"
+          if [ -z "$collected" ] || [ -z "$claimed" ]; then
+            echo "::error::could not read one of the two numbers"; exit 1
+          fi
+          if [ "$collected" != "$claimed" ]; then
+            echo "::error::README badge says $claimed, suite collects $collected"; exit 1
+          fi
       - name: Run the slow reproducibility tests
         run: pytest -q -m slow
 
