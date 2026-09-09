@@ -17,6 +17,7 @@ from __future__ import annotations
 import re
 
 import pandas as pd
+from pandas.api.types import is_datetime64_any_dtype, is_numeric_dtype
 import pytest
 
 import config as cfg
@@ -61,7 +62,15 @@ def _luhn_valid(digits: str) -> bool:
 
 
 def _text_columns(frame: pd.DataFrame) -> list[str]:
-    return [c for c in frame.columns if frame[c].dtype == object]
+    """Every column a name, address or card number could be hiding in.
+
+    Written as "not numeric and not a date" rather than "dtype is object",
+    because pandas 3 gives text columns a `str` dtype and the object test
+    quietly returned nothing at all - a PII scan over no columns, passing."""
+    return [
+        c for c in frame.columns
+        if not (is_numeric_dtype(frame[c]) or is_datetime64_any_dtype(frame[c]))
+    ]
 
 
 @pytest.fixture(scope="module", params=[p.name for p in COMMITTED_FILES])

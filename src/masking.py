@@ -15,6 +15,7 @@ both that the masking works and that the helper is the only route.
 from __future__ import annotations
 
 import pandas as pd
+from pandas.api.types import is_datetime64_any_dtype, is_numeric_dtype
 
 import config as cfg  # noqa: E402
 
@@ -90,7 +91,16 @@ def contains_unmasked_identifier(frame: pd.DataFrame) -> list[str]:
     """
     offenders = []
     for column in frame.columns:
-        if frame[column].dtype != object:
+        # Skip only what cannot hold an identifier. This used to be
+        # `dtype != object: continue`, which is the same idea written the
+        # dangerous way round: pandas 3 gives string columns a `str` dtype
+        # rather than `object`, so every text column stopped being examined and
+        # this returned [] on a frame full of live entity ids. A privacy guard
+        # that silently checks nothing is worse than no guard, and the only
+        # reason it was caught is that a test plants a leak and demands it be
+        # found. Deny-list the dtypes that are provably safe; anything new falls
+        # through to being checked.
+        if is_numeric_dtype(frame[column]) or is_datetime64_any_dtype(frame[column]):
             continue
         values = frame[column].dropna().astype(str)
         # A full party identifier looks like ENT-01344 or CPT-00375 -- prefix,

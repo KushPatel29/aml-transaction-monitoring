@@ -1,7 +1,7 @@
 # Transaction Monitoring & Anomaly Detection
 
 [![CI](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml)
-![Tests](https://img.shields.io/badge/tests-154%20passing-3B8C6E)
+![Tests](https://img.shields.io/badge/tests-155%20passing-3B8C6E)
 ![SQL](https://img.shields.io/badge/SQL-window%20functions%20%2B%20parity%20contract-CC2927)
 ![Python](https://img.shields.io/badge/Python-scikit--learn%20%2B%20Streamlit-3776AB?logo=python&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
@@ -116,7 +116,7 @@ contract is sharp about:
 
 ### 4. Test the claim
 
-**154 tests.** The floors in [`config.py`](config.py) are regression guards set
+**155 tests.** The floors in [`config.py`](config.py) are regression guards set
 at ~90% of what the first clean run produced, written down *after* measuring —
 nothing was tuned to clear them. Three habits do the real work:
 
@@ -326,7 +326,7 @@ size of the optimism, reported rather than assumed away.
 ```bash
 pip install -r requirements.txt
 python run_pipeline.py          # regenerates everything, ~46s
-pytest                          # 154 tests
+pytest                          # 155 tests
 streamlit run app/streamlit_app.py
 ```
 
@@ -383,7 +383,7 @@ src/masking.py                identifier masking for anything rendered
 app/streamlit_app.py          triage console
 docs/make_figures.py          the charts above, from results/
 results/metrics.json          every number in this README
-tests/                        154 tests
+tests/                        155 tests
 ```
 
 ## Constraint traceability
