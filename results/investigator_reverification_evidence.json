@@ -1,0 +1,9 @@
+{
+  "boundary": "The failure drill changes an in-memory copy only; committed evidence is unchanged.",
+  "decision_after": "BLOCKED",
+  "decision_before": "REVIEW REQUIRED",
+  "probe": "remove one investigation from the register in memory",
+  "queue_gate_after": "BLOCK",
+  "queue_gate_before": "PASS",
+  "source_data_mutated": false
+}

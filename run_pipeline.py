@@ -29,6 +29,7 @@ sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
 from sklearn.metrics import average_precision_score, roc_auc_score  # noqa: E402
 
 import config as cfg  # noqa: E402
+from governance import investigator_workflow  # noqa: E402
 from src import anomaly_model, cost_model, db, risk_scorer, rules_engine  # noqa: E402
 
 
@@ -395,6 +396,9 @@ def main(skip_generate: bool = False) -> dict:
     cfg.METRICS_PATH.write_text(
         json.dumps(metrics, indent=2) + "\n", encoding="utf-8", newline="\n"
     )
+
+    _step("Building the governed investigator evidence pack")
+    investigator_workflow.main()
 
     _step("Done")
     print(f"  results/metrics.json           ({cfg.METRICS_PATH.stat().st_size / 1024:.0f} KB)")

@@ -1,0 +1,18 @@
+{
+  "control_id": "AML-INV-01",
+  "data_classification": "synthetic portfolio evidence",
+  "decision": "REVIEW REQUIRED",
+  "ground_truth_use": "Evaluation labels remain in pipeline evidence and are excluded from workflow state, priority, hypothesis, next-step and disposition fields.",
+  "human_decision_boundary": "Only an authorized human investigator may close a case, escalate enhanced due diligence, or recommend a regulatory filing. This repository records no such approval or filing.",
+  "input_sha256": {
+    "data/generated/cases.csv.gz": "708e41a320019992c68e4339a87a18d11981e4c13324f4478bab0233b492a6e0",
+    "data/generated/counterparties.csv.gz": "549b0777473369e20e6cf6fffd913099f87ee5f5fb3a80cf3d76c3826d9e22dd",
+    "data/generated/entities.csv.gz": "3264f18fd99f1f739c924b2a9ee459f27e197584bc22b324e0d6543158f18890",
+    "results/metrics.json": "60ab1f8859f8fa898982d3f2f63e8cf794f6b38d40004ca715bcfd62070b39da",
+    "results/scored_transactions.csv.gz": "7293ef8611b79b427eea7c558efd62fc065add6d615c561e1b9858c5d0dcf874"
+  },
+  "metrics_hash_scope": "Decision evidence only; generated timestamps, Python version and runtime benchmarks are excluded from the metrics digest.",
+  "policy_sha256": "59a254e77552ce18632136484e0219ed87438d14741bb069264ce8b079220b44",
+  "register_fingerprint": "b414125ef15fd539a27aad72ca495cbc83f69900338a656b1e49c282b223943f",
+  "schema_version": 1
+}

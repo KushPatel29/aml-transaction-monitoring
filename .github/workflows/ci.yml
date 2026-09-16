@@ -38,6 +38,19 @@ jobs:
           git diff --exit-code --stat -- data/generated/ \
             || (echo "::error::regenerating produced different data" && exit 1)
 
+      - name: Assert the investigator evidence pack is reproducible
+        run: |
+          git diff --exit-code --stat -- \
+            results/investigation_case_register.csv \
+            results/investigation_entity_graph.csv \
+            results/typology_evidence_catalogue.csv \
+            results/investigation_release_gates.csv \
+            results/investigation_summary.json \
+            results/investigation_manifest.json \
+            results/investigator_reverification_evidence.json \
+            results/investigation_decision_packet.md \
+            || (echo "::error::investigator evidence is not reproducible" && exit 1)
+
       - name: Run the test suite
         run: pytest -q
 
@@ -82,7 +95,14 @@ jobs:
           assert not app.build_feature_profile(scored, entity_id).empty
           app.build_counterparty_network(scored, entity_id)
           app.baseline_comparison_frame(scored, 39.6)
-          print(f"dashboard OK: {len(queue)} entities in the queue")
+          register, gates, catalogue, release = app.load_investigation_release()
+          assert release["decision"] == "REVIEW REQUIRED"
+          assert len(register) == len(queue) == 366
+          assert len(gates) == 8 and len(catalogue) == 5
+          print(
+              f"dashboard OK: {len(queue)} entities; "
+              f"AML-INV-01 {release['decision']}"
+          )
           PY
 
   lint:

@@ -1,0 +1,9 @@
+gate_id,name,status,observed
+QUEUE-01,One investigation per alerted entity,PASS,366 registered / 366 expected
+LABEL-01,Ground truth quarantined from investigator workflow,PASS,0 evaluation-label columns in the case register
+GRAPH-01,Entity graph referential integrity,PASS,8972 entity-counterparty edges linked to registered cases
+REASON-01,Explainability boundary,PASS,277 model-only cases remain explicitly unclassified
+SLA-01,Priority and review clock,PASS,P0/P1/P2 cases carry 4/24/72-hour review clocks
+CAP-01,Illustrative analyst capacity,PASS,7.0 alerts/week against 48.0 capacity
+HUMAN-01,Human disposition approval,REVIEW,0 authorized human dispositions recorded
+FILING-01,Regulatory reporting decision,REVIEW,0 reporting recommendations approved or filed

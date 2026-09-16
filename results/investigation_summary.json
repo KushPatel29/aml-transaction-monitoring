@@ -1,0 +1,20 @@
+{
+  "control_id": "AML-INV-01",
+  "decision": "REVIEW REQUIRED",
+  "demonstration_boundary": "Synthetic portfolio workflow only; not a compliance product, legal conclusion, customer decision, suspicious transaction report, or regulatory filing.",
+  "gates_blocked": 0,
+  "gates_passed": 6,
+  "gates_review": 2,
+  "graph_edges": 8972,
+  "human_decision_boundary": "Only an authorized human investigator may close a case, escalate enhanced due diligence, or recommend a regulatory filing. This repository records no such approval or filing.",
+  "human_dispositions_recorded": 0,
+  "investigations": 366,
+  "p0_investigations": 78,
+  "p1_investigations": 11,
+  "p2_investigations": 277,
+  "policy_version": "1.0.0",
+  "register_fingerprint": "b414125ef15fd539a27aad72ca495cbc83f69900338a656b1e49c282b223943f",
+  "reporting_filings_recorded": 0,
+  "schema_version": 1,
+  "typologies": 5
+}

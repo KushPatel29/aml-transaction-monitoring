@@ -1,7 +1,7 @@
 # Transaction Monitoring & Anomaly Detection
 
 [![CI](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml)
-![Tests](https://img.shields.io/badge/tests-155%20passing-3B8C6E)
+![Tests](https://img.shields.io/badge/tests-182%20passing-3B8C6E)
 ![SQL](https://img.shields.io/badge/SQL-window%20functions%20%2B%20parity%20contract-CC2927)
 ![Python](https://img.shields.io/badge/Python-scikit--learn%20%2B%20Streamlit-3776AB?logo=python&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
@@ -17,6 +17,8 @@
 > repository. The cost constants are invented; see [`config.py`](config.py).
 
 **▶ Live demo: [aml-transaction-monitoring.streamlit.app](https://aml-transaction-monitoring.streamlit.app)**
+
+**Reviewer entry point:** [AML-INV-01 investigator decision packet](results/investigation_decision_packet.md) · [release gates](results/investigation_release_gates.csv) · [case register](results/investigation_case_register.csv)
 
 ---
 
@@ -55,6 +57,34 @@ README was typed in by hand, and a test
 fails the build if `metrics.json` stops describing the data actually in the repo.
 
 ![Precision-recall](docs/pr_curve.png)
+
+---
+
+## From alert to governed investigation
+
+Detection is only the beginning of the business process. `AML-INV-01` turns the
+operating-point alerts into **366 controlled investigations**, including **78 P0
+cases with a four-hour review clock**, and joins them to **8,972 aggregated
+entity-counterparty evidence links**. It also defines five machine-readable
+typology hypotheses, each with a lawful lookalike, discriminator, minimum
+evidence and known limitation.
+
+The release result is deliberately **REVIEW REQUIRED: 6 gates pass, 2 require
+authorized human review, 0 block**. The public evidence records **zero human
+dispositions and zero regulatory filings**. Scores and rules prioritize
+evidence; they never determine suspicion or authorize action.
+
+Ground truth is kept for evaluation but is prohibited from setting priority,
+workflow state, hypothesis or next step. A contract changes every planted label
+and proves the investigator register is unchanged. A second, in-memory failure
+drill removes one case and proves `QUEUE-01` changes from PASS to BLOCK and the
+release changes from REVIEW REQUIRED to BLOCKED—without modifying a source
+file.
+
+- [Read the concise decision packet](results/investigation_decision_packet.md)
+- [Inspect the executable release docket](results/investigation_release_gates.csv)
+- [Review the workflow and authority boundary](docs/INVESTIGATOR_WORKFLOW.md)
+- Open **Investigator workflow** in the [live app](https://aml-transaction-monitoring.streamlit.app)
 
 ---
 
@@ -116,7 +146,7 @@ contract is sharp about:
 
 ### 4. Test the claim
 
-**155 tests.** The floors in [`config.py`](config.py) are regression guards set
+**182 tests.** The floors in [`config.py`](config.py) are regression guards set
 at ~90% of what the first clean run produced, written down *after* measuring —
 nothing was tuned to clear them. Three habits do the real work:
 
@@ -150,8 +180,9 @@ R5_DORMANT:     $4,000.00 after 121 days of no activity, 18.7x the
                 entity's historical average of $213.60
 ```
 
-The [triage console](app/streamlit_app.py) puts those in front of an analyst,
-with a threshold slider, the cost curve, a per-entity drill-down and a
+The [investigator console](app/streamlit_app.py) puts those in front of an
+analyst, with a threshold slider, governed case register, review clocks, release
+gates, typology/evidence catalogue, cost curve, per-entity drill-down and
 counterparty network view. Identifiers are masked structurally: every table
 routes through one helper that masks first, and a test parses the app's AST to
 assert that helper is the **only** caller of `st.dataframe` anywhere in the file.
@@ -326,7 +357,7 @@ size of the optimism, reported rather than assumed away.
 ```bash
 pip install -r requirements.txt
 python run_pipeline.py          # regenerates everything, ~46s
-pytest                          # 155 tests
+pytest                          # 182 tests
 streamlit run app/streamlit_app.py
 ```
 
@@ -380,10 +411,14 @@ src/anomaly_model.py          entity-disjoint CV, model bake-off
 src/risk_scorer.py            blend, sweep, nested check, bootstrap
 src/cost_model.py             confusion, consolidation, naive baseline
 src/masking.py                identifier masking for anything rendered
-app/streamlit_app.py          triage console
+governance/investigation_policy.json  versioned typologies, clocks and authority boundary
+governance/investigator_workflow.py   case register, graph, gates, hashes and fail-closed drill
+app/streamlit_app.py          triage + governed investigator console
 docs/make_figures.py          the charts above, from results/
 results/metrics.json          every number in this README
-tests/                        155 tests
+results/investigation_decision_packet.md  concise reviewer brief
+results/investigation_manifest.json       input hashes + register fingerprint
+tests/                        182 tests
 ```
 
 ## Constraint traceability
@@ -399,6 +434,10 @@ tests/                        155 tests
 | Naive baseline beaten, with numbers | `test_layered_system_beats_the_naive_baseline` |
 | Cost constants clearly illustrative | `test_cost_constants_are_flagged_illustrative_in_config` |
 | No real institutions, cases or filings | `test_no_real_institutions_or_filings_named` |
+| Ground truth cannot drive investigator workflow | `test_ground_truth_cannot_change_priority_or_workflow_state` |
+| One case per alerted entity | `test_register_has_one_case_per_alerted_entity` |
+| Human disposition and filing gates remain unapproved | `test_human_and_filing_gates_remain_review` |
+| Missing-case drill fails closed without source mutation | `test_reverification_probe_fails_closed` |
 
 ---
 

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "control_id": "AML-INV-01",
+  "policy_version": "1.0.0",
+  "decision_owner": "AML operations manager (simulated role)",
+  "data_classification": "synthetic portfolio evidence",
+  "presentation_contract": "Party identifiers and names are masked in the public application; event references remain traceable.",
+  "human_decision_boundary": "Only an authorized human investigator may close a case, escalate enhanced due diligence, or recommend a regulatory filing. This repository records no such approval or filing.",
+  "priority_bands": [
+    {"priority": "P0", "minimum_score": 67.9, "due_hours": 4},
+    {"priority": "P1", "minimum_score": 55.0, "due_hours": 24},
+    {"priority": "P2", "minimum_score": 39.6, "due_hours": 72}
+  ],
+  "allowed_states": [
+    "OPEN TRIAGE",
+    "EVIDENCE REQUESTED",
+    "SECOND-LEVEL REVIEW"
+  ],
+  "allowed_dispositions": [
+    "CLOSE AS EXPLAINED ACTIVITY",
+    "REQUEST ADDITIONAL EVIDENCE",
+    "ESCALATE ENHANCED DUE DILIGENCE",
+    "RECOMMEND REPORTING REVIEW"
+  ],
+  "typologies": [
+    {
+      "typology_id": "T01-STRUCTURING",
+      "rule_code": "R1_STRUCTURING",
+      "hypothesis": "Repeated cash deposits may be deliberately kept below a reporting threshold.",
+      "lawful_lookalike": "Cash-intensive retail activity with regular till deposits.",
+      "discriminator": "Source of funds, deposit cadence, business receipts and related-account activity.",
+      "minimum_evidence": ["account timeline", "cash-source evidence", "customer profile", "related-party search"],
+      "known_limitation": "A fixed seven-day window can miss deposits that are both thinned and spread."
+    },
+    {
+      "typology_id": "T02-LAYERING",
+      "rule_code": "R2_LAYERING",
+      "hypothesis": "A large inbound transfer may be rapidly dispersed to several counterparties.",
+      "lawful_lookalike": "Wholesale settlement followed by a scheduled supplier-payment batch.",
+      "discriminator": "Invoice support, counterparty purpose, retained balance and relationship history.",
+      "minimum_evidence": ["fund-flow timeline", "invoice support", "counterparty profile", "beneficiary relationship"],
+      "known_limitation": "The single-institution view cannot observe the next hop after funds leave."
+    },
+    {
+      "typology_id": "T03-SMURFING",
+      "rule_code": "R3_SMURFING",
+      "hypothesis": "Many small inbound transfers from distinct senders may represent coordinated collection.",
+      "lawful_lookalike": "Marketplace, fundraising or event receipts from many unrelated customers.",
+      "discriminator": "Sender relationships, stated account purpose, campaign evidence and withdrawal behaviour.",
+      "minimum_evidence": ["sender network", "account purpose", "campaign or sales evidence", "subsequent-use review"],
+      "known_limitation": "Shared counterparties do not by themselves establish coordination."
+    },
+    {
+      "typology_id": "T04-ROUND-DOLLAR",
+      "rule_code": "R4_ROUND_DOLLAR",
+      "hypothesis": "Large round-dollar payments may be inconsistent with the entity's normal distribution.",
+      "lawful_lookalike": "Rent, payroll, tax, treasury or contract milestone payments.",
+      "discriminator": "Payment purpose, agreement or invoice, recurrence and entity-specific baseline.",
+      "minimum_evidence": ["entity baseline", "payment purpose", "supporting agreement", "recurrence history"],
+      "known_limitation": "Roundness is weak evidence unless it is evaluated relative to the entity."
+    },
+    {
+      "typology_id": "T05-DORMANT",
+      "rule_code": "R5_DORMANT",
+      "hypothesis": "Material activity after a long dormant period may indicate account takeover or repurposing.",
+      "lawful_lookalike": "Seasonal use, a matured investment or a legitimate one-off purchase.",
+      "discriminator": "Authentication events, customer contact, source of funds and historical purpose.",
+      "minimum_evidence": ["dormancy timeline", "authentication history", "customer confirmation", "source of funds"],
+      "known_limitation": "Only the first transaction after dormancy should trigger the rule."
+    }
+  ]
+}

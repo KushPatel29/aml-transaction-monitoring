@@ -52,6 +52,11 @@ RULE_TO_TYPOLOGY = {
     "R5_DORMANT": "Dormant reactivation",
 }
 
+INVESTIGATION_REGISTER = cfg.RESULTS_DIR / "investigation_case_register.csv"
+INVESTIGATION_GATES = cfg.RESULTS_DIR / "investigation_release_gates.csv"
+INVESTIGATION_CATALOGUE = cfg.RESULTS_DIR / "typology_evidence_catalogue.csv"
+INVESTIGATION_SUMMARY = cfg.RESULTS_DIR / "investigation_summary.json"
+
 
 # ---------------------------------------------------------------------------
 # Loading
@@ -80,6 +85,17 @@ def load_sweep(_scored: pd.DataFrame) -> pd.DataFrame:
         _scored["is_suspicious"].to_numpy(),
         _scored["entity_id"].to_numpy(),
     )
+
+
+@st.cache_data
+def load_investigation_release() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, dict]:
+    import json
+
+    register = pd.read_csv(INVESTIGATION_REGISTER, keep_default_na=False)
+    gates = pd.read_csv(INVESTIGATION_GATES, keep_default_na=False)
+    catalogue = pd.read_csv(INVESTIGATION_CATALOGUE, keep_default_na=False)
+    summary = json.loads(INVESTIGATION_SUMMARY.read_text(encoding="utf-8"))
+    return register, gates, catalogue, summary
 
 
 # ---------------------------------------------------------------------------
@@ -389,8 +405,14 @@ def main() -> None:
         delta_color="normal" if alerts_per_week <= capacity else "inverse",
     )
 
-    queue_tab, performance_tab, entity_tab, method_tab = st.tabs(
-        ["Case queue", "Performance", "Entity drill-down", "Method"]
+    queue_tab, investigation_tab, performance_tab, entity_tab, method_tab = st.tabs(
+        [
+            "Case queue",
+            "Investigator workflow",
+            "Performance",
+            "Entity drill-down",
+            "Method",
+        ]
     )
 
     # ---- case queue -------------------------------------------------------
@@ -413,6 +435,120 @@ def main() -> None:
         if show_baseline:
             st.subheader("Against the naive baseline")
             show_table(baseline_comparison_frame(scored, threshold), hide_index=True)
+
+    # ---- governed investigator workflow ---------------------------------
+    with investigation_tab:
+        if not all(
+            path.exists()
+            for path in (
+                INVESTIGATION_REGISTER,
+                INVESTIGATION_GATES,
+                INVESTIGATION_CATALOGUE,
+                INVESTIGATION_SUMMARY,
+            )
+        ):
+            st.info(
+                "Run `python -m governance.investigator_workflow` to build the "
+                "governed investigation evidence pack."
+            )
+        else:
+            register, gates, catalogue, investigation_summary = (
+                load_investigation_release()
+            )
+            st.subheader("AML-INV-01 · investigation release assurance")
+            st.markdown(
+                f"**{investigation_summary['decision']}** — "
+                f"{investigation_summary['gates_passed']} gates pass, "
+                f"{investigation_summary['gates_review']} require review, and "
+                f"{investigation_summary['gates_blocked']} block."
+            )
+            st.caption(investigation_summary["demonstration_boundary"])
+
+            release_metrics = st.columns(5)
+            release_metrics[0].metric(
+                "Investigations", f"{investigation_summary['investigations']:,}"
+            )
+            release_metrics[1].metric(
+                "P0 · 4-hour", investigation_summary["p0_investigations"]
+            )
+            release_metrics[2].metric(
+                "Graph edges", f"{investigation_summary['graph_edges']:,}"
+            )
+            release_metrics[3].metric(
+                "Typologies", investigation_summary["typologies"]
+            )
+            release_metrics[4].metric("Human approvals", 0)
+
+            st.markdown(
+                "Risk scores prioritize evidence; they do not establish suspicion, "
+                "close a case or authorize a filing. The public register therefore "
+                "keeps every disposition at **HUMAN DECISION REQUIRED**."
+            )
+            show_table(
+                register[
+                    [
+                        "investigation_id",
+                        "entity_id",
+                        "display_name",
+                        "priority",
+                        "case_state",
+                        "due_hours",
+                        "max_risk_score",
+                        "typology_hypothesis",
+                        "recommended_next_step",
+                        "decision_status",
+                    ]
+                ],
+                height=360,
+                hide_index=True,
+            )
+
+            selected_investigation = st.selectbox(
+                "Investigation",
+                register["investigation_id"].tolist(),
+                format_func=lambda value: (
+                    f"{value} · "
+                    f"{register.loc[register['investigation_id'].eq(value), 'priority'].iloc[0]}"
+                ),
+            )
+            selected_case = register.loc[
+                register["investigation_id"].eq(selected_investigation)
+            ].iloc[0]
+            st.markdown(
+                f"**Next evidence step:** {selected_case['recommended_next_step']}  \n"
+                f"**Hypothesis:** {selected_case['typology_hypothesis']}  \n"
+                f"**Authority boundary:** {investigation_summary['human_decision_boundary']}"
+            )
+            st.pyplot(
+                render_network(
+                    build_counterparty_network(scored, selected_case["entity_id"]),
+                    selected_case["entity_id"],
+                )
+            )
+            st.caption(
+                "Shared counterparties guide inquiry. Employers, utilities and other "
+                "hubs can be shared lawfully, so network density is not evidence by itself."
+            )
+
+            left, right = st.columns(2)
+            with left:
+                st.subheader("Release gates")
+                show_table(gates, hide_index=True)
+            with right:
+                st.subheader("Typology and evidence catalogue")
+                show_table(
+                    catalogue[
+                        [
+                            "typology_id",
+                            "lawful_lookalike",
+                            "discriminator",
+                            "minimum_evidence",
+                            "known_limitation",
+                        ]
+                    ],
+                    height=360,
+                    hide_index=True,
+                )
 
     # ---- performance ------------------------------------------------------
     with performance_tab:
