@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import gzip
 import json
 from copy import deepcopy
 
@@ -183,6 +184,18 @@ def test_hash_is_cross_platform_newline_stable(tmp_path):
     lf.write_bytes(b"case,status\n1,open\n")
     crlf.write_bytes(b"case,status\r\n1,open\r\n")
     assert iw.canonical_sha256(lf) == iw.canonical_sha256(crlf)
+
+
+def test_gzip_hash_uses_logical_content_not_archive_metadata(tmp_path):
+    first = tmp_path / "first.csv.gz"
+    second = tmp_path / "second.csv.gz"
+    payload = b"case,status\n1,open\n"
+    with gzip.GzipFile(filename=first, mode="wb", mtime=0) as handle:
+        handle.write(payload)
+    with gzip.GzipFile(filename=second, mode="wb", mtime=999) as handle:
+        handle.write(payload)
+    assert first.read_bytes() != second.read_bytes()
+    assert iw.canonical_sha256(first) == iw.canonical_sha256(second)
 
 
 def test_metrics_hash_excludes_volatile_runtime_metadata(tmp_path):

@@ -39,7 +39,7 @@ matching the existing `card-grid` component in `portfolio-site/index.html`.
   <div class="card-body">
     <div class="card-head">
       <p class="kicker">ANOMALY DETECTION · FINANCIAL CRIME</p>
-      <p class="card-tests">182 tests ✓</p>
+      <p class="card-tests">183 tests ✓</p>
     </div>
     <h3>Transaction Monitoring</h3>
     <p class="outcome">Every planted case found, then governed as one investigation per alerted entity with a fail-closed release docket.</p>
@@ -63,7 +63,7 @@ canvas-only, so it needs resizing but no cropping.
 **Command palette entry** (`main.js` uses repo name + test count):
 
 ```js
-{ label: 'Transaction Monitoring', hint: '182 tests', url: 'https://github.com/KushPatel29/aml-transaction-monitoring' },
+{ label: 'Transaction Monitoring', hint: '183 tests', url: 'https://github.com/KushPatel29/aml-transaction-monitoring' },
 ```
 
 ---

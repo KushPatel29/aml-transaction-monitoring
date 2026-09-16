@@ -11,6 +11,7 @@ investigator register or used to select a workflow state or disposition.
 
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 from copy import deepcopy
@@ -47,8 +48,14 @@ GROUND_TRUTH_COLUMNS = {
 
 
 def canonical_sha256(path: Path) -> str:
-    payload = path.read_bytes()
+    if path.suffix.lower() == ".gz":
+        with gzip.open(path, "rb") as handle:
+            payload = handle.read()
+    else:
+        payload = path.read_bytes()
     if path.suffix.lower() in {".json", ".csv", ".md", ".py", ".sql"}:
+        payload = payload.replace(b"\r\n", b"\n")
+    elif path.suffix.lower() == ".gz":
         payload = payload.replace(b"\r\n", b"\n")
     return hashlib.sha256(payload).hexdigest()
 
