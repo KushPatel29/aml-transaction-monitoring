@@ -61,14 +61,20 @@ def canonical_sha256(path: Path) -> str:
 
 
 def decision_metrics_sha256(path: Path = METRICS_PATH) -> str:
-    """Hash decision evidence while excluding timestamps and benchmark timings."""
+    """Hash only the operating-point evidence consumed by this workflow."""
     metrics = json.loads(path.read_text(encoding="utf-8"))
-    for key in ("generated_at_utc", "python_version", "runtime_seconds"):
-        metrics.pop(key, None)
-    for model in metrics.get("model_bakeoff", []):
-        model.pop("fit_score_seconds", None)
+    operating_point = metrics["operating_point"]
+    entity_level = operating_point["entity_level"]
+    decision_evidence = {
+        "threshold": operating_point["threshold"],
+        "entity_level": {
+            "alerts": entity_level["alerts"],
+            "alerts_per_week": entity_level["alerts_per_week"],
+            "analyst_capacity_per_week": entity_level["analyst_capacity_per_week"],
+        },
+    }
     payload = json.dumps(
-        metrics, sort_keys=True, separators=(",", ":"), ensure_ascii=False
+        decision_evidence, sort_keys=True, separators=(",", ":"), ensure_ascii=False
     ).encode("utf-8")
     return hashlib.sha256(payload).hexdigest()
 
@@ -374,8 +380,8 @@ def build_release(
             for path in required
         },
         "metrics_hash_scope": (
-            "Decision evidence only; generated timestamps, Python version and runtime "
-            "benchmarks are excluded from the metrics digest."
+            "Only the operating threshold, entity alerts, alerts per week and analyst "
+            "capacity consumed by AML-INV-01 are included in the metrics digest."
         ),
         "ground_truth_use": (
             "Evaluation labels remain in pipeline evidence and are excluded from workflow "

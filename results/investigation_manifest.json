@@ -8,10 +8,10 @@
     "data/generated/cases.csv.gz": "de51c1a83207c57b4daaade980bfc5152a8992256a7ed218865100de2ac4ef59",
     "data/generated/counterparties.csv.gz": "bd022a6263cf9fb010cc17eec986c8302ae3ba61c778974ffebe5c4d0b7f1bd9",
     "data/generated/entities.csv.gz": "6328bf89e943407150c79c77a92b8dcef2f691205ad4fa5a7f86064e385c7d84",
-    "results/metrics.json": "60ab1f8859f8fa898982d3f2f63e8cf794f6b38d40004ca715bcfd62070b39da",
+    "results/metrics.json": "cf411edfe2618016ec589aecff011cde7edb95d3593d747b44c2027fc3d0547c",
     "results/scored_transactions.csv.gz": "ed7d7133fd2e55974a3725b14c847282b2cf82214ef596f080654bddea277eb5"
   },
-  "metrics_hash_scope": "Decision evidence only; generated timestamps, Python version and runtime benchmarks are excluded from the metrics digest.",
+  "metrics_hash_scope": "Only the operating threshold, entity alerts, alerts per week and analyst capacity consumed by AML-INV-01 are included in the metrics digest.",
   "policy_sha256": "59a254e77552ce18632136484e0219ed87438d14741bb069264ce8b079220b44",
   "register_fingerprint": "b414125ef15fd539a27aad72ca495cbc83f69900338a656b1e49c282b223943f",
   "schema_version": 1
