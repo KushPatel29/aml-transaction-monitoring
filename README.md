@@ -20,6 +20,8 @@
 
 **Reviewer entry point:** [AML-INV-01 investigator decision packet](results/investigation_decision_packet.md) · [release gates](results/investigation_release_gates.csv) · [case register](results/investigation_case_register.csv)
 
+**Canadian context:** [how each rule maps to FINTRAC's reporting regime](docs/CANADIAN_REGULATORY_MAPPING.md) · [a two-page analytic brief on one structuring case](results/analytic_brief_INV-ENT-01216.md)
+
 ---
 
 ## The numbers
@@ -266,6 +268,28 @@ deposit is under $10,000 on purpose — which is precisely why threshold reporti
 alone was never the whole answer.
 
 ![Recall by typology](docs/typology_recall.png)
+
+---
+
+## Canadian regulatory context
+
+A Canadian reporting entity answers two separate questions. Threshold reports
+(a large cash transaction report for $10,000 or more in cash, including amounts
+aggregated under FINTRAC's 24-hour rule) are filed whether or not anything is
+wrong. A suspicious transaction report has no dollar threshold: it is filed
+when there are reasonable grounds to suspect, as soon as practicable once the
+measures that establish them are done. The naive baseline above is the
+threshold test used as a suspicion detector, which is why it cannot see
+structuring.
+
+[`docs/CANADIAN_REGULATORY_MAPPING.md`](docs/CANADIAN_REGULATORY_MAPPING.md)
+maps each rule to FINTRAC's indicator categories and the report it relates to,
+and lists what the project does not cover (KYC and beneficial ownership,
+sanctions and PEP screening, both legs of a transfer, the filing decision).
+[`results/analytic_brief_INV-ENT-01216.md`](results/analytic_brief_INV-ENT-01216.md)
+works one structuring case the way an analyst would hand it to a reviewer:
+bottom line, key judgments with confidence levels, alternatives considered,
+reporting position and the gaps that decide it.
 
 ---
 
