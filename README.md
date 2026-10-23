@@ -316,7 +316,23 @@ the alert threshold is the highest that still catches 95% of the standard varian
 there, a rule fixed before the first run. The held-out half reports it:
 
 <!-- sanctions-screening:begin -->
-_The list has not been screened yet._
+List retrieved 2026-10-23 (1,450 entitys, 3,527 individuals, 731 ships; 9,345 names including aliases; SHA-256 `61a9064720d9`). Threshold **0.945**, chosen on the development half by the fixed rule (catch 95.0% of standard variants) and reported unchanged on the held-out half:
+
+| Customer name typed as | Names (held out) | Alerted |
+|---|---:|---:|
+| Exact | 600 | 99.2% |
+| Surname first | 600 | 99.8% |
+| Upper case, no accents | 600 | 99.0% |
+| One typo | 600 | 91.2% |
+| Another romanisation | 600 | 97.5% |
+| Patronymic dropped | 600 | 94.3% |
+| A listed alias (Latin) | 345 | 65.5% |
+| A listed alias (Cyrillic) | 600 | 100.0% |
+| Two typos *(stress)* | 600 | 89.2% |
+| Initial for given name *(stress)* | 600 | 92.3% |
+| **All standard variants** | | **94.9%** |
+
+On 4,000 synthetic Canadian customers the same threshold alerts on 0.1% (**10.0 per 10,000**); on 999 namesakes who share a listed surname but not the given name or birth year, 0.2%. Every alert is a review, not a finding.
 <!-- sanctions-screening:end -->
 
 What it is not: one list, not every list a reporting entity screens (the UN and
