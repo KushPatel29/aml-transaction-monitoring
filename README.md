@@ -316,7 +316,7 @@ the alert threshold is the highest that still catches 95% of the standard varian
 there, a rule fixed before the first run. The held-out half reports it:
 
 <!-- sanctions-screening:begin -->
-List retrieved 2026-10-23 (1,450 entitys, 3,527 individuals, 731 ships; 9,604 names including aliases; SHA-256 `61a9064720d9`). Threshold **0.950**, chosen on the development half by the fixed rule (catch 95.0% of standard variants) and reported unchanged on the held-out half:
+List retrieved 2026-10-23 (1,450 entities, 3,527 individuals, 731 ships; 9,604 names including aliases; SHA-256 `61a9064720d9`). Threshold **0.950**, chosen on the development half by the fixed rule (catch 95.0% of standard variants) and reported unchanged on the held-out half:
 
 | Customer name typed as | Names (held out) | Alerted |
 |---|---:|---:|
@@ -334,7 +334,7 @@ List retrieved 2026-10-23 (1,450 entitys, 3,527 individuals, 731 ships; 9,604 na
 
 On 4,000 synthetic Canadian customers the same threshold alerts on 0.1% (**10.0 per 10,000**); on 999 namesakes who share a listed surname but not the given name or birth year, 0.2%. Every alert is a review, not a finding.
 
-Not screened: 258 aliases written in a script other than Latin or Cyrillic (Persian, Chinese, Korean and others), which this matcher cannot romanise; their Latin-script forms are screened.
+Not screened: 258 aliases written in a script other than Latin or Cyrillic (Persian, Chinese, Korean and others), which this matcher cannot romanise.
 <!-- sanctions-screening:end -->
 
 What it is not: one list, not every list a reporting entity screens (the UN and

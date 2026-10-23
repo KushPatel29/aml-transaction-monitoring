@@ -324,6 +324,7 @@ def describe(xml: bytes, parties: list[Party]) -> dict:
         "names_not_screened_other_script": sum(
             script_of(n) == "other" for p in parties for n in p.names
         ),
+        "primary_names_by_script": dict(Counter(script_of(p.names[0]) for p in parties)),
         "aliases_by_script": dict(scripts),
         "with_birth_year": sum(p.birth_year is not None for p in parties),
         "countries_or_regimes": len({p.country for p in parties}),
@@ -679,11 +680,21 @@ def readme_block(result: dict) -> str:
     def pct(x: float) -> str:
         return f"{100 * x:.1f}%"
 
+    plural = {"individual": "individuals", "entity": "entities", "ship": "ships"}
     kinds = ", ".join(
-        f"{v:,} {k}{'s' if v != 1 else ''}" for k, v in sorted(meta["parties"].items())
+        f"{v:,} {k if v == 1 else plural.get(k, k + 's')}"
+        for k, v in sorted(meta["parties"].items())
     )
     names = meta["names_including_aliases"]
     unscreened = meta.get("names_not_screened_other_script", 0)
+    primaries = meta.get("primary_names_by_script", {})
+    latin_primary = primaries.get("latin", 0)
+    primary_line = (
+        f"{latin_primary:,} of {sum(primaries.values()):,} listed parties have a Latin-script "
+        f"primary name, which is screened."
+        if primaries
+        else ""
+    )
     target = pct(ev["rule"]["target_standard_recall_on_dev"])
     lines = [
         BEGIN,
@@ -713,7 +724,7 @@ def readme_block(result: dict) -> str:
         "",
         f"Not screened: {unscreened:,} aliases written in a script other than Latin or "
         f"Cyrillic (Persian, Chinese, Korean and others), which this matcher cannot "
-        f"romanise; their Latin-script forms are screened.",
+        f"romanise." + (f" {primary_line}" if primary_line else ""),
         END,
     ]
     return "\n".join(lines)

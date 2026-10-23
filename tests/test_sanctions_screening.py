@@ -204,4 +204,5 @@ def test_the_readme_block_is_written_from_the_result_alone(tmp_path, parties, ev
     text = readme.read_text(encoding="utf-8")
     assert text.startswith("before\n") and text.endswith("\nafter\n") and "STALE-BLOCK" not in text
     assert "per 10,000" in text and "held-out half" in text
+    assert "1 entity," in text and "5 individuals" in text and "entitys" not in text
     assert "has not been screened" in S.readme_block({})
