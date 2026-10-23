@@ -67,6 +67,9 @@ def structuring(frame: pd.DataFrame) -> set[str]:
 
 def large_cash_24h(frame: pd.DataFrame) -> set[str]:
     with sqlite3.connect(":memory:") as con:
+        # Building the index spills to a temporary file by default, and the
+        # verifier's root filesystem is read-only. Keep it in memory.
+        con.execute("pragma temp_store = memory")
         frame.to_sql("transactions", con, index=False)
         con.execute("create index ix_cash on transactions(entity_id, txn_epoch)")
         return {row[0] for row in con.execute(LCTR_SQL)}
