@@ -1,7 +1,7 @@
 {
   "source": "https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml",
   "source_page": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-  "retrieved_at": "2026-10-23T02:08:50+00:00",
+  "retrieved_at": "2026-10-23T02:14:50+00:00",
   "list": {
     "records": 5708,
     "parties": {
@@ -11,6 +11,10 @@
     },
     "names_including_aliases": 9604,
     "names_not_screened_other_script": 258,
+    "primary_names_by_script": {
+      "latin": 5703,
+      "cyrillic": 5
+    },
     "aliases_by_script": {
       "latin": 701,
       "cyrillic": 2937,

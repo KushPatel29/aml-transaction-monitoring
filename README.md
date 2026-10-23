@@ -334,7 +334,7 @@ List retrieved 2026-10-23 (1,450 entities, 3,527 individuals, 731 ships; 9,604 n
 
 On 4,000 synthetic Canadian customers the same threshold alerts on 0.1% (**10.0 per 10,000**); on 999 namesakes who share a listed surname but not the given name or birth year, 0.2%. Every alert is a review, not a finding.
 
-Not screened: 258 aliases written in a script other than Latin or Cyrillic (Persian, Chinese, Korean and others), which this matcher cannot romanise.
+Not screened: 258 aliases written in a script other than Latin or Cyrillic (Persian, Chinese, Korean and others), which this matcher cannot romanise. 5,703 of 5,708 listed parties have a Latin-script primary name, which is screened.
 <!-- sanctions-screening:end -->
 
 What it is not: one list, not every list a reporting entity screens (the UN and
