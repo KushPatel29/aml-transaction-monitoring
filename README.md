@@ -1,7 +1,8 @@
 # Transaction Monitoring & Anomaly Detection
 
 [![CI](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml)
-![Tests](https://img.shields.io/badge/tests-211%20passing-3B8C6E)
+[![Streaming on Kubernetes](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/streaming.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/streaming.yml)
+![Tests](https://img.shields.io/badge/tests-228%20passing-3B8C6E)
 ![SQL](https://img.shields.io/badge/SQL-window%20functions%20%2B%20parity%20contract-CC2927)
 ![Python](https://img.shields.io/badge/Python-scikit--learn%20%2B%20Streamlit-3776AB?logo=python&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
@@ -427,14 +428,78 @@ size of the optimism, reported rather than assumed away.
 
 ---
 
+## Real time, on Kubernetes
+
+Everything above runs over a year of transactions at once. A bank's monitoring
+sees them one at a time, out of order, sometimes twice, from consumers that
+crash. [`streaming/`](streaming/) runs two rules under those conditions:
+
+- **R1 structuring**, the batch rule with the batch thresholds: three or more
+  cash deposits between $7,500 and $9,999.99 within seven days.
+- **FINTRAC's 24-hour rule**: cash received totalling $10,000 or more within 24
+  consecutive hours is reported as one large cash transaction. The batch
+  pipeline did not have it. It is a reporting obligation, not a finding of
+  suspicion.
+
+A producer replays the 100,299 transactions into Redpanda (the Kafka API),
+keyed by entity and roughened the way real feeds are: 3% arrive up to six hours
+late and 496 arrive twice. The monitor keeps each entity's windows in event
+time. A late deposit re-evaluates every window it belongs to; a watermark sets
+aside anything more than 12 hours late rather than folding it into alerts
+already sent (none in this replay); duplicates are dropped by transaction ID,
+so a redelivered $6,000 deposit is not $12,000 of cash; deposits no future
+window can reach are evicted, so state stays bounded.
+
+The standard is the batch. On the same transactions the stream must flag
+exactly what the batch flags, and it does: **51 structuring deposits** across
+10 entities, and **1,270 cash transactions under the 24-hour rule** across 80
+entities. The batch side is not a copy: R1 is the pipeline's own
+`rule_structuring`, and the 24-hour rule is written separately as SQL.
+
+Delivery is at least once and alerts are idempotent. A partition's offset is
+committed only after its alerts are flushed; a replacement consumer rebuilds
+the windows by replaying the partition and publishes nothing until it passes
+the last commit; alerts are keyed by window on a compacted topic, so a repeat
+overwrites instead of adding.
+
+The [workflow](.github/workflows/streaming.yml) proves it on a cluster, weekly
+and on every change. [Terraform](streaming/terraform/main.tf) deploys to a kind
+cluster a Redpanda broker, the monitor as a two-replica consumer group
+(non-root, read-only root filesystem, a liveness probe on the poll loop, a
+disruption budget) and three jobs that `apply` waits on in order: create the
+topics, replay the year, verify. While the replay runs,
+[`chaos.sh`](streaming/chaos.sh) kills one monitor pod with SIGKILL, so there
+is no clean shutdown and no final commit. `terraform apply` succeeds only if
+the verifier, reading the alerts after the group has caught up, finds the
+stream identical to the batch.
+
+What it is not: production. One broker, no TLS or authentication, a cluster
+that lives for one CI run. A replacement consumer replays a partition from its
+start, where a production one would seek by timestamp to the oldest event a
+window can still reach. Two rules, not five.
+
+---
+
 ## Running it
 
 ```bash
 pip install -r requirements.txt
 python run_pipeline.py          # regenerates everything, ~46s
-pytest                          # 183 tests
+pytest                          # 228 tests
 streamlit run app/streamlit_app.py
 ```
+
+The streaming monitor needs a Kafka-compatible broker. With one on
+`localhost:9092`, from the repository root:
+
+```bash
+pip install -r streaming/requirements.txt
+python -m streaming topics && python -m streaming process &   # the monitor
+python -m streaming produce && python -m streaming verify      # replay, then compare
+```
+
+or deploy all of it to a cluster with `terraform -chdir=streaming/terraform apply`
+after building `streaming/Dockerfile`, as the workflow does.
 
 `run_pipeline.py --skip-generate` reuses the committed data. The dashboard reads
 the committed artefacts, so it starts cold without a pipeline run.
@@ -486,6 +551,11 @@ src/anomaly_model.py          entity-disjoint CV, model bake-off
 src/risk_scorer.py            blend, sweep, nested check, bootstrap
 src/cost_model.py             confusion, consolidation, naive baseline
 src/masking.py                identifier masking for anything rendered
+streaming/windows.py          event-time sliding windows: R1 and the 24-hour rule
+streaming/worker.py           per-partition state: watermark, dedupe, replay, eviction
+streaming/kafka_io.py         topics, producer, monitor and verifier on Kafka
+streaming/terraform/          Kubernetes deployment: broker, monitor, jobs
+streaming/chaos.sh            kills a monitor pod mid-stream
 governance/investigation_policy.json  versioned typologies, clocks and authority boundary
 governance/investigator_workflow.py   case register, graph, gates, hashes and fail-closed drill
 app/streamlit_app.py          triage + governed investigator console
@@ -493,7 +563,7 @@ docs/make_figures.py          the charts above, from results/
 results/metrics.json          every number in this README
 results/investigation_decision_packet.md  concise reviewer brief
 results/investigation_manifest.json       input hashes + register fingerprint
-tests/                        183 tests
+tests/                        228 tests
 ```
 
 ## Constraint traceability

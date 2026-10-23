@@ -1,0 +1,4 @@
+# The streaming image only: the batch pipeline does not need a Kafka client.
+confluent-kafka==2.16.0
+pandas==2.2.0
+numpy==1.26.3

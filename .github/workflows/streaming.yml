@@ -1,0 +1,123 @@
+name: Streaming on Kubernetes
+
+# Deploys the real-time monitor to a throwaway kind cluster with Terraform,
+# replays a year of transactions through Redpanda, kills one monitor pod
+# mid-stream, and passes only if the stream's alerts equal the batch rules'.
+# `terraform apply` waits on the verifier job, so a mismatch fails the apply.
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "streaming/**"
+      - "src/rules_engine.py"
+      - "config.py"
+      - "data/generated/transactions.csv.gz"
+      - ".github/workflows/streaming.yml"
+  pull_request:
+    paths:
+      - "streaming/**"
+      - ".github/workflows/streaming.yml"
+  schedule:
+    - cron: "40 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: streaming-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NAMESPACE: aml-stream
+  REDPANDA_IMAGE: docker.redpanda.com/redpandadata/redpanda:v24.2.7
+  TF_IN_AUTOMATION: "1"
+
+jobs:
+  kind:
+    name: Terraform → kind → Redpanda, with a pod killed mid-stream
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+          terraform_wrapper: false
+
+      - name: Terraform format and validate
+        working-directory: streaming/terraform
+        run: |
+          if ! terraform fmt -check -recursive; then
+            echo "::error title=terraform fmt::$(terraform fmt -diff -recursive | sed ':a;N;$!ba;s/%/%25/g;s/\n/%0A/g')"
+            exit 1
+          fi
+          terraform init -input=false
+          terraform validate
+
+      - name: Create a kind cluster
+        run: |
+          if ! command -v kind >/dev/null; then
+            curl -sSLo kind https://kind.sigs.k8s.io/dl/v0.24.0/kind-linux-amd64
+            sudo install kind /usr/local/bin/kind
+          fi
+          kind create cluster --name aml --wait 180s
+          kubectl cluster-info --context kind-aml
+
+      - name: Build the image and load both images into the cluster
+        run: |
+          docker build -f streaming/Dockerfile -t aml-stream:ci .
+          if ! docker pull "$REDPANDA_IMAGE"; then
+            echo "::error title=broker image::cannot pull $REDPANDA_IMAGE"; exit 1
+          fi
+          kind load docker-image aml-stream:ci "$REDPANDA_IMAGE" --name aml
+
+      - name: Deploy with Terraform while a monitor pod is killed mid-stream
+        working-directory: streaming/terraform
+        run: |
+          bash ../chaos.sh > "$RUNNER_TEMP/chaos.log" 2>&1 &
+          chaos=$!
+          terraform apply -input=false -auto-approve -var "redpanda_image=$REDPANDA_IMAGE"
+          wait "$chaos" || true
+          cat "$RUNNER_TEMP/chaos.log"
+
+      - name: The kill landed while the stream was running
+        run: |
+          grep -q '^killed ' "$RUNNER_TEMP/chaos.log" \
+            || { echo "::error title=chaos::$(cat "$RUNNER_TEMP/chaos.log")"; exit 1; }
+          kubectl -n "$NAMESPACE" logs deployment/monitor --all-containers --prefix 2>/dev/null \
+            | grep '"event": "assigned"' | tail -5
+
+      - name: Report
+        if: always()
+        run: |
+          annotate() {  # title, level, text: one multi-line annotation, readable from the API
+            printf '::%s title=%s::%s\n' "$2" "$1" "$(printf '%s' "$3" | tail -c 3500 | sed ':a;N;$!ba;s/%/%25/g;s/\n/%0A/g')"
+          }
+          verdict=$(kubectl -n "$NAMESPACE" logs job/verifier 2>/dev/null | grep '"event": "verified"' | tail -1)
+          produced=$(kubectl -n "$NAMESPACE" logs job/producer 2>/dev/null | grep '"produce_done"' | tail -1)
+          chaos=$(cat "$RUNNER_TEMP/chaos.log" 2>/dev/null)
+          {
+            echo "## Stream versus batch"
+            echo '```json'; echo "${verdict:-no verdict}"; echo '```'
+            echo "**Producer:** \`${produced:-not finished}\`"
+            echo
+            echo "**Chaos:** ${chaos:-not run}"
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$verdict" ] && echo "$verdict" | grep -q '"stream_equals_batch": true'; then
+            annotate verifier notice "$verdict"
+          else
+            annotate verifier error "${verdict:-no verdict}"
+            annotate verifier-log error "$(kubectl -n "$NAMESPACE" logs job/verifier 2>&1 | tail -20)"
+            annotate producer-log error "$(kubectl -n "$NAMESPACE" logs job/producer 2>&1 | tail -15)"
+            annotate topics-log error "$(kubectl -n "$NAMESPACE" logs job/topics 2>&1 | tail -15)"
+            annotate monitor-log error "$(kubectl -n "$NAMESPACE" logs deployment/monitor --all-containers 2>&1 | tail -25)"
+            annotate pods error "$(kubectl -n "$NAMESPACE" get pods -o wide 2>&1; kubectl -n "$NAMESPACE" get events --sort-by=.lastTimestamp 2>&1 | tail -20)"
+          fi
+
+      - name: Terraform destroy
+        if: always()
+        working-directory: streaming/terraform
+        run: terraform destroy -input=false -auto-approve -var "redpanda_image=$REDPANDA_IMAGE"
