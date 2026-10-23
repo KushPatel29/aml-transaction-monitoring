@@ -20,6 +20,8 @@ from typing import Any
 
 import pandas as pd
 
+from src.masking import mask_name
+
 ROOT = Path(__file__).resolve().parents[1]
 POLICY_PATH = ROOT / "governance" / "investigation_policy.json"
 RESULTS = ROOT / "results"
@@ -159,7 +161,10 @@ def build_case_register(
             {
                 "investigation_id": f"INV-{entity_id}",
                 "entity_id": entity_id,
-                "display_name": profile["display_name"],
+                # Initials, as the dashboard shows them: the register is a published
+                # artefact, and an investigator who needs the full name has the client
+                # file (docs/PRIVACY_IMPACT_ASSESSMENT.md, risk P3).
+                "display_name": mask_name(profile["display_name"]),
                 "entity_type": profile["entity_type"],
                 "segment": profile["segment"],
                 "priority": priority,

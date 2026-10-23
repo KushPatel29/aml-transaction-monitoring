@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml)
 [![Streaming on Kubernetes](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/streaming.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/streaming.yml)
-![Tests](https://img.shields.io/badge/tests-244%20passing-3B8C6E)
+![Tests](https://img.shields.io/badge/tests-270%20passing-3B8C6E)
 ![SQL](https://img.shields.io/badge/SQL-window%20functions%20%2B%20parity%20contract-CC2927)
 ![Python](https://img.shields.io/badge/Python-scikit--learn%20%2B%20Streamlit-3776AB?logo=python&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
@@ -21,7 +21,7 @@
 
 **Reviewer entry point:** [AML-INV-01 investigator decision packet](results/investigation_decision_packet.md) · [release gates](results/investigation_release_gates.csv) · [case register](results/investigation_case_register.csv)
 
-**Canadian context:** [how each rule maps to FINTRAC's reporting regime](docs/CANADIAN_REGULATORY_MAPPING.md) · [a two-page analytic brief on one structuring case](results/analytic_brief_INV-ENT-01216.md)
+**Canadian context:** [how each rule maps to FINTRAC's reporting regime](docs/CANADIAN_REGULATORY_MAPPING.md) · [a two-page analytic brief on one structuring case](results/analytic_brief_INV-ENT-01216.md) · [a privacy impact assessment under PIPEDA](docs/PRIVACY_IMPACT_ASSESSMENT.md)
 
 ---
 
@@ -285,8 +285,8 @@ structuring.
 
 [`docs/CANADIAN_REGULATORY_MAPPING.md`](docs/CANADIAN_REGULATORY_MAPPING.md)
 maps each rule to FINTRAC's indicator categories and the report it relates to,
-and lists what the project does not cover (KYC and beneficial ownership,
-PEP screening, both legs of a transfer, the filing decision). Sanctions
+and lists what the project does not cover (real client records and identity
+verification, PEP screening, both legs of a transfer, the filing decision). Sanctions
 screening is covered for one list, [below](#sanctions-screening-on-canadas-real-list).
 [`results/analytic_brief_INV-ENT-01216.md`](results/analytic_brief_INV-ENT-01216.md)
 works one structuring case the way an analyst would hand it to a reviewer:
@@ -480,6 +480,32 @@ FINTRAC prescription.
 
 ---
 
+## Privacy impact assessment
+
+A reporting entity could not run any of this on real clients until it could say
+what personal information the system holds, why, for how long and who sees it.
+[`docs/PRIVACY_IMPACT_ASSESSMENT.md`](docs/PRIVACY_IMPACT_ASSESSMENT.md) is that
+assessment under PIPEDA: the purposes and their legal footing (reporting to
+FINTRAC needs no consent, but the Act is no licence to collect more than it
+requires), an inventory of every data element, the data flow, findings against
+the ten fair information principles, and a risk register.
+
+- **The inventory is code.** [`governance/privacy_inventory.json`](governance/privacy_inventory.json)
+  puts each of 105 columns across 14 files in one of 9 classes and gives every
+  file a retention rule and an audience. A new file or column fails the build
+  until someone classifies it ([`tests/test_privacy_inventory.py`](tests/test_privacy_inventory.py)).
+- **Writing it found a gap.** The published case register carried customers'
+  full synthetic names while the dashboard showed only initials. The register
+  now goes through the dashboard's masking, and a test holds every name in it to
+  initials.
+- **It says what is not done.** 7 of 12 risks are handled in code and tested.
+  The other five are a privacy officer and an access-request procedure, a client
+  notice, single sign-on, a hosting-region decision and deletion after the
+  retention period (the streaming demo keeps its transaction topic forever).
+  Those belong to people and infrastructure, and the register says so.
+
+---
+
 ## Real time, on Kubernetes
 
 Everything above runs over a year of transactions at once. A bank's monitoring
@@ -537,7 +563,7 @@ window can still reach. Two rules, not five.
 ```bash
 pip install -r requirements.txt
 python run_pipeline.py          # regenerates everything, ~46s
-pytest                          # 244 tests
+pytest                          # 270 tests
 streamlit run app/streamlit_app.py
 ```
 
@@ -604,6 +630,8 @@ src/risk_scorer.py            blend, sweep, nested check, bootstrap
 src/cost_model.py             confusion, consolidation, naive baseline
 src/masking.py                identifier masking for anything rendered
 src/kyc.py                    customer risk rating, EDD triggers, beneficial ownership
+docs/PRIVACY_IMPACT_ASSESSMENT.md     PIPEDA assessment: inventory, principles, risk register
+governance/privacy_inventory.json     every column's class; every file's retention and audience
 streaming/windows.py          event-time sliding windows: R1 and the 24-hour rule
 streaming/worker.py           per-partition state: watermark, dedupe, replay, eviction
 streaming/kafka_io.py         topics, producer, monitor and verifier on Kafka
@@ -616,7 +644,7 @@ docs/make_figures.py          the charts above, from results/
 results/metrics.json          every number in this README
 results/investigation_decision_packet.md  concise reviewer brief
 results/investigation_manifest.json       input hashes + register fingerprint
-tests/                        244 tests
+tests/                        270 tests
 ```
 
 ## Constraint traceability
@@ -624,6 +652,7 @@ tests/                        244 tests
 | | Where |
 |---|---|
 | Synthetic only, disclaimer in README + app | `tests/test_no_pii_in_data.py`, `render_disclaimer()` |
+| Every data element classified, names masked in published outputs | `tests/test_privacy_inventory.py` |
 | SQL ↔ Python parity | `tests/test_sql_python_feature_parity.py` (17 columns, 100,299 rows) |
 | Every README number from `metrics.json` | `test_metrics_json_matches_the_committed_scored_output` |
 | One-command setup + CI | `run_pipeline.py`, `.github/workflows/ci.yml` |

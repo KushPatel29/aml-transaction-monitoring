@@ -13,6 +13,6 @@
   },
   "metrics_hash_scope": "Only the operating threshold, entity alerts, alerts per week and analyst capacity consumed by AML-INV-01 are included in the metrics digest.",
   "policy_sha256": "59a254e77552ce18632136484e0219ed87438d14741bb069264ce8b079220b44",
-  "register_fingerprint": "b414125ef15fd539a27aad72ca495cbc83f69900338a656b1e49c282b223943f",
+  "register_fingerprint": "5cd166a821c0d2dd1564dba4bdb53486d5cdd6f9e130fb9ca6fc3729a2fbf9f5",
   "schema_version": 1
 }

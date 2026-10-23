@@ -67,9 +67,12 @@ question has to be asked separately.
 
 ## What this project does not cover
 
-- **Know-your-client and beneficial ownership.** The synthetic data has no
-  conductor identity per deposit, no onboarding profile and no ownership
-  records, all of which a real STR decision leans on.
+- **Real client records.** The KYC profiles and ownership trees above are
+  synthetic and complete; there is no conductor identity per deposit and no
+  identity verification or document check, all of which a real STR decision
+  leans on. What the system would hold about real clients, and the privacy
+  risks of holding it, are in the
+  [privacy impact assessment](PRIVACY_IMPACT_ASSESSMENT.md).
 - **Most sanctions and all PEP and terrorist-property work.** Customer names
   are screened against one list, the Consolidated Canadian Autonomous Sanctions
   List ([README](../README.md#sanctions-screening-on-canadas-real-list)); not the

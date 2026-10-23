@@ -1,0 +1,255 @@
+{
+ "what": "Every data element this project holds, classified for the privacy impact assessment (docs/PRIVACY_IMPACT_ASSESSMENT.md). tests/test_privacy_inventory.py fails if a file or a column appears that is not classified here.",
+ "classes": {
+  "direct_identifier": {
+   "personal": true,
+   "sensitivity": "high",
+   "meaning": "names a person or business on its face",
+   "on_screen": "initials only (src/masking.py)"
+  },
+  "party_reference": {
+   "personal": true,
+   "sensitivity": "medium",
+   "meaning": "an internal key that points to one client or counterparty; personal because it links to the client file",
+   "on_screen": "type prefix and last four characters (src/masking.py)"
+  },
+  "event_reference": {
+   "personal": false,
+   "sensitivity": "low",
+   "meaning": "a transaction or investigation number analysts quote; it identifies an event, not a person",
+   "on_screen": "in full"
+  },
+  "financial_activity": {
+   "personal": true,
+   "sensitivity": "high",
+   "meaning": "amounts, counts and timing of a client's money movements, and the features derived from them",
+   "on_screen": "shown beside masked parties"
+  },
+  "account_attribute": {
+   "personal": true,
+   "sensitivity": "low",
+   "meaning": "client type, segment, channel, coarse region and account dates",
+   "on_screen": "shown"
+  },
+  "kyc_assessment": {
+   "personal": true,
+   "sensitivity": "high",
+   "meaning": "know-your-client facts and ratings: PEP status, adverse media, risk points and ratings, enhanced-due-diligence flags, beneficial ownership",
+   "on_screen": "analysts only"
+  },
+  "monitoring_output": {
+   "personal": true,
+   "sensitivity": "high",
+   "meaning": "what monitoring concluded about a client: rule hits, scores, case state, recommended next step",
+   "on_screen": "analysts only"
+  },
+  "synthetic_ground_truth": {
+   "personal": true,
+   "sensitivity": "high",
+   "meaning": "the planted answer key; exists only because the data is synthetic, would not exist in production, and never reaches an investigator output",
+   "on_screen": "never"
+  },
+  "generator_internal": {
+   "personal": true,
+   "sensitivity": "medium",
+   "meaning": "inputs the synthetic generator uses to make behaviour realistic (pay, rent); a reporting entity would not collect these for monitoring",
+   "on_screen": "never"
+  }
+ },
+ "columns": {
+  "R1_STRUCTURING": "monitoring_output",
+  "R2_LAYERING": "monitoring_output",
+  "R3_SMURFING": "monitoring_output",
+  "R4_ROUND_DOLLAR": "monitoring_output",
+  "R5_DORMANT": "monitoring_output",
+  "actual_monthly_inflow_cad": "financial_activity",
+  "adverse_media": "kyc_assessment",
+  "amount_cad": "financial_activity",
+  "amount_cents": "financial_activity",
+  "amount_involved_cad": "financial_activity",
+  "amount_zscore_entity": "financial_activity",
+  "baseline_mean_cad": "synthetic_ground_truth",
+  "case_id": "synthetic_ground_truth",
+  "case_state": "monitoring_output",
+  "cash_ratio_7d": "financial_activity",
+  "chains": "kyc_assessment",
+  "channel": "financial_activity",
+  "counterparty_age_days": "financial_activity",
+  "counterparty_entity_degree_asof": "financial_activity",
+  "counterparty_id": "party_reference",
+  "counterparty_type": "account_attribute",
+  "days_since_prev_txn": "financial_activity",
+  "decision_status": "monitoring_output",
+  "declared_monthly_inflow_cad": "kyc_assessment",
+  "direction": "financial_activity",
+  "directions": "financial_activity",
+  "display_name": "direct_identifier",
+  "distinct_counterparties_7d": "financial_activity",
+  "due_hours": "monitoring_output",
+  "edd_reasons": "kyc_assessment",
+  "edd_required": "kyc_assessment",
+  "effective_share": "kyc_assessment",
+  "entity_id": "party_reference",
+  "entity_type": "account_attribute",
+  "evidence_references": "monitoring_output",
+  "example_chain": "kyc_assessment",
+  "factors": "kyc_assessment",
+  "filing_status": "monitoring_output",
+  "first_seen": "financial_activity",
+  "first_txn_epoch": "synthetic_ground_truth",
+  "flagged_transactions": "financial_activity",
+  "fold": "monitoring_output",
+  "gap_days": "synthetic_ground_truth",
+  "home_region": "account_attribute",
+  "hour_of_day": "financial_activity",
+  "investigation_id": "event_reference",
+  "is_beneficial_owner": "kyc_assessment",
+  "is_cash": "financial_activity",
+  "is_round_amount": "financial_activity",
+  "is_suspicious": "synthetic_ground_truth",
+  "is_weekend": "financial_activity",
+  "isolation_forest_score": "monitoring_output",
+  "last_seen": "financial_activity",
+  "last_txn_epoch": "synthetic_ground_truth",
+  "max_risk_score": "monitoring_output",
+  "median_cad": "synthetic_ground_truth",
+  "model_component": "monitoring_output",
+  "n_rules_fired": "monitoring_output",
+  "n_senders": "synthetic_ground_truth",
+  "n_transactions": "synthetic_ground_truth",
+  "new_counterparty_ratio_7d": "financial_activity",
+  "next_review": "kyc_assessment",
+  "onboarding_channel": "account_attribute",
+  "onboarding_points": "kyc_assessment",
+  "onboarding_rating": "kyc_assessment",
+  "opened_date": "account_attribute",
+  "outbound_to_inbound_ratio_48h": "financial_activity",
+  "owned": "party_reference",
+  "owner": "party_reference",
+  "owner_opaque_jurisdiction": "kyc_assessment",
+  "owner_type": "kyc_assessment",
+  "payroll_base_cad": "generator_internal",
+  "pep_status": "kyc_assessment",
+  "person_id": "party_reference",
+  "prior_mean_cents": "financial_activity",
+  "prior_txn_count": "financial_activity",
+  "priority": "monitoring_output",
+  "reason_codes": "monitoring_output",
+  "recommended_next_step": "monitoring_output",
+  "refresh_points": "kyc_assessment",
+  "refresh_rating": "kyc_assessment",
+  "rent_cad": "generator_internal",
+  "retention": "synthetic_ground_truth",
+  "risk_score": "monitoring_output",
+  "rule_component": "monitoring_output",
+  "rules_fired": "monitoring_output",
+  "segment": "account_attribute",
+  "share": "kyc_assessment",
+  "shared_entity_degree": "financial_activity",
+  "span_days": "synthetic_ground_truth",
+  "total_amount_cad": "synthetic_ground_truth",
+  "transaction_id": "event_reference",
+  "transactions": "financial_activity",
+  "txn_count_30d": "financial_activity",
+  "txn_count_7d": "financial_activity",
+  "txn_datetime": "financial_activity",
+  "txn_epoch": "financial_activity",
+  "txn_sum_30d_cents": "financial_activity",
+  "txn_sum_7d_cents": "financial_activity",
+  "typical_amount_cad": "generator_internal",
+  "typology": "synthetic_ground_truth",
+  "typology_hypothesis": "monitoring_output",
+  "typology_variant": "synthetic_ground_truth",
+  "used_mule_pool": "synthetic_ground_truth",
+  "variant": "synthetic_ground_truth"
+ },
+ "files": {
+  "data/generated/entities.csv.gz": {
+   "rows": "one per client",
+   "audience": "monitoring system",
+   "retention": "at least five years (FINTRAC record keeping), then destroyed on a schedule",
+   "published": true
+  },
+  "data/generated/counterparties.csv.gz": {
+   "rows": "one per external counterparty",
+   "audience": "monitoring system",
+   "retention": "at least five years (FINTRAC record keeping), then destroyed on a schedule",
+   "published": true
+  },
+  "data/generated/transactions.csv.gz": {
+   "rows": "one per transaction",
+   "audience": "monitoring system",
+   "retention": "at least five years (FINTRAC record keeping), then destroyed on a schedule",
+   "published": true
+  },
+  "data/generated/cases.csv.gz": {
+   "rows": "one per planted case",
+   "audience": "model evaluation only (synthetic answer key)",
+   "retention": "not applicable: would not exist in production",
+   "published": true
+  },
+  "data/generated/kyc_profiles.csv.gz": {
+   "rows": "one per client",
+   "audience": "KYC and monitoring",
+   "retention": "at least five years (FINTRAC record keeping), then destroyed on a schedule after the business relationship ends",
+   "published": true
+  },
+  "data/generated/kyc_ownership.csv.gz": {
+   "rows": "one per ownership link",
+   "audience": "KYC",
+   "retention": "at least five years (FINTRAC record keeping), then destroyed on a schedule after the business relationship ends",
+   "published": true
+  },
+  "results/scored_transactions.csv.gz": {
+   "rows": "one per transaction",
+   "audience": "analysts (dashboard, masked)",
+   "retention": "at least five years (FINTRAC record keeping), then destroyed on a schedule",
+   "published": true
+  },
+  "results/investigation_case_register.csv": {
+   "rows": "one per alerted client",
+   "audience": "analysts and supervisors; published here with initials only",
+   "retention": "at least five years (FINTRAC record keeping), then destroyed on a schedule",
+   "published": true
+  },
+  "results/investigation_entity_graph.csv": {
+   "rows": "one per client-counterparty pair under investigation",
+   "audience": "analysts",
+   "retention": "at least five years (FINTRAC record keeping), then destroyed on a schedule",
+   "published": true
+  },
+  "results/kyc_customer_risk.csv": {
+   "rows": "one per client",
+   "audience": "KYC and AML compliance",
+   "retention": "at least five years (FINTRAC record keeping), then destroyed on a schedule after the business relationship ends",
+   "published": true
+  },
+  "results/kyc_beneficial_owners.csv": {
+   "rows": "one per business and owner",
+   "audience": "KYC and AML compliance",
+   "retention": "at least five years (FINTRAC record keeping), then destroyed on a schedule after the business relationship ends",
+   "published": true
+  },
+  "results/threshold_sweep.csv": {
+   "aggregate": true,
+   "rows": "one per score threshold",
+   "audience": "model governance",
+   "retention": "life of the model",
+   "published": true
+  },
+  "results/typology_evidence_catalogue.csv": {
+   "aggregate": true,
+   "rows": "one per typology",
+   "audience": "analysts",
+   "retention": "life of the policy",
+   "published": true
+  },
+  "results/investigation_release_gates.csv": {
+   "aggregate": true,
+   "rows": "one per release gate",
+   "audience": "model governance",
+   "retention": "life of the release",
+   "published": true
+  }
+ }
+}
