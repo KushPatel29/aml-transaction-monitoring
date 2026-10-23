@@ -160,6 +160,11 @@ STOP_TOKENS = frozenset(
         "jv",
         "ltda",
         "srl",
+        # Connectives the list writes inside an alias ("Katsiaryna or Katerina").
+        "or",
+        "also",
+        "known",
+        "as",
     }
 )
 
@@ -246,9 +251,34 @@ def _fields(record: ET.Element) -> dict[str, str]:
     return {child.tag.split("-")[0]: (child.text or "").strip() for child in record}
 
 
-def split_aliases(text: str) -> list[str]:
+def split_aliases(text: str, person: bool = False) -> list[str]:
+    """One alias per name. For people the list also joins aliases with commas
+    ("Galina ... LUKASHENKA, Halina ... LUKASHENKO"); an entity's comma can be part
+    of its name, so entities are not split there."""
     parts = re.split(r";|\n|\s/\s|\baka\b|\ba\.k\.a\.", text or "")
-    return [p.strip(" ,.") for p in parts if p.strip(" ,.")]
+    if person:
+        parts = [q for part in parts for q in part.split(",")]
+    return [q.strip(" ,.") for q in parts if q.strip(" ,.")]
+
+
+def script_of(name: str) -> str:
+    """latin, cyrillic or other. Only the first two are screened: an alias in
+    Persian, Chinese, Korean or Burmese script normalises to nothing here, and
+    is counted as not screened rather than silently matching nothing."""
+    scripts = set()
+    for char in name:
+        if char.isalpha():
+            label = unicodedata.name(char, "")
+            scripts.add(
+                "latin"
+                if label.startswith("LATIN")
+                else "cyrillic"
+                if label.startswith("CYRILLIC")
+                else "other"
+            )
+    if "other" in scripts or not scripts:
+        return "other"
+    return "cyrillic" if "cyrillic" in scripts else "latin"
 
 
 def parse_list(xml: bytes) -> list[Party]:
@@ -267,7 +297,7 @@ def parse_list(xml: bytes) -> list[Party]:
             kind, primary = ("ship" if ship else "entity"), entity
         else:
             continue
-        aliases = split_aliases(f.get("Aliases", ""))
+        aliases = split_aliases(f.get("Aliases", ""), person=bool(last or given))
         year = re.search(r"\b(1[89]\d\d|20\d\d)\b", f.get("DateOfBirthOrShipBuildDate", ""))
         parties.append(
             Party(
@@ -286,13 +316,14 @@ def describe(xml: bytes, parties: list[Party]) -> dict:
     """Aggregates only: what the run saw, never who."""
     root = ET.fromstring(xml)
     tags = Counter(child.tag.split("-")[0] for record in root.iter("record") for child in record)
-    scripts = Counter(
-        "cyrillic" if re.search("[Ѐ-ӿ]", n) else "latin" for p in parties for n in p.names[1:]
-    )
+    scripts = Counter(script_of(n) for p in parties for n in p.names[1:])
     return {
         "records": sum(1 for _ in root.iter("record")),
         "parties": Counter(p.kind for p in parties),
         "names_including_aliases": sum(len(p.names) for p in parties),
+        "names_not_screened_other_script": sum(
+            script_of(n) == "other" for p in parties for n in p.names
+        ),
         "aliases_by_script": dict(scripts),
         "with_birth_year": sum(p.birth_year is not None for p in parties),
         "countries_or_regimes": len({p.country for p in parties}),
@@ -311,6 +342,8 @@ def _keys(folded: tuple[str, ...]) -> set[str]:
     keys = set()
     for t in folded:
         if len(t) < 3:
+            # "Li Na", "Ri Il": a name of short tokens still needs a way in.
+            keys.add("w:" + t)
             continue
         consonants = re.sub(r"[aeiou]", "", t)
         keys |= {"p:" + t[:3], "s:" + t[-3:]}
@@ -332,6 +365,8 @@ class Index:
         index = cls(parties)
         for p_i, party in enumerate(parties):
             for name in party.names:
+                if script_of(name) == "other":
+                    continue
                 folded = tuple(fold(t) for t in tokens(name))
                 if not folded:
                     continue
@@ -441,10 +476,6 @@ def _typo(word: str, rng: random.Random) -> str:
     return word[:i] + rng.choice("aeiourstnlk") + word[i + 1 :]
 
 
-def _latin(name: str) -> bool:
-    return not re.search("[Ѐ-ӿ]", name)
-
-
 def variants(party: Party, rng: random.Random) -> dict[str, str]:
     """The forms a listed name takes when a customer types it. Only types that
     apply to this party are returned."""
@@ -475,8 +506,8 @@ def variants(party: Party, rng: random.Random) -> dict[str, str]:
         out["dropped_middle_name"] = f"{words[0]} {words[-1]}"
     if party.kind == "individual" and len(words) >= 2:
         out["initial_for_given_name"] = f"{words[0][0]}. {' '.join(words[1:])}"
-    latin_aliases = [a for a in party.names[1:] if _latin(a)]
-    cyrillic_aliases = [a for a in party.names[1:] if not _latin(a)]
+    latin_aliases = [a for a in party.names[1:] if script_of(a) == "latin"]
+    cyrillic_aliases = [a for a in party.names[1:] if script_of(a) == "cyrillic"]
     if latin_aliases:
         out["latin_alias"] = rng.choice(latin_aliases)
     if cyrillic_aliases:
@@ -652,6 +683,7 @@ def readme_block(result: dict) -> str:
         f"{v:,} {k}{'s' if v != 1 else ''}" for k, v in sorted(meta["parties"].items())
     )
     names = meta["names_including_aliases"]
+    unscreened = meta.get("names_not_screened_other_script", 0)
     target = pct(ev["rule"]["target_standard_recall_on_dev"])
     lines = [
         BEGIN,
@@ -678,6 +710,10 @@ def readme_block(result: dict) -> str:
         f"{test['hard_negatives']:,} namesakes who share a listed surname but not the given "
         f"name or birth year, {pct(test['hard_negative_alert_rate'])}. Every alert is a "
         f"review, not a finding.",
+        "",
+        f"Not screened: {unscreened:,} aliases written in a script other than Latin or "
+        f"Cyrillic (Persian, Chinese, Korean and others), which this matcher cannot "
+        f"romanise; their Latin-script forms are screened.",
         END,
     ]
     return "\n".join(lines)

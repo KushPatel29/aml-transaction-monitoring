@@ -1,7 +1,7 @@
 # Transaction Monitoring & Anomaly Detection
 
 [![CI](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml)
-![Tests](https://img.shields.io/badge/tests-206%20passing-3B8C6E)
+![Tests](https://img.shields.io/badge/tests-211%20passing-3B8C6E)
 ![SQL](https://img.shields.io/badge/SQL-window%20functions%20%2B%20parity%20contract-CC2927)
 ![Python](https://img.shields.io/badge/Python-scikit--learn%20%2B%20Streamlit-3776AB?logo=python&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)

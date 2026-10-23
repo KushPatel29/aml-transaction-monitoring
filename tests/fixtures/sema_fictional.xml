@@ -16,6 +16,7 @@
 		<Country-Pays>Testland / Pays-test</Country-Pays>
 		<LastName-NomDeFamille>Velichkova</LastName-NomDeFamille>
 		<GivenName-Prenom>Oksana Aleksandrovna</GivenName-Prenom>
+		<Aliases-Alias>Oksana or Oxana Velichkova; 奥克萨娜</Aliases-Alias>
 		<DateOfBirthOrShipBuildDate-DateDeNaissanceOuDateDeConstructionDuNavire>1979</DateOfBirthOrShipBuildDate-DateDeNaissanceOuDateDeConstructionDuNavire>
 		<Schedule-Annexe>1, Part 1</Schedule-Annexe>
 		<Item-NumeroDarticle>2</Item-NumeroDarticle>
@@ -25,7 +26,7 @@
 		<Country-Pays>Testland / Pays-test</Country-Pays>
 		<LastName-NomDeFamille>Ivashchenko</LastName-NomDeFamille>
 		<GivenName-Prenom>Bohdan Mykolayovych</GivenName-Prenom>
-		<Aliases-Alias>Богдан Миколайович Іващенко</Aliases-Alias>
+		<Aliases-Alias>Богдан Миколайович Іващенко; Bohdan Ivashchenko, Bogdan Nikolayevich Ivashenko</Aliases-Alias>
 		<DateOfBirthOrShipBuildDate-DateDeNaissanceOuDateDeConstructionDuNavire>1971-11-30</DateOfBirthOrShipBuildDate-DateDeNaissanceOuDateDeConstructionDuNavire>
 		<Schedule-Annexe>1, Part 1</Schedule-Annexe>
 		<Item-NumeroDarticle>3</Item-NumeroDarticle>
@@ -42,7 +43,7 @@
 	<record>
 		<Country-Pays>Testland / Pays-test</Country-Pays>
 		<EntityOrShip-EntiteOuNavire>Northwind Fictional Trading LLC</EntityOrShip-EntiteOuNavire>
-		<Aliases-Alias>OOO Nordvind Fiktiv; ООО Нордвинд Фиктив</Aliases-Alias>
+		<Aliases-Alias>OOO Nordvind Fiktiv; ООО Нордвинд Фиктив; Nordvind, Fiktiv and Partners</Aliases-Alias>
 		<Schedule-Annexe>1, Part 2</Schedule-Annexe>
 		<Item-NumeroDarticle>1</Item-NumeroDarticle>
 		<DateOfListing-DateDinscription>2022-05-08</DateOfListing-DateDinscription>
@@ -55,5 +56,13 @@
 		<Schedule-Annexe>1, Part 3</Schedule-Annexe>
 		<Item-NumeroDarticle>1</Item-NumeroDarticle>
 		<DateOfListing-DateDinscription>2024-02-23</DateOfListing-DateDinscription>
+	</record>
+	<record>
+		<Country-Pays>Elsewhere / Ailleurs</Country-Pays>
+		<LastName-NomDeFamille>Qo</LastName-NomDeFamille>
+		<GivenName-Prenom>Ru</GivenName-Prenom>
+		<Schedule-Annexe>1, Part 1</Schedule-Annexe>
+		<Item-NumeroDarticle>2</Item-NumeroDarticle>
+		<DateOfListing-DateDinscription>2024-06-01</DateOfListing-DateDinscription>
 	</record>
 </data-set>
