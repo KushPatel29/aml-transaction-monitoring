@@ -1,7 +1,7 @@
 {
   "source": "https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml",
   "source_page": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-  "retrieved_at": "2026-10-23T01:58:19+00:00",
+  "retrieved_at": "2026-10-23T02:08:50+00:00",
   "list": {
     "records": 5708,
     "parties": {
@@ -9,10 +9,12 @@
       "entity": 1450,
       "ship": 731
     },
-    "names_including_aliases": 9345,
+    "names_including_aliases": 9604,
+    "names_not_screened_other_script": 258,
     "aliases_by_script": {
-      "latin": 752,
-      "cyrillic": 2885
+      "latin": 701,
+      "cyrillic": 2937,
+      "other": 258
     },
     "with_birth_year": 1875,
     "countries_or_regimes": 19,
@@ -53,58 +55,8 @@
         "initial_for_given_name"
       ]
     },
-    "threshold": 0.945,
+    "threshold": 0.95,
     "dev": {
-      "variants": {
-        "case_and_accents": {
-          "names": 600,
-          "recall": 0.9933333333333333
-        },
-        "cyrillic_alias": {
-          "names": 600,
-          "recall": 1.0
-        },
-        "dropped_middle_name": {
-          "names": 600,
-          "recall": 0.9483333333333334
-        },
-        "exact": {
-          "names": 600,
-          "recall": 1.0
-        },
-        "initial_for_given_name": {
-          "names": 600,
-          "recall": 0.9333333333333333
-        },
-        "latin_alias": {
-          "names": 326,
-          "recall": 0.6625766871165644
-        },
-        "one_typo": {
-          "names": 600,
-          "recall": 0.9183333333333333
-        },
-        "reordered": {
-          "names": 600,
-          "recall": 0.9983333333333333
-        },
-        "transliteration": {
-          "names": 600,
-          "recall": 0.97
-        },
-        "two_typos": {
-          "names": 600,
-          "recall": 0.8983333333333333
-        }
-      },
-      "standard_recall": 0.9529385771100309,
-      "customers": 4000,
-      "customer_alert_rate": 0.00225,
-      "alerts_per_10k_customers": 22.5,
-      "hard_negatives": 1000,
-      "hard_negative_alert_rate": 0.007
-    },
-    "test": {
       "variants": {
         "case_and_accents": {
           "names": 600,
@@ -116,23 +68,23 @@
         },
         "dropped_middle_name": {
           "names": 600,
-          "recall": 0.9433333333333334
+          "recall": 0.9233333333333333
         },
         "exact": {
           "names": 600,
-          "recall": 0.9916666666666667
+          "recall": 0.9966666666666667
         },
         "initial_for_given_name": {
           "names": 600,
-          "recall": 0.9233333333333333
+          "recall": 0.9433333333333334
         },
         "latin_alias": {
-          "names": 345,
-          "recall": 0.6550724637681159
+          "names": 255,
+          "recall": 0.996078431372549
         },
         "one_typo": {
           "names": 600,
-          "recall": 0.9116666666666666
+          "recall": 0.9016666666666666
         },
         "reordered": {
           "names": 600,
@@ -144,10 +96,60 @@
         },
         "two_typos": {
           "names": 600,
-          "recall": 0.8916666666666667
+          "recall": 0.8883333333333333
         }
       },
-      "standard_recall": 0.9487348734873488,
+      "standard_recall": 0.9708193041526375,
+      "customers": 4000,
+      "customer_alert_rate": 0.002,
+      "alerts_per_10k_customers": 20.0,
+      "hard_negatives": 1000,
+      "hard_negative_alert_rate": 0.006
+    },
+    "test": {
+      "variants": {
+        "case_and_accents": {
+          "names": 600,
+          "recall": 0.9983333333333333
+        },
+        "cyrillic_alias": {
+          "names": 600,
+          "recall": 1.0
+        },
+        "dropped_middle_name": {
+          "names": 600,
+          "recall": 0.92
+        },
+        "exact": {
+          "names": 600,
+          "recall": 0.9966666666666667
+        },
+        "initial_for_given_name": {
+          "names": 600,
+          "recall": 0.9283333333333333
+        },
+        "latin_alias": {
+          "names": 261,
+          "recall": 1.0
+        },
+        "one_typo": {
+          "names": 600,
+          "recall": 0.9
+        },
+        "reordered": {
+          "names": 600,
+          "recall": 1.0
+        },
+        "transliteration": {
+          "names": 600,
+          "recall": 0.9766666666666667
+        },
+        "two_typos": {
+          "names": 600,
+          "recall": 0.85
+        }
+      },
+      "standard_recall": 0.9719793768213405,
       "customers": 4000,
       "customer_alert_rate": 0.001,
       "alerts_per_10k_customers": 10.0,
@@ -157,92 +159,92 @@
     "curve_on_dev": [
       {
         "threshold": 0.8,
-        "dev_standard_recall": 0.9695095006628369,
-        "dev_alerts_per_10k_customers": 4472.5
+        "dev_standard_recall": 0.9961840628507295,
+        "dev_alerts_per_10k_customers": 4540.0
       },
       {
         "threshold": 0.81,
-        "dev_standard_recall": 0.9692885550154662,
-        "dev_alerts_per_10k_customers": 3502.5
+        "dev_standard_recall": 0.9957351290684624,
+        "dev_alerts_per_10k_customers": 3565.0
       },
       {
         "threshold": 0.82,
-        "dev_standard_recall": 0.9692885550154662,
-        "dev_alerts_per_10k_customers": 2732.5
+        "dev_standard_recall": 0.9957351290684624,
+        "dev_alerts_per_10k_customers": 2795.0
       },
       {
         "threshold": 0.83,
-        "dev_standard_recall": 0.9692885550154662,
-        "dev_alerts_per_10k_customers": 2115.0
+        "dev_standard_recall": 0.9955106621773289,
+        "dev_alerts_per_10k_customers": 2162.5
       },
       {
         "threshold": 0.84,
-        "dev_standard_recall": 0.9684047724259832,
-        "dev_alerts_per_10k_customers": 1547.5
+        "dev_standard_recall": 0.9946127946127946,
+        "dev_alerts_per_10k_customers": 1575.0
       },
       {
         "threshold": 0.85,
-        "dev_standard_recall": 0.9681838267786125,
-        "dev_alerts_per_10k_customers": 1067.5
+        "dev_standard_recall": 0.9946127946127946,
+        "dev_alerts_per_10k_customers": 1090.0
       },
       {
         "threshold": 0.86,
-        "dev_standard_recall": 0.9673000441891295,
-        "dev_alerts_per_10k_customers": 762.5
+        "dev_standard_recall": 0.9934904601571268,
+        "dev_alerts_per_10k_customers": 777.5
       },
       {
         "threshold": 0.87,
-        "dev_standard_recall": 0.9670790985417588,
-        "dev_alerts_per_10k_customers": 512.5
+        "dev_standard_recall": 0.9928170594837261,
+        "dev_alerts_per_10k_customers": 522.5
       },
       {
         "threshold": 0.88,
-        "dev_standard_recall": 0.9666372072470172,
-        "dev_alerts_per_10k_customers": 372.5
+        "dev_standard_recall": 0.9921436588103255,
+        "dev_alerts_per_10k_customers": 382.5
       },
       {
         "threshold": 0.89,
-        "dev_standard_recall": 0.9664162615996464,
-        "dev_alerts_per_10k_customers": 260.0
+        "dev_standard_recall": 0.9916947250280583,
+        "dev_alerts_per_10k_customers": 270.0
       },
       {
         "threshold": 0.9,
-        "dev_standard_recall": 0.9655324790101635,
-        "dev_alerts_per_10k_customers": 175.0
+        "dev_standard_recall": 0.990347923681257,
+        "dev_alerts_per_10k_customers": 177.5
       },
       {
         "threshold": 0.91,
-        "dev_standard_recall": 0.964206805125939,
+        "dev_standard_recall": 0.9890011223344557,
         "dev_alerts_per_10k_customers": 115.0
       },
       {
         "threshold": 0.92,
-        "dev_standard_recall": 0.9635439681838268,
+        "dev_standard_recall": 0.9878787878787879,
         "dev_alerts_per_10k_customers": 77.5
       },
       {
         "threshold": 0.93,
-        "dev_standard_recall": 0.9569155987627044,
-        "dev_alerts_per_10k_customers": 45.0
+        "dev_standard_recall": 0.9811447811447811,
+        "dev_alerts_per_10k_customers": 42.5
       },
       {
         "threshold": 0.94,
-        "dev_standard_recall": 0.9542642509942554,
-        "dev_alerts_per_10k_customers": 27.5
+        "dev_standard_recall": 0.978675645342312,
+        "dev_alerts_per_10k_customers": 25.0
       },
       {
         "threshold": 0.95,
-        "dev_standard_recall": 0.9463102076889085,
+        "dev_standard_recall": 0.9708193041526375,
         "dev_alerts_per_10k_customers": 20.0
       },
       {
         "threshold": 0.96,
-        "dev_standard_recall": 0.8921785240830755,
-        "dev_alerts_per_10k_customers": 10.0
+        "dev_standard_recall": 0.9169472502805837,
+        "dev_alerts_per_10k_customers": 7.5
       },
       {
         "threshold": 0.97,
-        "dev_standard_recall": 0.882235969951392,
+        "dev_standard_recall": 0.9075196408529742,
         "dev_alerts_per_10k_customers": 5.0
       }
     ]
