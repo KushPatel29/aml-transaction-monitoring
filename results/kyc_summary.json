@@ -1,0 +1,92 @@
+{
+  "as_of": "2026-07-31",
+  "customers": 1500,
+  "onboarding": {
+    "Low": 1132,
+    "Medium": 271,
+    "High": 97
+  },
+  "refresh": {
+    "Low": 1069,
+    "Medium": 300,
+    "High": 131
+  },
+  "migration_onboarding_to_refresh": {
+    "Low": {
+      "Low": 1069,
+      "Medium": 62,
+      "High": 1
+    },
+    "Medium": {
+      "Low": 0,
+      "Medium": 238,
+      "High": 33
+    },
+    "High": {
+      "Low": 0,
+      "Medium": 0,
+      "High": 97
+    }
+  },
+  "edd_required": 132,
+  "edd_by_reason": {
+    "circular ownership": 1,
+    "foreign PEP": 4,
+    "high risk": 131,
+    "no individual owns or controls 25%": 4
+  },
+  "pep": {
+    "none": 1488,
+    "domestic_pep_or_hio": 8,
+    "foreign_pep": 4
+  },
+  "planted_case_customers": 60,
+  "planted_high_at_onboarding": 4,
+  "planted_high_at_refresh": 11,
+  "alerted_customers": 89,
+  "businesses": 450,
+  "businesses_layered": 188,
+  "businesses_opaque_jurisdiction": 51,
+  "businesses_no_25pct_owner": 4,
+  "businesses_circular": 1,
+  "beneficial_owner_links": 633,
+  "persons_owning_two_or_more_businesses": 16,
+  "policy": {
+    "points": {
+      "business": 1,
+      "segment": null,
+      "domestic_pep_or_hio": 2,
+      "non_face_to_face": 1,
+      "adverse_media": 3,
+      "layered_ownership": 2,
+      "opaque_jurisdiction": 2,
+      "no_25pct_owner": 1,
+      "activity_over_3x_declared": 2,
+      "activity_over_1_5x_declared": 1,
+      "cash_over_half_of_inflows": 1,
+      "wires_over_fifth_of_outflows": 1,
+      "monitoring_alert": 2
+    },
+    "segment_risk": {
+      "salaried": 0,
+      "retired": 0,
+      "gig": 1,
+      "self_employed": 1,
+      "ecommerce": 1,
+      "wholesale": 1,
+      "professional_services": 2,
+      "retail_cash_intensive": 3
+    },
+    "bands": {
+      "High": 6,
+      "Medium": 3,
+      "Low": 0
+    },
+    "review_months": {
+      "High": 12,
+      "Medium": 24,
+      "Low": 36
+    },
+    "ubo_threshold": 0.25
+  }
+}

@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml)
 [![Streaming on Kubernetes](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/streaming.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/streaming.yml)
-![Tests](https://img.shields.io/badge/tests-228%20passing-3B8C6E)
+![Tests](https://img.shields.io/badge/tests-244%20passing-3B8C6E)
 ![SQL](https://img.shields.io/badge/SQL-window%20functions%20%2B%20parity%20contract-CC2927)
 ![Python](https://img.shields.io/badge/Python-scikit--learn%20%2B%20Streamlit-3776AB?logo=python&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
@@ -428,6 +428,58 @@ size of the optimism, reported rather than assumed away.
 
 ---
 
+## Know your customer: risk rating, EDD and beneficial ownership
+
+Monitoring asks whether a pattern is suspicious. KYC asks the prior question:
+who is this customer, who stands behind them, and how much scrutiny do they
+warrant? [`src/kyc.py`](src/kyc.py) does the three things the PCMLTFA asks of a
+reporting entity, on the same 1,500 synthetic customers: assess each client's
+risk, apply enhanced measures to high-risk clients, and for every business find
+each individual who directly or indirectly owns or controls 25% or more.
+
+The KYC files are synthetic and seeded: declared monthly activity, onboarding
+channel, a small share of politically exposed persons, adverse-media hits, and
+for each of the 450 businesses an ownership tree through up to three layers of
+holding companies, some in an opaque jurisdiction, with one loop built in on
+purpose. Owners are identifiers; nobody is named.
+
+- **Beneficial ownership** multiplies shares along every chain and adds a
+  person's chains together, so 15% held directly plus 20% of an 85% holding is
+  32%, over the line. 188 of 450 businesses are owned through at least one
+  holding company and 51 through an opaque jurisdiction; 4 have no individual
+  at 25%, which means verifying the most senior managing officer instead; the
+  loop is found and stopped rather than followed for ever. 16 people are
+  beneficial owners of two or more businesses.
+- **Customer risk rating** is points on stated factors: customer type and line
+  of business, PEP or head of an international organization, non-face-to-face
+  onboarding, adverse media and ownership complexity, then at the yearly refresh
+  declared against actual activity, cash share, wire share and whether
+  monitoring alerted. A foreign PEP is high risk whatever the points. Every
+  rating carries its reasons, and the weights and bands were set before looking
+  at which customers carry planted cases.
+
+| Customers rated | Low | Medium | High |
+|---|---:|---:|---:|
+| At onboarding | 1,132 | 271 | 97 |
+| At the refresh | 1,069 | 300 | 131 |
+
+That leaves 131 customers High after the refresh (97 at onboarding), each with
+enhanced measures and a 12-month review; Medium is reviewed every 24 months,
+Low every 36.
+
+What it shows: a risk rating is not a detector.
+4 of the 60 planted-case customers were High at onboarding, because a KYC file
+says little about what a customer will do, and 11 at the refresh. Monitoring found all 60. An alert on its
+own is worth 2 points, by design: an alert is a question, and the rating should
+move on the answer, a disposition, which this project never makes. What the
+rating decides is how hard to look and how often.
+
+What it is not: no identity verification or document checks, no real PEP or
+adverse-media lists, and review cycles that are a policy choice rather than a
+FINTRAC prescription.
+
+---
+
 ## Real time, on Kubernetes
 
 Everything above runs over a year of transactions at once. A bank's monitoring
@@ -485,7 +537,7 @@ window can still reach. Two rules, not five.
 ```bash
 pip install -r requirements.txt
 python run_pipeline.py          # regenerates everything, ~46s
-pytest                          # 228 tests
+pytest                          # 244 tests
 streamlit run app/streamlit_app.py
 ```
 
@@ -551,6 +603,7 @@ src/anomaly_model.py          entity-disjoint CV, model bake-off
 src/risk_scorer.py            blend, sweep, nested check, bootstrap
 src/cost_model.py             confusion, consolidation, naive baseline
 src/masking.py                identifier masking for anything rendered
+src/kyc.py                    customer risk rating, EDD triggers, beneficial ownership
 streaming/windows.py          event-time sliding windows: R1 and the 24-hour rule
 streaming/worker.py           per-partition state: watermark, dedupe, replay, eviction
 streaming/kafka_io.py         topics, producer, monitor and verifier on Kafka
@@ -563,7 +616,7 @@ docs/make_figures.py          the charts above, from results/
 results/metrics.json          every number in this README
 results/investigation_decision_packet.md  concise reviewer brief
 results/investigation_manifest.json       input hashes + register fingerprint
-tests/                        228 tests
+tests/                        244 tests
 ```
 
 ## Constraint traceability

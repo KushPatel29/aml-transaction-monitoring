@@ -51,6 +51,16 @@ jobs:
             results/investigation_decision_packet.md \
             || (echo "::error::investigator evidence is not reproducible" && exit 1)
 
+      # KYC reads the pipeline's outputs and seeds its own synthetic files, so a
+      # rerun must reproduce the committed ratings and ownership byte for byte.
+      - name: Rerun KYC and assert it is reproducible
+        run: |
+          python -m src.kyc
+          git diff --exit-code --stat -- data/generated/kyc_profiles.csv.gz \
+            data/generated/kyc_ownership.csv.gz results/kyc_customer_risk.csv \
+            results/kyc_beneficial_owners.csv results/kyc_summary.json \
+            || (echo "::error::KYC outputs are not reproducible" && exit 1)
+
       - name: Run the test suite
         run: pytest -q
 

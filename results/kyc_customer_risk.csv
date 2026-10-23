@@ -1,0 +1,1501 @@
+entity_id,entity_type,segment,pep_status,onboarding_points,onboarding_rating,refresh_points,refresh_rating,declared_monthly_inflow_cad,actual_monthly_inflow_cad,factors,edd_required,edd_reasons,next_review
+ENT-00001,individual,salaried,none,0,Low,0,Low,8400.0,4431.42,,False,,2029-07-31
+ENT-00002,individual,salaried,none,0,Low,0,Low,8900.0,4421.09,,False,,2029-07-31
+ENT-00003,individual,salaried,none,1,Low,1,Low,4800.0,5680.27,non_face_to_face +1,False,,2029-07-31
+ENT-00004,individual,salaried,none,0,Low,0,Low,6100.0,4751.06,,False,,2029-07-31
+ENT-00005,individual,salaried,none,0,Low,0,Low,6400.0,3098.22,,False,,2029-07-31
+ENT-00006,individual,salaried,none,1,Low,1,Low,4000.0,2493.76,non_face_to_face +1,False,,2029-07-31
+ENT-00007,individual,salaried,none,0,Low,0,Low,4000.0,5460.93,,False,,2029-07-31
+ENT-00008,individual,salaried,none,0,Low,0,Low,4000.0,3519.21,,False,,2029-07-31
+ENT-00009,individual,salaried,none,1,Low,1,Low,3400.0,4879.88,non_face_to_face +1,False,,2029-07-31
+ENT-00010,individual,salaried,none,1,Low,1,Low,5900.0,5298.85,non_face_to_face +1,False,,2029-07-31
+ENT-00011,individual,self_employed,none,1,Low,2,Low,3200.0,5917.27,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00012,individual,self_employed,none,1,Low,1,Low,9900.0,11838.37,segment:self_employed +1,False,,2029-07-31
+ENT-00013,individual,gig,none,2,Low,2,Low,10000.0,587.66,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00014,individual,retired,none,0,Low,0,Low,3500.0,1365.41,,False,,2029-07-31
+ENT-00015,individual,self_employed,none,1,Low,1,Low,3800.0,4949.4,segment:self_employed +1,False,,2029-07-31
+ENT-00016,individual,salaried,none,0,Low,0,Low,3300.0,3229.67,,False,,2029-07-31
+ENT-00017,individual,retired,none,0,Low,0,Low,14700.0,2366.55,,False,,2029-07-31
+ENT-00018,individual,salaried,none,1,Low,1,Low,6500.0,6785.58,non_face_to_face +1,False,,2029-07-31
+ENT-00019,individual,salaried,none,0,Low,0,Low,3400.0,3897.57,,False,,2029-07-31
+ENT-00020,individual,gig,none,1,Low,1,Low,2300.0,924.99,segment:gig +1,False,,2029-07-31
+ENT-00021,individual,gig,none,1,Low,1,Low,2600.0,580.0,segment:gig +1,False,,2029-07-31
+ENT-00022,individual,salaried,none,0,Low,0,Low,3900.0,4949.22,,False,,2029-07-31
+ENT-00023,individual,salaried,none,0,Low,0,Low,3100.0,3448.13,,False,,2029-07-31
+ENT-00024,individual,salaried,none,0,Low,0,Low,6100.0,6535.69,,False,,2029-07-31
+ENT-00025,individual,self_employed,none,2,Low,3,Medium,2500.0,7202.97,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-00026,individual,gig,none,1,Low,1,Low,2100.0,728.9,segment:gig +1,False,,2029-07-31
+ENT-00027,individual,self_employed,none,1,Low,2,Low,3400.0,7696.33,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00028,individual,self_employed,none,1,Low,1,Low,6300.0,3848.85,segment:self_employed +1,False,,2029-07-31
+ENT-00029,individual,salaried,none,1,Low,1,Low,2500.0,3187.33,non_face_to_face +1,False,,2029-07-31
+ENT-00030,individual,salaried,none,1,Low,1,Low,1900.0,2680.2,non_face_to_face +1,False,,2029-07-31
+ENT-00031,individual,salaried,none,1,Low,1,Low,4300.0,5152.04,non_face_to_face +1,False,,2029-07-31
+ENT-00032,individual,salaried,none,1,Low,1,Low,3200.0,4641.25,non_face_to_face +1,False,,2029-07-31
+ENT-00033,individual,self_employed,none,1,Low,1,Low,6500.0,5385.54,segment:self_employed +1,False,,2029-07-31
+ENT-00034,individual,salaried,none,1,Low,1,Low,3400.0,4670.53,non_face_to_face +1,False,,2029-07-31
+ENT-00035,individual,salaried,none,0,Low,0,Low,4500.0,4704.35,,False,,2029-07-31
+ENT-00036,individual,gig,none,1,Low,1,Low,9700.0,766.19,segment:gig +1,False,,2029-07-31
+ENT-00037,individual,salaried,none,1,Low,1,Low,8900.0,7704.14,non_face_to_face +1,False,,2029-07-31
+ENT-00038,individual,salaried,none,1,Low,1,Low,5600.0,5009.31,non_face_to_face +1,False,,2029-07-31
+ENT-00039,individual,salaried,none,1,Low,1,Low,4500.0,4722.23,non_face_to_face +1,False,,2029-07-31
+ENT-00040,individual,self_employed,none,1,Low,1,Low,4600.0,3360.77,segment:self_employed +1,False,,2029-07-31
+ENT-00041,individual,salaried,none,0,Low,0,Low,4200.0,3568.53,,False,,2029-07-31
+ENT-00042,individual,self_employed,none,1,Low,1,Low,6400.0,7122.96,segment:self_employed +1,False,,2029-07-31
+ENT-00043,individual,salaried,none,0,Low,0,Low,4700.0,4297.56,,False,,2029-07-31
+ENT-00044,individual,gig,none,1,Low,1,Low,4500.0,712.17,segment:gig +1,False,,2029-07-31
+ENT-00045,individual,retired,none,0,Low,0,Low,2300.0,1000.28,,False,,2029-07-31
+ENT-00046,individual,salaried,none,0,Low,1,Low,1800.0,2963.35,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00047,individual,self_employed,none,1,Low,2,Low,3600.0,5882.36,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00048,individual,retired,none,0,Low,0,Low,2500.0,748.66,,False,,2029-07-31
+ENT-00049,individual,salaried,none,0,Low,2,Low,7400.0,9570.67,monitoring_alert +2,False,,2029-07-31
+ENT-00050,individual,salaried,none,1,Low,1,Low,8700.0,6773.12,non_face_to_face +1,False,,2029-07-31
+ENT-00051,individual,salaried,none,0,Low,0,Low,4700.0,3927.98,,False,,2029-07-31
+ENT-00052,individual,salaried,none,0,Low,0,Low,2200.0,3134.79,,False,,2029-07-31
+ENT-00053,individual,salaried,none,0,Low,0,Low,6100.0,4879.81,,False,,2029-07-31
+ENT-00054,individual,salaried,none,0,Low,0,Low,2200.0,2723.72,,False,,2029-07-31
+ENT-00055,individual,gig,none,2,Low,2,Low,3600.0,726.06,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00056,individual,gig,none,2,Low,2,Low,4800.0,805.12,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00057,individual,gig,none,2,Low,2,Low,4600.0,609.64,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00058,individual,retired,none,0,Low,0,Low,4800.0,1520.26,,False,,2029-07-31
+ENT-00059,individual,salaried,none,0,Low,0,Low,2500.0,2225.86,,False,,2029-07-31
+ENT-00060,individual,salaried,none,0,Low,4,Medium,3800.0,17248.6,activity_over_3x_declared +2; monitoring_alert +2,False,,2028-07-31
+ENT-00061,individual,salaried,none,0,Low,0,Low,5200.0,5632.03,,False,,2029-07-31
+ENT-00062,individual,salaried,none,0,Low,0,Low,7600.0,6319.87,,False,,2029-07-31
+ENT-00063,individual,salaried,none,0,Low,0,Low,6300.0,7209.28,,False,,2029-07-31
+ENT-00064,individual,salaried,none,0,Low,0,Low,3500.0,5215.29,,False,,2029-07-31
+ENT-00065,individual,salaried,none,0,Low,0,Low,4500.0,5313.11,,False,,2029-07-31
+ENT-00066,individual,salaried,none,0,Low,0,Low,4300.0,3706.16,,False,,2029-07-31
+ENT-00067,individual,gig,none,1,Low,1,Low,7800.0,694.04,segment:gig +1,False,,2029-07-31
+ENT-00068,individual,salaried,none,0,Low,0,Low,3700.0,4049.96,,False,,2029-07-31
+ENT-00069,individual,salaried,none,1,Low,1,Low,2900.0,3211.22,non_face_to_face +1,False,,2029-07-31
+ENT-00070,individual,self_employed,none,1,Low,1,Low,6200.0,5740.59,segment:self_employed +1,False,,2029-07-31
+ENT-00071,individual,salaried,none,0,Low,0,Low,7100.0,6962.93,,False,,2029-07-31
+ENT-00072,individual,salaried,none,1,Low,1,Low,8700.0,7035.99,non_face_to_face +1,False,,2029-07-31
+ENT-00073,individual,salaried,none,0,Low,0,Low,3800.0,2660.85,,False,,2029-07-31
+ENT-00074,individual,salaried,none,1,Low,1,Low,3700.0,4439.19,non_face_to_face +1,False,,2029-07-31
+ENT-00075,individual,salaried,none,1,Low,1,Low,6600.0,5553.77,non_face_to_face +1,False,,2029-07-31
+ENT-00076,individual,salaried,none,0,Low,0,Low,2400.0,3015.79,,False,,2029-07-31
+ENT-00077,individual,self_employed,none,1,Low,1,Low,4700.0,4933.68,segment:self_employed +1,False,,2029-07-31
+ENT-00078,individual,gig,none,1,Low,1,Low,6900.0,612.87,segment:gig +1,False,,2029-07-31
+ENT-00079,individual,self_employed,none,1,Low,1,Low,5000.0,5361.01,segment:self_employed +1,False,,2029-07-31
+ENT-00080,individual,salaried,none,0,Low,0,Low,3500.0,4360.04,,False,,2029-07-31
+ENT-00081,individual,self_employed,none,1,Low,1,Low,6800.0,5964.62,segment:self_employed +1,False,,2029-07-31
+ENT-00082,individual,salaried,none,0,Low,0,Low,5400.0,4251.31,,False,,2029-07-31
+ENT-00083,individual,salaried,none,1,Low,1,Low,5100.0,4825.63,non_face_to_face +1,False,,2029-07-31
+ENT-00084,individual,self_employed,none,2,Low,2,Low,3800.0,5047.91,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00085,individual,salaried,none,0,Low,0,Low,5200.0,4514.76,,False,,2029-07-31
+ENT-00086,individual,salaried,none,0,Low,0,Low,4800.0,5005.99,,False,,2029-07-31
+ENT-00087,individual,salaried,none,0,Low,1,Low,2800.0,5131.55,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00088,individual,salaried,none,1,Low,1,Low,4600.0,3202.01,non_face_to_face +1,False,,2029-07-31
+ENT-00089,individual,salaried,none,1,Low,1,Low,8400.0,4721.25,non_face_to_face +1,False,,2029-07-31
+ENT-00090,individual,gig,none,1,Low,1,Low,5300.0,704.6,segment:gig +1,False,,2029-07-31
+ENT-00091,individual,salaried,none,0,Low,0,Low,3100.0,2331.67,,False,,2029-07-31
+ENT-00092,individual,salaried,none,1,Low,1,Low,5000.0,5450.44,non_face_to_face +1,False,,2029-07-31
+ENT-00093,individual,salaried,none,1,Low,1,Low,2800.0,3269.56,non_face_to_face +1,False,,2029-07-31
+ENT-00094,individual,self_employed,none,1,Low,2,Low,1200.0,2291.28,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00095,individual,salaried,none,1,Low,1,Low,2700.0,1736.36,non_face_to_face +1,False,,2029-07-31
+ENT-00096,individual,retired,none,1,Low,1,Low,5000.0,1764.77,non_face_to_face +1,False,,2029-07-31
+ENT-00097,individual,salaried,foreign_pep,1,High,1,High,2000.0,2942.55,non_face_to_face +1,True,"foreign PEP: source of funds, senior management approval, enhanced ongoing monitoring | high risk: enhanced measures and enhanced ongoing monitoring",2027-07-31
+ENT-00098,individual,salaried,none,0,Low,0,Low,6200.0,5091.02,,False,,2029-07-31
+ENT-00099,individual,salaried,none,0,Low,0,Low,8100.0,5567.88,,False,,2029-07-31
+ENT-00100,individual,gig,none,1,Low,1,Low,8300.0,965.52,segment:gig +1,False,,2029-07-31
+ENT-00101,individual,retired,none,0,Low,0,Low,4800.0,1098.89,,False,,2029-07-31
+ENT-00102,individual,retired,domestic_pep_or_hio,2,Low,2,Low,3100.0,1150.86,domestic_pep_or_hio +2,False,,2029-07-31
+ENT-00103,individual,salaried,none,0,Low,0,Low,4900.0,4648.38,,False,,2029-07-31
+ENT-00104,individual,salaried,none,0,Low,3,Medium,2700.0,4335.27,activity_over_1_5x_declared +1; monitoring_alert +2,False,,2028-07-31
+ENT-00105,individual,gig,none,2,Low,2,Low,3200.0,644.36,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00106,individual,retired,none,0,Low,0,Low,3100.0,1151.29,,False,,2029-07-31
+ENT-00107,individual,self_employed,none,2,Low,2,Low,4300.0,5241.43,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00108,individual,salaried,none,0,Low,0,Low,3000.0,2570.6,,False,,2029-07-31
+ENT-00109,individual,self_employed,none,2,Low,3,Medium,3600.0,5421.58,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-00110,individual,self_employed,none,1,Low,2,Low,2600.0,6291.17,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00111,individual,salaried,none,1,Low,1,Low,2900.0,2223.81,non_face_to_face +1,False,,2029-07-31
+ENT-00112,individual,self_employed,none,1,Low,2,Low,3200.0,5457.13,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00113,individual,salaried,none,0,Low,0,Low,3200.0,3391.12,,False,,2029-07-31
+ENT-00114,individual,salaried,none,0,Low,1,Low,2600.0,4052.6,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00115,individual,self_employed,none,1,Low,2,Low,3400.0,7141.14,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00116,individual,salaried,none,0,Low,0,Low,9200.0,8447.1,,False,,2029-07-31
+ENT-00117,individual,salaried,none,0,Low,0,Low,4400.0,4964.39,,False,,2029-07-31
+ENT-00118,individual,salaried,none,1,Low,1,Low,3600.0,3008.65,non_face_to_face +1,False,,2029-07-31
+ENT-00119,individual,retired,none,0,Low,0,Low,7500.0,1928.07,,False,,2029-07-31
+ENT-00120,individual,salaried,none,1,Low,4,Medium,4600.0,2331.82,non_face_to_face +1; wires_over_fifth_of_outflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00121,individual,salaried,none,1,Low,1,Low,4300.0,5120.76,non_face_to_face +1,False,,2029-07-31
+ENT-00122,individual,self_employed,none,2,Low,3,Medium,3300.0,5394.16,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-00123,individual,salaried,none,0,Low,0,Low,3000.0,2078.33,,False,,2029-07-31
+ENT-00124,individual,salaried,none,1,Low,1,Low,11600.0,11317.85,non_face_to_face +1,False,,2029-07-31
+ENT-00125,individual,self_employed,none,1,Low,5,Medium,6700.0,12790.41,segment:self_employed +1; activity_over_1_5x_declared +1; wires_over_fifth_of_outflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00126,individual,self_employed,none,1,Low,1,Low,3100.0,4131.8,segment:self_employed +1,False,,2029-07-31
+ENT-00127,individual,salaried,none,1,Low,1,Low,6600.0,4045.03,non_face_to_face +1,False,,2029-07-31
+ENT-00128,individual,salaried,none,0,Low,0,Low,4700.0,4237.66,,False,,2029-07-31
+ENT-00129,individual,salaried,none,0,Low,1,Low,1900.0,4143.59,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00130,individual,gig,none,1,Low,3,Medium,6700.0,698.49,segment:gig +1; monitoring_alert +2,False,,2028-07-31
+ENT-00131,individual,salaried,none,1,Low,1,Low,4300.0,5545.33,non_face_to_face +1,False,,2029-07-31
+ENT-00132,individual,salaried,none,0,Low,0,Low,5200.0,5484.47,,False,,2029-07-31
+ENT-00133,individual,salaried,none,0,Low,0,Low,7000.0,4685.28,,False,,2029-07-31
+ENT-00134,individual,salaried,none,0,Low,0,Low,11500.0,6012.4,,False,,2029-07-31
+ENT-00135,individual,self_employed,none,1,Low,1,Low,3700.0,4230.78,segment:self_employed +1,False,,2029-07-31
+ENT-00136,individual,self_employed,none,1,Low,2,Low,1700.0,4187.15,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00137,individual,self_employed,none,1,Low,1,Low,6900.0,3355.34,segment:self_employed +1,False,,2029-07-31
+ENT-00138,individual,self_employed,none,4,Medium,4,Medium,3300.0,3389.11,segment:self_employed +1; adverse_media +3,False,,2028-07-31
+ENT-00139,individual,salaried,none,0,Low,0,Low,2700.0,2289.46,,False,,2029-07-31
+ENT-00140,individual,salaried,none,1,Low,1,Low,6900.0,4895.84,non_face_to_face +1,False,,2029-07-31
+ENT-00141,individual,salaried,none,1,Low,1,Low,4800.0,4904.83,non_face_to_face +1,False,,2029-07-31
+ENT-00142,individual,salaried,none,0,Low,0,Low,4900.0,2636.47,,False,,2029-07-31
+ENT-00143,individual,salaried,none,0,Low,0,Low,3000.0,3281.24,,False,,2029-07-31
+ENT-00144,individual,gig,none,1,Low,1,Low,4100.0,682.53,segment:gig +1,False,,2029-07-31
+ENT-00145,individual,salaried,none,0,Low,0,Low,5600.0,4496.22,,False,,2029-07-31
+ENT-00146,individual,salaried,none,0,Low,1,Low,1900.0,2936.31,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00147,individual,self_employed,none,1,Low,1,Low,4900.0,5406.69,segment:self_employed +1,False,,2029-07-31
+ENT-00148,individual,salaried,none,0,Low,0,Low,3800.0,4884.31,,False,,2029-07-31
+ENT-00149,individual,salaried,none,0,Low,3,Medium,4600.0,10877.19,activity_over_1_5x_declared +1; monitoring_alert +2,False,,2028-07-31
+ENT-00150,individual,salaried,none,0,Low,0,Low,9900.0,6026.11,,False,,2029-07-31
+ENT-00151,individual,salaried,none,0,Low,0,Low,3500.0,3236.57,,False,,2029-07-31
+ENT-00152,individual,retired,none,0,Low,0,Low,7700.0,1739.08,,False,,2029-07-31
+ENT-00153,individual,salaried,none,1,Low,1,Low,8200.0,6117.03,non_face_to_face +1,False,,2029-07-31
+ENT-00154,individual,gig,none,2,Low,2,Low,4100.0,662.47,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00155,individual,salaried,none,1,Low,3,Medium,6500.0,8072.83,non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-00156,individual,salaried,none,0,Low,0,Low,1800.0,2022.66,,False,,2029-07-31
+ENT-00157,individual,salaried,none,0,Low,0,Low,6300.0,4202.54,,False,,2029-07-31
+ENT-00158,individual,self_employed,none,1,Low,1,Low,6600.0,5569.94,segment:self_employed +1,False,,2029-07-31
+ENT-00159,individual,salaried,none,1,Low,1,Low,3100.0,3277.94,non_face_to_face +1,False,,2029-07-31
+ENT-00160,individual,salaried,none,0,Low,0,Low,8300.0,4237.19,,False,,2029-07-31
+ENT-00161,individual,self_employed,none,1,Low,2,Low,2700.0,7312.07,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00162,individual,salaried,none,1,Low,1,Low,3300.0,4024.78,non_face_to_face +1,False,,2029-07-31
+ENT-00163,individual,self_employed,none,2,Low,2,Low,8000.0,6154.54,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00164,individual,salaried,none,0,Low,0,Low,5600.0,5055.89,,False,,2029-07-31
+ENT-00165,individual,salaried,none,0,Low,0,Low,3300.0,3028.29,,False,,2029-07-31
+ENT-00166,individual,salaried,none,0,Low,0,Low,3300.0,3809.98,,False,,2029-07-31
+ENT-00167,individual,salaried,none,0,Low,0,Low,7100.0,6085.47,,False,,2029-07-31
+ENT-00168,individual,salaried,none,1,Low,1,Low,4500.0,3369.24,non_face_to_face +1,False,,2029-07-31
+ENT-00169,individual,salaried,none,0,Low,0,Low,8600.0,7327.32,,False,,2029-07-31
+ENT-00170,individual,salaried,none,0,Low,0,Low,6400.0,6815.23,,False,,2029-07-31
+ENT-00171,individual,salaried,none,0,Low,0,Low,2300.0,2915.4,,False,,2029-07-31
+ENT-00172,individual,retired,none,0,Low,0,Low,12400.0,2313.36,,False,,2029-07-31
+ENT-00173,individual,self_employed,none,1,Low,2,Low,3100.0,5606.38,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00174,individual,self_employed,none,2,Low,2,Low,5800.0,7486.89,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00175,individual,self_employed,none,1,Low,1,Low,6000.0,6808.64,segment:self_employed +1,False,,2029-07-31
+ENT-00176,individual,salaried,none,0,Low,0,Low,3600.0,3824.8,,False,,2029-07-31
+ENT-00177,individual,gig,none,1,Low,1,Low,3000.0,764.71,segment:gig +1,False,,2029-07-31
+ENT-00178,individual,salaried,none,0,Low,0,Low,6500.0,7155.21,,False,,2029-07-31
+ENT-00179,individual,salaried,none,0,Low,0,Low,3600.0,3289.85,,False,,2029-07-31
+ENT-00180,individual,self_employed,none,2,Low,2,Low,5700.0,4452.89,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00181,individual,salaried,none,1,Low,1,Low,4800.0,5356.01,non_face_to_face +1,False,,2029-07-31
+ENT-00182,individual,self_employed,none,1,Low,1,Low,5200.0,3718.53,segment:self_employed +1,False,,2029-07-31
+ENT-00183,individual,salaried,none,0,Low,0,Low,5500.0,5798.0,,False,,2029-07-31
+ENT-00184,individual,salaried,none,0,Low,0,Low,5100.0,4992.16,,False,,2029-07-31
+ENT-00185,individual,self_employed,none,1,Low,1,Low,5800.0,7855.49,segment:self_employed +1,False,,2029-07-31
+ENT-00186,individual,retired,none,0,Low,0,Low,3100.0,1351.99,,False,,2029-07-31
+ENT-00187,individual,gig,none,1,Low,1,Low,4100.0,581.46,segment:gig +1,False,,2029-07-31
+ENT-00188,individual,self_employed,none,2,Low,3,Medium,2400.0,4899.62,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-00189,individual,salaried,none,1,Low,4,Medium,5300.0,13765.71,non_face_to_face +1; activity_over_1_5x_declared +1; monitoring_alert +2,False,,2028-07-31
+ENT-00190,individual,gig,none,1,Low,1,Low,3000.0,464.96,segment:gig +1,False,,2029-07-31
+ENT-00191,individual,salaried,none,0,Low,0,Low,3400.0,2972.42,,False,,2029-07-31
+ENT-00192,individual,salaried,none,0,Low,0,Low,5300.0,3417.89,,False,,2029-07-31
+ENT-00193,individual,salaried,none,1,Low,1,Low,3700.0,3966.83,non_face_to_face +1,False,,2029-07-31
+ENT-00194,individual,self_employed,none,1,Low,1,Low,5300.0,6002.24,segment:self_employed +1,False,,2029-07-31
+ENT-00195,individual,retired,none,0,Low,3,Medium,4300.0,1266.12,wires_over_fifth_of_outflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00196,individual,salaried,none,1,Low,1,Low,2500.0,2291.4,non_face_to_face +1,False,,2029-07-31
+ENT-00197,individual,salaried,none,1,Low,4,Medium,6200.0,8813.54,non_face_to_face +1; cash_over_half_of_inflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00198,individual,salaried,none,1,Low,1,Low,17700.0,8089.0,non_face_to_face +1,False,,2029-07-31
+ENT-00199,individual,salaried,none,0,Low,0,Low,5700.0,4541.58,,False,,2029-07-31
+ENT-00200,individual,salaried,none,1,Low,1,Low,2700.0,3965.77,non_face_to_face +1,False,,2029-07-31
+ENT-00201,individual,salaried,none,1,Low,1,Low,2800.0,2456.92,non_face_to_face +1,False,,2029-07-31
+ENT-00202,individual,salaried,none,0,Low,0,Low,2100.0,2635.8,,False,,2029-07-31
+ENT-00203,individual,salaried,none,0,Low,1,Low,3100.0,6869.28,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00204,individual,gig,none,1,Low,1,Low,4200.0,646.38,segment:gig +1,False,,2029-07-31
+ENT-00205,individual,salaried,none,0,Low,0,Low,3300.0,4315.55,,False,,2029-07-31
+ENT-00206,individual,salaried,none,0,Low,0,Low,2600.0,3488.65,,False,,2029-07-31
+ENT-00207,individual,self_employed,none,1,Low,1,Low,7700.0,3732.97,segment:self_employed +1,False,,2029-07-31
+ENT-00208,individual,salaried,none,0,Low,1,Low,4000.0,6644.9,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00209,individual,self_employed,none,2,Low,2,Low,5000.0,5104.84,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00210,individual,salaried,none,0,Low,3,Medium,2100.0,4691.55,activity_over_1_5x_declared +1; monitoring_alert +2,False,,2028-07-31
+ENT-00211,individual,salaried,none,0,Low,0,Low,4200.0,4138.11,,False,,2029-07-31
+ENT-00212,individual,salaried,none,0,Low,0,Low,2600.0,3434.72,,False,,2029-07-31
+ENT-00213,individual,salaried,none,0,Low,0,Low,4000.0,4685.08,,False,,2029-07-31
+ENT-00214,individual,salaried,none,0,Low,0,Low,3900.0,4406.66,,False,,2029-07-31
+ENT-00215,individual,salaried,none,1,Low,1,Low,3600.0,4421.38,non_face_to_face +1,False,,2029-07-31
+ENT-00216,individual,salaried,none,0,Low,0,Low,2900.0,2384.37,,False,,2029-07-31
+ENT-00217,individual,salaried,none,1,Low,1,Low,5400.0,3434.91,non_face_to_face +1,False,,2029-07-31
+ENT-00218,individual,salaried,none,4,Medium,4,Medium,7800.0,5165.31,non_face_to_face +1; adverse_media +3,False,,2028-07-31
+ENT-00219,individual,salaried,none,1,Low,1,Low,4900.0,4093.22,non_face_to_face +1,False,,2029-07-31
+ENT-00220,individual,self_employed,none,1,Low,2,Low,5200.0,8909.99,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00221,individual,salaried,none,1,Low,1,Low,3600.0,4437.29,non_face_to_face +1,False,,2029-07-31
+ENT-00222,individual,self_employed,foreign_pep,2,High,3,High,3000.0,6812.8,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,True,"foreign PEP: source of funds, senior management approval, enhanced ongoing monitoring | high risk: enhanced measures and enhanced ongoing monitoring",2027-07-31
+ENT-00223,individual,gig,none,1,Low,1,Low,1600.0,673.46,segment:gig +1,False,,2029-07-31
+ENT-00224,individual,salaried,none,0,Low,1,Low,2500.0,5267.21,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00225,individual,salaried,none,1,Low,2,Low,5600.0,10133.86,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00226,individual,salaried,none,1,Low,1,Low,2900.0,2159.29,non_face_to_face +1,False,,2029-07-31
+ENT-00227,individual,salaried,none,0,Low,1,Low,3200.0,4856.41,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00228,individual,salaried,none,0,Low,0,Low,2000.0,2634.87,,False,,2029-07-31
+ENT-00229,individual,salaried,none,0,Low,0,Low,7300.0,4604.7,,False,,2029-07-31
+ENT-00230,individual,retired,none,0,Low,0,Low,6000.0,1934.6,,False,,2029-07-31
+ENT-00231,individual,salaried,none,0,Low,1,Low,3300.0,7755.37,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00232,individual,salaried,none,0,Low,0,Low,3900.0,4160.38,,False,,2029-07-31
+ENT-00233,individual,salaried,none,0,Low,0,Low,3500.0,3643.73,,False,,2029-07-31
+ENT-00234,individual,salaried,none,0,Low,0,Low,9600.0,4406.19,,False,,2029-07-31
+ENT-00235,individual,salaried,none,0,Low,0,Low,4500.0,5287.31,,False,,2029-07-31
+ENT-00236,individual,salaried,none,0,Low,0,Low,10900.0,7647.74,,False,,2029-07-31
+ENT-00237,individual,salaried,none,1,Low,1,Low,13000.0,9607.78,non_face_to_face +1,False,,2029-07-31
+ENT-00238,individual,salaried,none,0,Low,0,Low,4600.0,5863.71,,False,,2029-07-31
+ENT-00239,individual,salaried,none,0,Low,1,Low,1600.0,2587.81,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00240,individual,self_employed,none,1,Low,1,Low,4100.0,5238.6,segment:self_employed +1,False,,2029-07-31
+ENT-00241,individual,self_employed,none,4,Medium,5,Medium,3000.0,6232.48,segment:self_employed +1; adverse_media +3; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-00242,individual,salaried,none,1,Low,1,Low,7400.0,4733.11,non_face_to_face +1,False,,2029-07-31
+ENT-00243,individual,salaried,none,0,Low,1,Low,3500.0,5429.25,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00244,individual,salaried,none,1,Low,1,Low,4600.0,6375.36,non_face_to_face +1,False,,2029-07-31
+ENT-00245,individual,self_employed,none,2,Low,2,Low,3700.0,4395.49,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00246,individual,gig,none,2,Low,2,Low,4400.0,611.48,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00247,individual,gig,none,1,Low,1,Low,6300.0,627.13,segment:gig +1,False,,2029-07-31
+ENT-00248,individual,salaried,none,1,Low,4,Medium,4300.0,1558.71,non_face_to_face +1; wires_over_fifth_of_outflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00249,individual,salaried,none,0,Low,0,Low,3600.0,5226.38,,False,,2029-07-31
+ENT-00250,individual,salaried,none,0,Low,0,Low,6900.0,4142.8,,False,,2029-07-31
+ENT-00251,individual,retired,none,1,Low,1,Low,4900.0,1165.66,non_face_to_face +1,False,,2029-07-31
+ENT-00252,individual,gig,none,2,Low,2,Low,6300.0,764.77,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00253,individual,gig,none,1,Low,1,Low,2200.0,775.69,segment:gig +1,False,,2029-07-31
+ENT-00254,individual,gig,none,1,Low,1,Low,11900.0,554.4,segment:gig +1,False,,2029-07-31
+ENT-00255,individual,salaried,none,0,Low,0,Low,2800.0,4001.72,,False,,2029-07-31
+ENT-00256,individual,retired,none,1,Low,1,Low,6900.0,1259.7,non_face_to_face +1,False,,2029-07-31
+ENT-00257,individual,salaried,none,0,Low,0,Low,4500.0,5284.61,,False,,2029-07-31
+ENT-00258,individual,self_employed,none,2,Low,2,Low,8000.0,6069.23,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00259,individual,salaried,none,0,Low,0,Low,6200.0,7663.71,,False,,2029-07-31
+ENT-00260,individual,salaried,none,0,Low,0,Low,8600.0,5131.2,,False,,2029-07-31
+ENT-00261,individual,gig,none,2,Low,2,Low,5800.0,835.99,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00262,individual,self_employed,none,1,Low,1,Low,6000.0,6873.36,segment:self_employed +1,False,,2029-07-31
+ENT-00263,individual,salaried,none,0,Low,0,Low,3600.0,4699.28,,False,,2029-07-31
+ENT-00264,individual,gig,none,1,Low,1,Low,3400.0,696.47,segment:gig +1,False,,2029-07-31
+ENT-00265,individual,salaried,none,0,Low,0,Low,5700.0,5466.15,,False,,2029-07-31
+ENT-00266,individual,salaried,none,0,Low,0,Low,6700.0,4464.45,,False,,2029-07-31
+ENT-00267,individual,self_employed,none,1,Low,1,Low,12500.0,5630.18,segment:self_employed +1,False,,2029-07-31
+ENT-00268,individual,salaried,none,1,Low,1,Low,4000.0,3627.4,non_face_to_face +1,False,,2029-07-31
+ENT-00269,individual,retired,none,0,Low,0,Low,5000.0,2525.24,,False,,2029-07-31
+ENT-00270,individual,salaried,none,1,Low,1,Low,5700.0,7680.23,non_face_to_face +1,False,,2029-07-31
+ENT-00271,individual,retired,none,0,Low,0,Low,6900.0,1923.12,,False,,2029-07-31
+ENT-00272,individual,salaried,none,0,Low,0,Low,4200.0,5164.38,,False,,2029-07-31
+ENT-00273,individual,salaried,none,1,Low,1,Low,4300.0,2499.01,non_face_to_face +1,False,,2029-07-31
+ENT-00274,individual,salaried,none,0,Low,0,Low,2900.0,4196.78,,False,,2029-07-31
+ENT-00275,individual,gig,none,1,Low,1,Low,3900.0,820.74,segment:gig +1,False,,2029-07-31
+ENT-00276,individual,salaried,none,0,Low,0,Low,5000.0,5097.4,,False,,2029-07-31
+ENT-00277,individual,salaried,none,1,Low,1,Low,3200.0,3537.5,non_face_to_face +1,False,,2029-07-31
+ENT-00278,individual,self_employed,none,1,Low,2,Low,3500.0,7691.25,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00279,individual,salaried,none,0,Low,0,Low,4500.0,6011.22,,False,,2029-07-31
+ENT-00280,individual,salaried,none,0,Low,0,Low,4500.0,5132.18,,False,,2029-07-31
+ENT-00281,individual,salaried,none,0,Low,0,Low,4600.0,3678.01,,False,,2029-07-31
+ENT-00282,individual,gig,none,2,Low,2,Low,6700.0,585.11,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00283,individual,self_employed,none,5,Medium,5,Medium,6000.0,5852.68,segment:self_employed +1; non_face_to_face +1; adverse_media +3,False,,2028-07-31
+ENT-00284,individual,salaried,none,0,Low,0,Low,5400.0,4249.2,,False,,2029-07-31
+ENT-00285,individual,self_employed,none,1,Low,2,Low,3400.0,5548.98,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00286,individual,salaried,none,0,Low,1,Low,3700.0,6104.18,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00287,individual,self_employed,none,1,Low,2,Low,2900.0,6399.52,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00288,individual,salaried,none,1,Low,1,Low,12500.0,7301.78,non_face_to_face +1,False,,2029-07-31
+ENT-00289,individual,salaried,none,4,Medium,7,High,3600.0,3017.55,non_face_to_face +1; adverse_media +3; wires_over_fifth_of_outflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-00290,individual,salaried,none,1,Low,1,Low,4000.0,5788.94,non_face_to_face +1,False,,2029-07-31
+ENT-00291,individual,salaried,none,1,Low,1,Low,4800.0,5064.92,non_face_to_face +1,False,,2029-07-31
+ENT-00292,individual,self_employed,none,1,Low,2,Low,1800.0,5114.67,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00293,individual,salaried,none,0,Low,1,Low,2100.0,3539.88,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00294,individual,salaried,none,1,Low,1,Low,4800.0,4069.69,non_face_to_face +1,False,,2029-07-31
+ENT-00295,individual,self_employed,none,1,Low,1,Low,5500.0,5293.01,segment:self_employed +1,False,,2029-07-31
+ENT-00296,individual,salaried,none,0,Low,0,Low,5600.0,4327.73,,False,,2029-07-31
+ENT-00297,individual,salaried,none,1,Low,1,Low,1300.0,1889.98,non_face_to_face +1,False,,2029-07-31
+ENT-00298,individual,self_employed,none,2,Low,2,Low,6900.0,4289.61,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00299,individual,self_employed,none,1,Low,1,Low,5800.0,4724.82,segment:self_employed +1,False,,2029-07-31
+ENT-00300,individual,salaried,none,0,Low,0,Low,15200.0,8638.97,,False,,2029-07-31
+ENT-00301,individual,salaried,none,0,Low,0,Low,5000.0,5042.59,,False,,2029-07-31
+ENT-00302,individual,salaried,none,0,Low,0,Low,5100.0,4622.22,,False,,2029-07-31
+ENT-00303,individual,salaried,none,0,Low,5,Medium,2900.0,13101.63,activity_over_3x_declared +2; wires_over_fifth_of_outflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00304,individual,salaried,none,1,Low,1,Low,1800.0,2311.13,non_face_to_face +1,False,,2029-07-31
+ENT-00305,individual,salaried,none,0,Low,0,Low,5700.0,4544.66,,False,,2029-07-31
+ENT-00306,individual,salaried,none,0,Low,0,Low,5500.0,4971.09,,False,,2029-07-31
+ENT-00307,individual,salaried,none,0,Low,0,Low,3000.0,4461.5,,False,,2029-07-31
+ENT-00308,individual,retired,none,0,Low,0,Low,1800.0,1341.45,,False,,2029-07-31
+ENT-00309,individual,salaried,none,1,Low,1,Low,4900.0,4218.54,non_face_to_face +1,False,,2029-07-31
+ENT-00310,individual,salaried,none,0,Low,0,Low,7500.0,8633.6,,False,,2029-07-31
+ENT-00311,individual,salaried,none,0,Low,0,Low,4400.0,4971.65,,False,,2029-07-31
+ENT-00312,individual,salaried,none,0,Low,0,Low,3600.0,2301.73,,False,,2029-07-31
+ENT-00313,individual,salaried,none,1,Low,1,Low,5500.0,4246.49,non_face_to_face +1,False,,2029-07-31
+ENT-00314,individual,self_employed,none,1,Low,2,Low,3200.0,7361.39,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00315,individual,salaried,none,0,Low,0,Low,3000.0,3119.89,,False,,2029-07-31
+ENT-00316,individual,salaried,none,0,Low,0,Low,3900.0,4519.52,,False,,2029-07-31
+ENT-00317,individual,salaried,none,0,Low,0,Low,4800.0,4478.5,,False,,2029-07-31
+ENT-00318,individual,retired,none,0,Low,0,Low,2900.0,950.8,,False,,2029-07-31
+ENT-00319,individual,retired,none,0,Low,0,Low,2100.0,849.18,,False,,2029-07-31
+ENT-00320,individual,salaried,none,0,Low,0,Low,6100.0,6218.91,,False,,2029-07-31
+ENT-00321,individual,salaried,none,0,Low,0,Low,4100.0,3070.35,,False,,2029-07-31
+ENT-00322,individual,gig,none,2,Low,2,Low,7800.0,544.2,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00323,individual,salaried,none,1,Low,1,Low,7100.0,6912.39,non_face_to_face +1,False,,2029-07-31
+ENT-00324,individual,salaried,none,0,Low,0,Low,6200.0,4577.04,,False,,2029-07-31
+ENT-00325,individual,self_employed,none,1,Low,1,Low,7200.0,8905.18,segment:self_employed +1,False,,2029-07-31
+ENT-00326,individual,salaried,none,0,Low,0,Low,3300.0,2618.15,,False,,2029-07-31
+ENT-00327,individual,salaried,none,1,Low,1,Low,4600.0,4263.77,non_face_to_face +1,False,,2029-07-31
+ENT-00328,individual,gig,none,1,Low,1,Low,2400.0,740.72,segment:gig +1,False,,2029-07-31
+ENT-00329,individual,self_employed,none,2,Low,2,Low,7200.0,6479.25,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00330,individual,retired,none,1,Low,1,Low,6900.0,2416.36,non_face_to_face +1,False,,2029-07-31
+ENT-00331,individual,gig,none,2,Low,2,Low,8000.0,541.11,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00332,individual,gig,none,1,Low,1,Low,4000.0,813.79,segment:gig +1,False,,2029-07-31
+ENT-00333,individual,salaried,none,1,Low,5,Medium,1800.0,9558.59,non_face_to_face +1; activity_over_3x_declared +2; monitoring_alert +2,False,,2028-07-31
+ENT-00334,individual,salaried,none,1,Low,2,Low,1400.0,2171.18,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00335,individual,salaried,none,0,Low,1,Low,2400.0,3688.71,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00336,individual,salaried,none,0,Low,0,Low,1700.0,2230.38,,False,,2029-07-31
+ENT-00337,individual,self_employed,none,2,Low,2,Low,7400.0,3199.27,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00338,individual,self_employed,none,2,Low,2,Low,10900.0,7318.98,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00339,individual,self_employed,none,2,Low,2,Low,5600.0,6388.25,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00340,individual,salaried,none,0,Low,0,Low,4500.0,4557.55,,False,,2029-07-31
+ENT-00341,individual,retired,none,0,Low,0,Low,3100.0,1012.03,,False,,2029-07-31
+ENT-00342,individual,salaried,none,1,Low,1,Low,4800.0,3777.56,non_face_to_face +1,False,,2029-07-31
+ENT-00343,individual,salaried,none,0,Low,0,Low,6900.0,4883.41,,False,,2029-07-31
+ENT-00344,individual,gig,none,2,Low,2,Low,5500.0,596.63,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00345,individual,salaried,none,0,Low,0,Low,5300.0,3814.88,,False,,2029-07-31
+ENT-00346,individual,self_employed,none,2,Low,4,Medium,1400.0,6576.28,segment:self_employed +1; non_face_to_face +1; activity_over_3x_declared +2,False,,2028-07-31
+ENT-00347,individual,salaried,none,0,Low,0,Low,7400.0,5154.51,,False,,2029-07-31
+ENT-00348,individual,gig,none,1,Low,1,Low,7800.0,859.17,segment:gig +1,False,,2029-07-31
+ENT-00349,individual,self_employed,none,1,Low,2,Low,2000.0,3601.0,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00350,individual,retired,none,0,Low,0,Low,3000.0,1005.54,,False,,2029-07-31
+ENT-00351,individual,self_employed,none,1,Low,1,Low,3400.0,4675.67,segment:self_employed +1,False,,2029-07-31
+ENT-00352,individual,salaried,none,1,Low,1,Low,8000.0,6057.94,non_face_to_face +1,False,,2029-07-31
+ENT-00353,individual,salaried,none,0,Low,0,Low,6700.0,5105.89,,False,,2029-07-31
+ENT-00354,individual,salaried,none,1,Low,1,Low,4600.0,4273.81,non_face_to_face +1,False,,2029-07-31
+ENT-00355,individual,self_employed,none,1,Low,2,Low,3700.0,6203.75,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00356,individual,salaried,none,1,Low,1,Low,5500.0,4057.28,non_face_to_face +1,False,,2029-07-31
+ENT-00357,individual,salaried,none,0,Low,0,Low,8600.0,4039.15,,False,,2029-07-31
+ENT-00358,individual,salaried,none,1,Low,2,Low,3300.0,5549.32,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00359,individual,retired,none,1,Low,1,Low,3500.0,1105.31,non_face_to_face +1,False,,2029-07-31
+ENT-00360,individual,self_employed,none,1,Low,1,Low,5200.0,5447.61,segment:self_employed +1,False,,2029-07-31
+ENT-00361,individual,salaried,none,0,Low,0,Low,4600.0,3298.55,,False,,2029-07-31
+ENT-00362,individual,salaried,none,0,Low,0,Low,4100.0,3570.98,,False,,2029-07-31
+ENT-00363,individual,salaried,none,0,Low,0,Low,5000.0,4325.13,,False,,2029-07-31
+ENT-00364,individual,salaried,none,0,Low,0,Low,4600.0,4721.28,,False,,2029-07-31
+ENT-00365,individual,self_employed,none,1,Low,1,Low,4300.0,6144.5,segment:self_employed +1,False,,2029-07-31
+ENT-00366,individual,salaried,none,1,Low,1,Low,4000.0,2891.11,non_face_to_face +1,False,,2029-07-31
+ENT-00367,individual,gig,none,1,Low,1,Low,4900.0,718.81,segment:gig +1,False,,2029-07-31
+ENT-00368,individual,self_employed,none,1,Low,2,Low,2300.0,4530.41,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00369,individual,salaried,none,1,Low,1,Low,6900.0,7570.89,non_face_to_face +1,False,,2029-07-31
+ENT-00370,individual,salaried,none,0,Low,0,Low,1900.0,2582.34,,False,,2029-07-31
+ENT-00371,individual,salaried,none,1,Low,1,Low,3600.0,3701.56,non_face_to_face +1,False,,2029-07-31
+ENT-00372,individual,gig,none,1,Low,1,Low,13200.0,726.8,segment:gig +1,False,,2029-07-31
+ENT-00373,individual,retired,none,1,Low,1,Low,4100.0,1577.89,non_face_to_face +1,False,,2029-07-31
+ENT-00374,individual,self_employed,none,1,Low,1,Low,4800.0,6550.06,segment:self_employed +1,False,,2029-07-31
+ENT-00375,individual,retired,none,0,Low,0,Low,5000.0,1882.61,,False,,2029-07-31
+ENT-00376,individual,salaried,none,0,Low,0,Low,6800.0,4456.54,,False,,2029-07-31
+ENT-00377,individual,self_employed,none,1,Low,2,Low,4400.0,6737.44,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00378,individual,salaried,none,0,Low,0,Low,2700.0,3568.48,,False,,2029-07-31
+ENT-00379,individual,gig,none,1,Low,1,Low,4300.0,590.45,segment:gig +1,False,,2029-07-31
+ENT-00380,individual,salaried,none,0,Low,0,Low,6700.0,4990.9,,False,,2029-07-31
+ENT-00381,individual,gig,none,1,Low,1,Low,7000.0,831.26,segment:gig +1,False,,2029-07-31
+ENT-00382,individual,salaried,none,0,Low,0,Low,5500.0,4466.8,,False,,2029-07-31
+ENT-00383,individual,retired,none,0,Low,0,Low,7100.0,1964.91,,False,,2029-07-31
+ENT-00384,individual,salaried,none,1,Low,1,Low,2900.0,2926.55,non_face_to_face +1,False,,2029-07-31
+ENT-00385,individual,salaried,none,0,Low,0,Low,4200.0,6181.87,,False,,2029-07-31
+ENT-00386,individual,salaried,none,0,Low,2,Low,3000.0,2957.26,monitoring_alert +2,False,,2029-07-31
+ENT-00387,individual,salaried,none,0,Low,3,Medium,1300.0,3149.9,activity_over_1_5x_declared +1; monitoring_alert +2,False,,2028-07-31
+ENT-00388,individual,salaried,none,0,Low,0,Low,4300.0,3614.7,,False,,2029-07-31
+ENT-00389,individual,retired,none,0,Low,0,Low,3200.0,1424.43,,False,,2029-07-31
+ENT-00390,individual,self_employed,none,1,Low,1,Low,9300.0,5510.05,segment:self_employed +1,False,,2029-07-31
+ENT-00391,individual,salaried,none,0,Low,0,Low,4300.0,5311.08,,False,,2029-07-31
+ENT-00392,individual,retired,none,1,Low,1,Low,3700.0,1479.31,non_face_to_face +1,False,,2029-07-31
+ENT-00393,individual,salaried,none,0,Low,0,Low,2300.0,2949.83,,False,,2029-07-31
+ENT-00394,individual,self_employed,none,1,Low,1,Low,6300.0,5484.62,segment:self_employed +1,False,,2029-07-31
+ENT-00395,individual,gig,none,1,Low,1,Low,8900.0,625.18,segment:gig +1,False,,2029-07-31
+ENT-00396,individual,salaried,none,0,Low,1,Low,2300.0,4785.26,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00397,individual,salaried,none,0,Low,0,Low,9400.0,5457.93,,False,,2029-07-31
+ENT-00398,individual,salaried,none,0,Low,0,Low,11700.0,4918.28,,False,,2029-07-31
+ENT-00399,individual,self_employed,none,1,Low,1,Low,6200.0,7850.48,segment:self_employed +1,False,,2029-07-31
+ENT-00400,individual,gig,none,1,Low,1,Low,2000.0,690.28,segment:gig +1,False,,2029-07-31
+ENT-00401,individual,salaried,none,1,Low,1,Low,3500.0,3719.64,non_face_to_face +1,False,,2029-07-31
+ENT-00402,individual,salaried,none,0,Low,0,Low,2900.0,3989.93,,False,,2029-07-31
+ENT-00403,individual,salaried,none,0,Low,0,Low,6200.0,3380.64,,False,,2029-07-31
+ENT-00404,individual,salaried,none,0,Low,0,Low,1600.0,1839.92,,False,,2029-07-31
+ENT-00405,individual,salaried,none,1,Low,1,Low,2500.0,2138.24,non_face_to_face +1,False,,2029-07-31
+ENT-00406,individual,salaried,none,0,Low,0,Low,6100.0,6734.1,,False,,2029-07-31
+ENT-00407,individual,salaried,none,1,Low,1,Low,2800.0,2644.5,non_face_to_face +1,False,,2029-07-31
+ENT-00408,individual,retired,none,1,Low,1,Low,6200.0,1085.54,non_face_to_face +1,False,,2029-07-31
+ENT-00409,individual,self_employed,none,2,Low,3,Medium,4000.0,7170.16,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-00410,individual,salaried,none,1,Low,2,Low,1700.0,3380.8,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00411,individual,salaried,none,1,Low,1,Low,2800.0,3913.88,non_face_to_face +1,False,,2029-07-31
+ENT-00412,individual,salaried,none,0,Low,1,Low,3200.0,5131.91,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00413,individual,self_employed,none,2,Low,4,Medium,1600.0,6897.58,segment:self_employed +1; non_face_to_face +1; activity_over_3x_declared +2,False,,2028-07-31
+ENT-00414,individual,salaried,none,0,Low,0,Low,2800.0,3986.3,,False,,2029-07-31
+ENT-00415,individual,salaried,none,0,Low,0,Low,20900.0,10561.38,,False,,2029-07-31
+ENT-00416,individual,salaried,none,0,Low,0,Low,9700.0,7508.45,,False,,2029-07-31
+ENT-00417,individual,salaried,none,0,Low,0,Low,3000.0,3101.21,,False,,2029-07-31
+ENT-00418,individual,retired,none,0,Low,0,Low,2300.0,997.34,,False,,2029-07-31
+ENT-00419,individual,salaried,none,1,Low,1,Low,5700.0,4801.13,non_face_to_face +1,False,,2029-07-31
+ENT-00420,individual,gig,none,1,Low,1,Low,1600.0,620.16,segment:gig +1,False,,2029-07-31
+ENT-00421,individual,salaried,none,1,Low,1,Low,3900.0,3411.57,non_face_to_face +1,False,,2029-07-31
+ENT-00422,individual,salaried,none,0,Low,0,Low,2000.0,1773.07,,False,,2029-07-31
+ENT-00423,individual,self_employed,none,1,Low,1,Low,4900.0,5929.18,segment:self_employed +1,False,,2029-07-31
+ENT-00424,individual,self_employed,none,1,Low,2,Low,3000.0,6893.13,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00425,individual,self_employed,none,1,Low,2,Low,2700.0,6097.79,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00426,individual,gig,none,1,Low,1,Low,2200.0,874.5,segment:gig +1,False,,2029-07-31
+ENT-00427,individual,salaried,none,1,Low,1,Low,8100.0,5698.17,non_face_to_face +1,False,,2029-07-31
+ENT-00428,individual,salaried,none,0,Low,0,Low,4100.0,3604.39,,False,,2029-07-31
+ENT-00429,individual,gig,none,1,Low,1,Low,2200.0,684.94,segment:gig +1,False,,2029-07-31
+ENT-00430,individual,salaried,none,0,Low,1,Low,4500.0,7527.26,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00431,individual,salaried,none,0,Low,0,Low,4800.0,5033.69,,False,,2029-07-31
+ENT-00432,individual,salaried,none,0,Low,0,Low,8300.0,7877.24,,False,,2029-07-31
+ENT-00433,individual,salaried,none,0,Low,1,Low,1500.0,2618.06,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00434,individual,salaried,none,0,Low,0,Low,3100.0,4244.35,,False,,2029-07-31
+ENT-00435,individual,salaried,domestic_pep_or_hio,3,Medium,3,Medium,2600.0,3769.62,domestic_pep_or_hio +2; non_face_to_face +1,False,,2028-07-31
+ENT-00436,individual,salaried,none,0,Low,0,Low,10200.0,6964.12,,False,,2029-07-31
+ENT-00437,individual,self_employed,none,4,Medium,5,Medium,5500.0,12161.26,segment:self_employed +1; adverse_media +3; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-00438,individual,salaried,none,1,Low,1,Low,7200.0,5071.23,non_face_to_face +1,False,,2029-07-31
+ENT-00439,individual,salaried,none,0,Low,0,Low,6100.0,5033.5,,False,,2029-07-31
+ENT-00440,individual,salaried,none,0,Low,0,Low,4700.0,4223.73,,False,,2029-07-31
+ENT-00441,individual,salaried,none,1,Low,1,Low,4700.0,4707.59,non_face_to_face +1,False,,2029-07-31
+ENT-00442,individual,salaried,none,0,Low,0,Low,7400.0,6640.08,,False,,2029-07-31
+ENT-00443,individual,salaried,none,1,Low,1,Low,5800.0,2810.63,non_face_to_face +1,False,,2029-07-31
+ENT-00444,individual,salaried,none,0,Low,0,Low,1300.0,1555.07,,False,,2029-07-31
+ENT-00445,individual,salaried,none,0,Low,0,Low,9500.0,6726.77,,False,,2029-07-31
+ENT-00446,individual,salaried,none,0,Low,0,Low,3600.0,2465.09,,False,,2029-07-31
+ENT-00447,individual,self_employed,none,1,Low,1,Low,7500.0,7447.58,segment:self_employed +1,False,,2029-07-31
+ENT-00448,individual,retired,none,0,Low,0,Low,7500.0,1892.0,,False,,2029-07-31
+ENT-00449,individual,salaried,none,3,Medium,3,Medium,3100.0,3629.5,adverse_media +3,False,,2028-07-31
+ENT-00450,individual,salaried,none,0,Low,1,Low,1800.0,3589.18,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00451,individual,salaried,none,0,Low,0,Low,3500.0,5098.65,,False,,2029-07-31
+ENT-00452,individual,self_employed,none,1,Low,2,Low,4500.0,8016.53,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00453,individual,gig,none,1,Low,1,Low,2300.0,697.59,segment:gig +1,False,,2029-07-31
+ENT-00454,individual,gig,none,1,Low,3,Medium,8200.0,706.41,segment:gig +1; monitoring_alert +2,False,,2028-07-31
+ENT-00455,individual,salaried,none,0,Low,0,Low,8600.0,5283.18,,False,,2029-07-31
+ENT-00456,individual,self_employed,none,1,Low,2,Low,3500.0,6187.99,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00457,individual,self_employed,none,2,Low,4,Medium,2100.0,6635.54,segment:self_employed +1; non_face_to_face +1; activity_over_3x_declared +2,False,,2028-07-31
+ENT-00458,individual,salaried,none,0,Low,0,Low,3100.0,3962.42,,False,,2029-07-31
+ENT-00459,individual,retired,none,0,Low,0,Low,2600.0,944.5,,False,,2029-07-31
+ENT-00460,individual,self_employed,none,1,Low,2,Low,2700.0,5989.95,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00461,individual,salaried,none,0,Low,0,Low,7500.0,4980.08,,False,,2029-07-31
+ENT-00462,individual,self_employed,none,1,Low,2,Low,6500.0,10135.05,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00463,individual,salaried,none,0,Low,0,Low,3300.0,3775.33,,False,,2029-07-31
+ENT-00464,individual,salaried,none,0,Low,0,Low,6600.0,4509.26,,False,,2029-07-31
+ENT-00465,individual,gig,none,1,Low,1,Low,3000.0,704.04,segment:gig +1,False,,2029-07-31
+ENT-00466,individual,gig,none,1,Low,1,Low,5200.0,884.49,segment:gig +1,False,,2029-07-31
+ENT-00467,individual,salaried,none,0,Low,0,Low,3000.0,3611.82,,False,,2029-07-31
+ENT-00468,individual,salaried,none,1,Low,1,Low,7700.0,4741.21,non_face_to_face +1,False,,2029-07-31
+ENT-00469,individual,salaried,none,0,Low,0,Low,3700.0,3788.34,,False,,2029-07-31
+ENT-00470,individual,self_employed,none,1,Low,1,Low,3800.0,4816.32,segment:self_employed +1,False,,2029-07-31
+ENT-00471,individual,gig,none,2,Low,2,Low,4700.0,591.4,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00472,individual,gig,none,1,Low,1,Low,6600.0,613.07,segment:gig +1,False,,2029-07-31
+ENT-00473,individual,retired,none,0,Low,0,Low,4400.0,927.64,,False,,2029-07-31
+ENT-00474,individual,retired,none,1,Low,1,Low,2900.0,1093.94,non_face_to_face +1,False,,2029-07-31
+ENT-00475,individual,salaried,none,1,Low,1,Low,4000.0,5469.92,non_face_to_face +1,False,,2029-07-31
+ENT-00476,individual,self_employed,none,1,Low,1,Low,7400.0,4115.1,segment:self_employed +1,False,,2029-07-31
+ENT-00477,individual,salaried,none,1,Low,2,Low,1900.0,2864.99,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00478,individual,salaried,none,0,Low,0,Low,2700.0,3481.27,,False,,2029-07-31
+ENT-00479,individual,salaried,none,1,Low,1,Low,5500.0,4203.65,non_face_to_face +1,False,,2029-07-31
+ENT-00480,individual,salaried,none,1,Low,1,Low,3800.0,3198.28,non_face_to_face +1,False,,2029-07-31
+ENT-00481,individual,salaried,none,1,Low,1,Low,5000.0,5137.66,non_face_to_face +1,False,,2029-07-31
+ENT-00482,individual,gig,none,2,Low,2,Low,3300.0,899.91,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00483,individual,salaried,none,1,Low,1,Low,6100.0,4673.81,non_face_to_face +1,False,,2029-07-31
+ENT-00484,individual,salaried,none,0,Low,0,Low,4900.0,4458.84,,False,,2029-07-31
+ENT-00485,individual,salaried,none,0,Low,0,Low,3200.0,2664.87,,False,,2029-07-31
+ENT-00486,individual,salaried,none,0,Low,0,Low,5800.0,6900.29,,False,,2029-07-31
+ENT-00487,individual,salaried,none,0,Low,0,Low,4500.0,5621.78,,False,,2029-07-31
+ENT-00488,individual,self_employed,none,2,Low,2,Low,2700.0,4032.57,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00489,individual,salaried,none,1,Low,1,Low,12600.0,9171.63,non_face_to_face +1,False,,2029-07-31
+ENT-00490,individual,self_employed,none,1,Low,1,Low,7400.0,5937.82,segment:self_employed +1,False,,2029-07-31
+ENT-00491,individual,self_employed,none,1,Low,1,Low,5800.0,3367.17,segment:self_employed +1,False,,2029-07-31
+ENT-00492,individual,salaried,none,0,Low,3,Medium,7100.0,16179.91,activity_over_1_5x_declared +1; monitoring_alert +2,False,,2028-07-31
+ENT-00493,individual,salaried,none,0,Low,0,Low,8000.0,7818.37,,False,,2029-07-31
+ENT-00494,individual,salaried,none,3,Medium,3,Medium,4900.0,4294.07,adverse_media +3,False,,2028-07-31
+ENT-00495,individual,self_employed,none,2,Low,2,Low,4000.0,5390.78,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00496,individual,salaried,none,0,Low,2,Low,5000.0,3167.36,monitoring_alert +2,False,,2029-07-31
+ENT-00497,individual,salaried,foreign_pep,1,High,2,High,2500.0,4845.1,non_face_to_face +1; activity_over_1_5x_declared +1,True,"foreign PEP: source of funds, senior management approval, enhanced ongoing monitoring | high risk: enhanced measures and enhanced ongoing monitoring",2027-07-31
+ENT-00498,individual,gig,none,2,Low,2,Low,8500.0,797.49,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00499,individual,salaried,none,0,Low,0,Low,4200.0,4381.85,,False,,2029-07-31
+ENT-00500,individual,self_employed,none,4,Medium,6,High,2200.0,6709.84,segment:self_employed +1; adverse_media +3; activity_over_3x_declared +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-00501,individual,salaried,none,0,Low,0,Low,3100.0,4024.53,,False,,2029-07-31
+ENT-00502,individual,salaried,none,0,Low,0,Low,6300.0,5819.6,,False,,2029-07-31
+ENT-00503,individual,gig,none,1,Low,1,Low,10000.0,635.8,segment:gig +1,False,,2029-07-31
+ENT-00504,individual,gig,none,1,Low,1,Low,5800.0,782.18,segment:gig +1,False,,2029-07-31
+ENT-00505,individual,gig,none,1,Low,1,Low,6600.0,695.58,segment:gig +1,False,,2029-07-31
+ENT-00506,individual,gig,none,2,Low,2,Low,5100.0,849.15,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00507,individual,salaried,none,1,Low,1,Low,2900.0,3487.14,non_face_to_face +1,False,,2029-07-31
+ENT-00508,individual,salaried,none,0,Low,0,Low,5300.0,4453.19,,False,,2029-07-31
+ENT-00509,individual,salaried,none,0,Low,0,Low,3900.0,5050.23,,False,,2029-07-31
+ENT-00510,individual,salaried,none,0,Low,0,Low,6600.0,6545.44,,False,,2029-07-31
+ENT-00511,individual,gig,none,1,Low,1,Low,2500.0,720.75,segment:gig +1,False,,2029-07-31
+ENT-00512,individual,salaried,none,0,Low,1,Low,3700.0,5874.05,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00513,individual,retired,none,0,Low,0,Low,5100.0,1534.66,,False,,2029-07-31
+ENT-00514,individual,gig,none,1,Low,1,Low,8400.0,497.34,segment:gig +1,False,,2029-07-31
+ENT-00515,individual,salaried,none,0,Low,0,Low,3500.0,3255.83,,False,,2029-07-31
+ENT-00516,individual,self_employed,none,1,Low,2,Low,3500.0,5551.6,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00517,individual,salaried,none,0,Low,0,Low,4200.0,5163.88,,False,,2029-07-31
+ENT-00518,individual,salaried,none,0,Low,0,Low,14000.0,8402.92,,False,,2029-07-31
+ENT-00519,individual,self_employed,none,1,Low,1,Low,8100.0,4921.31,segment:self_employed +1,False,,2029-07-31
+ENT-00520,individual,salaried,none,0,Low,0,Low,4900.0,3513.43,,False,,2029-07-31
+ENT-00521,individual,salaried,none,1,Low,1,Low,8600.0,6033.42,non_face_to_face +1,False,,2029-07-31
+ENT-00522,individual,gig,none,2,Low,4,Medium,6000.0,647.98,segment:gig +1; non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-00523,individual,salaried,none,0,Low,0,Low,4700.0,5242.78,,False,,2029-07-31
+ENT-00524,individual,salaried,none,1,Low,1,Low,5600.0,5637.08,non_face_to_face +1,False,,2029-07-31
+ENT-00525,individual,salaried,none,0,Low,0,Low,4700.0,4577.65,,False,,2029-07-31
+ENT-00526,individual,salaried,none,0,Low,0,Low,8300.0,7806.23,,False,,2029-07-31
+ENT-00527,individual,salaried,none,1,Low,1,Low,2400.0,2553.82,non_face_to_face +1,False,,2029-07-31
+ENT-00528,individual,gig,none,1,Low,1,Low,2300.0,689.61,segment:gig +1,False,,2029-07-31
+ENT-00529,individual,salaried,none,0,Low,0,Low,3100.0,3840.77,,False,,2029-07-31
+ENT-00530,individual,gig,none,2,Low,2,Low,4500.0,568.26,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00531,individual,salaried,none,0,Low,0,Low,9200.0,5058.56,,False,,2029-07-31
+ENT-00532,individual,retired,none,0,Low,0,Low,2900.0,639.16,,False,,2029-07-31
+ENT-00533,individual,salaried,none,0,Low,0,Low,4100.0,3092.59,,False,,2029-07-31
+ENT-00534,individual,salaried,none,1,Low,1,Low,4600.0,3651.99,non_face_to_face +1,False,,2029-07-31
+ENT-00535,individual,salaried,none,0,Low,0,Low,2900.0,3100.51,,False,,2029-07-31
+ENT-00536,individual,self_employed,none,2,Low,3,Medium,1700.0,4627.52,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-00537,individual,self_employed,none,1,Low,1,Low,6700.0,4739.89,segment:self_employed +1,False,,2029-07-31
+ENT-00538,individual,salaried,none,1,Low,1,Low,2800.0,3694.82,non_face_to_face +1,False,,2029-07-31
+ENT-00539,individual,self_employed,none,1,Low,1,Low,8600.0,4003.9,segment:self_employed +1,False,,2029-07-31
+ENT-00540,individual,salaried,none,0,Low,0,Low,2800.0,2619.76,,False,,2029-07-31
+ENT-00541,individual,salaried,none,0,Low,0,Low,3000.0,2656.66,,False,,2029-07-31
+ENT-00542,individual,gig,none,1,Low,1,Low,2900.0,651.38,segment:gig +1,False,,2029-07-31
+ENT-00543,individual,salaried,none,1,Low,1,Low,3500.0,5024.0,non_face_to_face +1,False,,2029-07-31
+ENT-00544,individual,self_employed,none,1,Low,1,Low,5400.0,5241.69,segment:self_employed +1,False,,2029-07-31
+ENT-00545,individual,self_employed,none,1,Low,2,Low,4700.0,9178.05,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00546,individual,salaried,none,0,Low,0,Low,14100.0,5847.6,,False,,2029-07-31
+ENT-00547,individual,salaried,none,0,Low,0,Low,6500.0,5691.73,,False,,2029-07-31
+ENT-00548,individual,salaried,none,1,Low,1,Low,3700.0,3048.17,non_face_to_face +1,False,,2029-07-31
+ENT-00549,individual,salaried,none,1,Low,1,Low,3500.0,4193.6,non_face_to_face +1,False,,2029-07-31
+ENT-00550,individual,gig,none,1,Low,1,Low,2800.0,604.81,segment:gig +1,False,,2029-07-31
+ENT-00551,individual,salaried,none,1,Low,1,Low,5300.0,5105.66,non_face_to_face +1,False,,2029-07-31
+ENT-00552,individual,salaried,none,0,Low,0,Low,5700.0,4740.14,,False,,2029-07-31
+ENT-00553,individual,gig,none,2,Low,2,Low,5000.0,598.84,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00554,individual,salaried,none,1,Low,2,Low,2300.0,3919.16,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00555,individual,salaried,none,0,Low,0,Low,9100.0,4927.78,,False,,2029-07-31
+ENT-00556,individual,salaried,none,0,Low,1,Low,1700.0,4184.42,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00557,individual,gig,none,2,Low,2,Low,4100.0,595.78,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00558,individual,gig,none,1,Low,1,Low,6000.0,615.76,segment:gig +1,False,,2029-07-31
+ENT-00559,individual,self_employed,none,1,Low,2,Low,3400.0,5259.33,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00560,individual,salaried,none,1,Low,1,Low,6000.0,6301.71,non_face_to_face +1,False,,2029-07-31
+ENT-00561,individual,salaried,none,1,Low,1,Low,4600.0,3737.85,non_face_to_face +1,False,,2029-07-31
+ENT-00562,individual,retired,none,0,Low,0,Low,2800.0,1240.8,,False,,2029-07-31
+ENT-00563,individual,salaried,none,0,Low,0,Low,4200.0,3369.4,,False,,2029-07-31
+ENT-00564,individual,self_employed,none,1,Low,1,Low,4600.0,4000.74,segment:self_employed +1,False,,2029-07-31
+ENT-00565,individual,self_employed,none,2,Low,2,Low,2100.0,2848.2,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00566,individual,self_employed,none,1,Low,1,Low,6200.0,5213.51,segment:self_employed +1,False,,2029-07-31
+ENT-00567,individual,retired,none,0,Low,0,Low,3800.0,1285.79,,False,,2029-07-31
+ENT-00568,individual,salaried,none,0,Low,0,Low,8700.0,9222.07,,False,,2029-07-31
+ENT-00569,individual,gig,none,1,Low,1,Low,3400.0,640.4,segment:gig +1,False,,2029-07-31
+ENT-00570,individual,gig,none,1,Low,1,Low,1200.0,652.63,segment:gig +1,False,,2029-07-31
+ENT-00571,individual,self_employed,none,1,Low,1,Low,3800.0,5685.39,segment:self_employed +1,False,,2029-07-31
+ENT-00572,individual,salaried,none,1,Low,2,Low,1600.0,2421.32,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00573,individual,salaried,none,0,Low,1,Low,1400.0,2472.1,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00574,individual,self_employed,none,1,Low,1,Low,6100.0,1851.54,segment:self_employed +1,False,,2029-07-31
+ENT-00575,individual,self_employed,none,1,Low,1,Low,5000.0,6735.05,segment:self_employed +1,False,,2029-07-31
+ENT-00576,individual,salaried,none,1,Low,1,Low,3000.0,3758.26,non_face_to_face +1,False,,2029-07-31
+ENT-00577,individual,gig,none,2,Low,2,Low,4000.0,866.67,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00578,individual,retired,none,0,Low,0,Low,3700.0,1270.13,,False,,2029-07-31
+ENT-00579,individual,salaried,none,0,Low,0,Low,8100.0,4610.29,,False,,2029-07-31
+ENT-00580,individual,self_employed,none,1,Low,1,Low,5100.0,4870.89,segment:self_employed +1,False,,2029-07-31
+ENT-00581,individual,salaried,none,0,Low,0,Low,6200.0,5477.87,,False,,2029-07-31
+ENT-00582,individual,salaried,none,0,Low,0,Low,6300.0,6186.49,,False,,2029-07-31
+ENT-00583,individual,self_employed,none,2,Low,2,Low,5700.0,5655.77,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00584,individual,salaried,none,0,Low,0,Low,5500.0,4994.67,,False,,2029-07-31
+ENT-00585,individual,self_employed,none,1,Low,2,Low,4200.0,8260.76,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00586,individual,self_employed,none,1,Low,1,Low,3700.0,3709.58,segment:self_employed +1,False,,2029-07-31
+ENT-00587,individual,salaried,none,1,Low,1,Low,4700.0,3604.87,non_face_to_face +1,False,,2029-07-31
+ENT-00588,individual,retired,none,1,Low,1,Low,5100.0,2192.14,non_face_to_face +1,False,,2029-07-31
+ENT-00589,individual,salaried,none,0,Low,3,Medium,6600.0,10967.44,activity_over_1_5x_declared +1; monitoring_alert +2,False,,2028-07-31
+ENT-00590,individual,salaried,none,0,Low,0,Low,2100.0,2543.88,,False,,2029-07-31
+ENT-00591,individual,salaried,none,0,Low,0,Low,5900.0,4229.19,,False,,2029-07-31
+ENT-00592,individual,salaried,none,0,Low,0,Low,6200.0,4500.66,,False,,2029-07-31
+ENT-00593,individual,retired,none,1,Low,1,Low,16600.0,2726.82,non_face_to_face +1,False,,2029-07-31
+ENT-00594,individual,salaried,none,0,Low,0,Low,5400.0,4887.85,,False,,2029-07-31
+ENT-00595,individual,salaried,none,0,Low,0,Low,6400.0,8677.26,,False,,2029-07-31
+ENT-00596,individual,self_employed,none,1,Low,1,Low,5200.0,3488.84,segment:self_employed +1,False,,2029-07-31
+ENT-00597,individual,salaried,none,1,Low,1,Low,11300.0,6259.35,non_face_to_face +1,False,,2029-07-31
+ENT-00598,individual,salaried,none,1,Low,1,Low,4800.0,3276.16,non_face_to_face +1,False,,2029-07-31
+ENT-00599,individual,retired,none,4,Medium,4,Medium,2600.0,1407.56,non_face_to_face +1; adverse_media +3,False,,2028-07-31
+ENT-00600,individual,salaried,none,0,Low,0,Low,4200.0,4953.32,,False,,2029-07-31
+ENT-00601,individual,gig,none,1,Low,1,Low,11200.0,787.19,segment:gig +1,False,,2029-07-31
+ENT-00602,individual,salaried,none,0,Low,0,Low,9400.0,4440.48,,False,,2029-07-31
+ENT-00603,individual,self_employed,none,2,Low,2,Low,4400.0,4268.24,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00604,individual,salaried,none,0,Low,0,Low,6900.0,4491.94,,False,,2029-07-31
+ENT-00605,individual,salaried,none,0,Low,0,Low,4700.0,4172.35,,False,,2029-07-31
+ENT-00606,individual,salaried,none,0,Low,0,Low,3500.0,2665.15,,False,,2029-07-31
+ENT-00607,individual,self_employed,none,1,Low,2,Low,2200.0,5077.02,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00608,individual,salaried,none,1,Low,1,Low,2300.0,2145.52,non_face_to_face +1,False,,2029-07-31
+ENT-00609,individual,salaried,none,0,Low,0,Low,21600.0,15701.36,,False,,2029-07-31
+ENT-00610,individual,self_employed,none,1,Low,1,Low,9300.0,5833.76,segment:self_employed +1,False,,2029-07-31
+ENT-00611,individual,salaried,none,0,Low,0,Low,4900.0,3608.56,,False,,2029-07-31
+ENT-00612,individual,salaried,none,1,Low,1,Low,2600.0,3595.23,non_face_to_face +1,False,,2029-07-31
+ENT-00613,individual,salaried,none,0,Low,0,Low,7400.0,5325.24,,False,,2029-07-31
+ENT-00614,individual,salaried,none,0,Low,0,Low,2300.0,3154.23,,False,,2029-07-31
+ENT-00615,individual,salaried,none,0,Low,0,Low,5300.0,6164.55,,False,,2029-07-31
+ENT-00616,individual,salaried,none,0,Low,0,Low,4000.0,3978.1,,False,,2029-07-31
+ENT-00617,individual,self_employed,none,1,Low,1,Low,16700.0,3104.04,segment:self_employed +1,False,,2029-07-31
+ENT-00618,individual,salaried,none,0,Low,0,Low,5500.0,3748.9,,False,,2029-07-31
+ENT-00619,individual,salaried,none,1,Low,1,Low,3500.0,3299.81,non_face_to_face +1,False,,2029-07-31
+ENT-00620,individual,salaried,none,0,Low,0,Low,11200.0,6694.2,,False,,2029-07-31
+ENT-00621,individual,self_employed,none,1,Low,2,Low,4100.0,7520.12,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00622,individual,salaried,none,1,Low,1,Low,7000.0,3271.97,non_face_to_face +1,False,,2029-07-31
+ENT-00623,individual,self_employed,none,1,Low,1,Low,5400.0,4674.04,segment:self_employed +1,False,,2029-07-31
+ENT-00624,individual,retired,none,0,Low,2,Low,6800.0,1198.89,monitoring_alert +2,False,,2029-07-31
+ENT-00625,individual,salaried,none,0,Low,0,Low,4900.0,6619.16,,False,,2029-07-31
+ENT-00626,individual,self_employed,none,1,Low,1,Low,4100.0,3912.98,segment:self_employed +1,False,,2029-07-31
+ENT-00627,individual,salaried,none,0,Low,0,Low,4800.0,3396.49,,False,,2029-07-31
+ENT-00628,individual,salaried,none,1,Low,1,Low,4100.0,4053.73,non_face_to_face +1,False,,2029-07-31
+ENT-00629,individual,salaried,none,0,Low,0,Low,4700.0,6501.22,,False,,2029-07-31
+ENT-00630,individual,salaried,none,1,Low,1,Low,7100.0,7623.96,non_face_to_face +1,False,,2029-07-31
+ENT-00631,individual,salaried,none,1,Low,1,Low,5500.0,4842.23,non_face_to_face +1,False,,2029-07-31
+ENT-00632,individual,salaried,domestic_pep_or_hio,2,Low,2,Low,6500.0,3930.18,domestic_pep_or_hio +2,False,,2029-07-31
+ENT-00633,individual,salaried,none,1,Low,1,Low,3300.0,3413.88,non_face_to_face +1,False,,2029-07-31
+ENT-00634,individual,salaried,none,0,Low,0,Low,4400.0,5295.17,,False,,2029-07-31
+ENT-00635,individual,self_employed,none,2,Low,2,Low,5300.0,7216.47,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00636,individual,salaried,none,0,Low,0,Low,10300.0,7929.23,,False,,2029-07-31
+ENT-00637,individual,self_employed,none,4,Medium,4,Medium,4200.0,5291.08,segment:self_employed +1; adverse_media +3,False,,2028-07-31
+ENT-00638,individual,salaried,none,0,Low,1,Low,4400.0,6983.57,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00639,individual,retired,none,1,Low,1,Low,8400.0,2779.92,non_face_to_face +1,False,,2029-07-31
+ENT-00640,individual,salaried,none,0,Low,1,Low,3600.0,6071.07,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00641,individual,salaried,none,0,Low,0,Low,11800.0,4794.31,,False,,2029-07-31
+ENT-00642,individual,self_employed,none,1,Low,3,Medium,5000.0,5861.4,segment:self_employed +1; monitoring_alert +2,False,,2028-07-31
+ENT-00643,individual,gig,none,1,Low,1,Low,9600.0,550.69,segment:gig +1,False,,2029-07-31
+ENT-00644,individual,salaried,none,1,Low,3,Medium,2900.0,3937.34,non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-00645,individual,salaried,none,4,Medium,4,Medium,2900.0,4032.79,non_face_to_face +1; adverse_media +3,False,,2028-07-31
+ENT-00646,individual,self_employed,none,2,Low,2,Low,7600.0,4235.41,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00647,individual,retired,none,0,Low,0,Low,2900.0,1304.27,,False,,2029-07-31
+ENT-00648,individual,salaried,none,0,Low,0,Low,6900.0,6253.37,,False,,2029-07-31
+ENT-00649,individual,salaried,none,0,Low,2,Low,5900.0,6310.78,monitoring_alert +2,False,,2029-07-31
+ENT-00650,individual,retired,none,1,Low,4,Medium,3500.0,4161.06,non_face_to_face +1; cash_over_half_of_inflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00651,individual,salaried,none,0,Low,0,Low,7200.0,5644.82,,False,,2029-07-31
+ENT-00652,individual,gig,none,1,Low,1,Low,5300.0,666.68,segment:gig +1,False,,2029-07-31
+ENT-00653,individual,gig,none,2,Low,5,Medium,2900.0,462.88,segment:gig +1; non_face_to_face +1; wires_over_fifth_of_outflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00654,individual,salaried,none,0,Low,2,Low,1400.0,4232.04,activity_over_3x_declared +2,False,,2029-07-31
+ENT-00655,individual,salaried,none,0,Low,1,Low,5000.0,8602.2,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00656,individual,salaried,none,4,Medium,4,Medium,3500.0,3530.43,non_face_to_face +1; adverse_media +3,False,,2028-07-31
+ENT-00657,individual,self_employed,none,1,Low,1,Low,3800.0,5062.04,segment:self_employed +1,False,,2029-07-31
+ENT-00658,individual,salaried,none,0,Low,0,Low,6700.0,4472.07,,False,,2029-07-31
+ENT-00659,individual,gig,none,1,Low,1,Low,7500.0,384.23,segment:gig +1,False,,2029-07-31
+ENT-00660,individual,salaried,none,0,Low,0,Low,5100.0,3266.13,,False,,2029-07-31
+ENT-00661,individual,retired,none,1,Low,1,Low,3800.0,1686.57,non_face_to_face +1,False,,2029-07-31
+ENT-00662,individual,salaried,none,1,Low,1,Low,4500.0,3557.28,non_face_to_face +1,False,,2029-07-31
+ENT-00663,individual,salaried,none,1,Low,1,Low,3000.0,2403.49,non_face_to_face +1,False,,2029-07-31
+ENT-00664,individual,salaried,none,0,Low,1,Low,2000.0,3987.82,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00665,individual,salaried,none,0,Low,0,Low,3300.0,3777.59,,False,,2029-07-31
+ENT-00666,individual,self_employed,none,2,Low,2,Low,4300.0,6167.33,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00667,individual,salaried,none,1,Low,1,Low,4600.0,3146.67,non_face_to_face +1,False,,2029-07-31
+ENT-00668,individual,salaried,none,0,Low,0,Low,6800.0,5141.79,,False,,2029-07-31
+ENT-00669,individual,salaried,none,0,Low,1,Low,2400.0,3948.69,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00670,individual,salaried,none,0,Low,0,Low,2700.0,3974.89,,False,,2029-07-31
+ENT-00671,individual,salaried,none,0,Low,0,Low,10200.0,4399.07,,False,,2029-07-31
+ENT-00672,individual,salaried,none,1,Low,1,Low,15400.0,7325.05,non_face_to_face +1,False,,2029-07-31
+ENT-00673,individual,salaried,none,1,Low,2,Low,2400.0,3690.04,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00674,individual,salaried,none,1,Low,2,Low,2400.0,4053.45,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00675,individual,gig,none,1,Low,1,Low,2800.0,827.55,segment:gig +1,False,,2029-07-31
+ENT-00676,individual,salaried,none,1,Low,2,Low,1500.0,2268.93,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00677,individual,salaried,none,0,Low,0,Low,2200.0,2848.01,,False,,2029-07-31
+ENT-00678,individual,salaried,none,0,Low,2,Low,5200.0,6487.79,monitoring_alert +2,False,,2029-07-31
+ENT-00679,individual,salaried,none,0,Low,1,Low,5600.0,8499.37,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00680,individual,salaried,none,0,Low,0,Low,5200.0,4167.67,,False,,2029-07-31
+ENT-00681,individual,salaried,none,0,Low,1,Low,2500.0,5342.96,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00682,individual,salaried,none,1,Low,1,Low,7000.0,5308.81,non_face_to_face +1,False,,2029-07-31
+ENT-00683,individual,gig,none,2,Low,2,Low,3400.0,848.78,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00684,individual,salaried,none,0,Low,0,Low,2500.0,2023.51,,False,,2029-07-31
+ENT-00685,individual,salaried,none,0,Low,0,Low,2600.0,3114.27,,False,,2029-07-31
+ENT-00686,individual,self_employed,none,2,Low,2,Low,2700.0,2856.14,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00687,individual,salaried,none,1,Low,4,Medium,1800.0,2952.1,non_face_to_face +1; activity_over_1_5x_declared +1; monitoring_alert +2,False,,2028-07-31
+ENT-00688,individual,salaried,none,0,Low,0,Low,7600.0,7747.67,,False,,2029-07-31
+ENT-00689,individual,gig,none,1,Low,1,Low,1800.0,589.53,segment:gig +1,False,,2029-07-31
+ENT-00690,individual,self_employed,none,1,Low,1,Low,3500.0,4464.77,segment:self_employed +1,False,,2029-07-31
+ENT-00691,individual,retired,none,1,Low,1,Low,5800.0,1379.01,non_face_to_face +1,False,,2029-07-31
+ENT-00692,individual,retired,none,0,Low,0,Low,3400.0,1329.81,,False,,2029-07-31
+ENT-00693,individual,salaried,none,1,Low,1,Low,4000.0,3176.03,non_face_to_face +1,False,,2029-07-31
+ENT-00694,individual,salaried,none,1,Low,1,Low,8300.0,7893.68,non_face_to_face +1,False,,2029-07-31
+ENT-00695,individual,salaried,none,1,Low,1,Low,3700.0,5333.8,non_face_to_face +1,False,,2029-07-31
+ENT-00696,individual,self_employed,none,1,Low,2,Low,3300.0,9018.41,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00697,individual,salaried,none,0,Low,1,Low,2900.0,4827.16,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00698,individual,salaried,none,0,Low,1,Low,4300.0,7126.5,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00699,individual,salaried,none,0,Low,0,Low,6300.0,4666.42,,False,,2029-07-31
+ENT-00700,individual,salaried,none,1,Low,1,Low,4000.0,3081.67,non_face_to_face +1,False,,2029-07-31
+ENT-00701,individual,self_employed,none,1,Low,2,Low,2300.0,4432.88,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00702,individual,retired,none,1,Low,1,Low,6400.0,1660.39,non_face_to_face +1,False,,2029-07-31
+ENT-00703,individual,salaried,none,0,Low,0,Low,8800.0,8458.38,,False,,2029-07-31
+ENT-00704,individual,salaried,none,1,Low,1,Low,5400.0,4611.99,non_face_to_face +1,False,,2029-07-31
+ENT-00705,individual,salaried,none,1,Low,1,Low,3500.0,2730.43,non_face_to_face +1,False,,2029-07-31
+ENT-00706,individual,gig,none,1,Low,1,Low,3300.0,597.44,segment:gig +1,False,,2029-07-31
+ENT-00707,individual,salaried,none,0,Low,0,Low,5000.0,3781.71,,False,,2029-07-31
+ENT-00708,individual,gig,none,1,Low,1,Low,4500.0,860.5,segment:gig +1,False,,2029-07-31
+ENT-00709,individual,salaried,none,0,Low,0,Low,6400.0,6404.49,,False,,2029-07-31
+ENT-00710,individual,salaried,none,1,Low,1,Low,6400.0,6387.87,non_face_to_face +1,False,,2029-07-31
+ENT-00711,individual,retired,none,0,Low,0,Low,2100.0,838.96,,False,,2029-07-31
+ENT-00712,individual,salaried,none,1,Low,1,Low,9700.0,8033.6,non_face_to_face +1,False,,2029-07-31
+ENT-00713,individual,self_employed,none,1,Low,2,Low,3200.0,5698.33,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00714,individual,self_employed,none,2,Low,4,Medium,2100.0,6407.97,segment:self_employed +1; non_face_to_face +1; activity_over_3x_declared +2,False,,2028-07-31
+ENT-00715,individual,salaried,none,0,Low,0,Low,5000.0,3288.71,,False,,2029-07-31
+ENT-00716,individual,salaried,none,0,Low,1,Low,3800.0,7925.51,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00717,individual,salaried,none,0,Low,0,Low,11700.0,6249.95,,False,,2029-07-31
+ENT-00718,individual,salaried,none,1,Low,5,Medium,3500.0,8830.54,non_face_to_face +1; activity_over_1_5x_declared +1; cash_over_half_of_inflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00719,individual,salaried,none,0,Low,0,Low,3300.0,3248.36,,False,,2029-07-31
+ENT-00720,individual,gig,none,1,Low,1,Low,1000.0,614.11,segment:gig +1,False,,2029-07-31
+ENT-00721,individual,salaried,none,1,Low,1,Low,12100.0,5932.89,non_face_to_face +1,False,,2029-07-31
+ENT-00722,individual,self_employed,none,1,Low,1,Low,5200.0,3889.82,segment:self_employed +1,False,,2029-07-31
+ENT-00723,individual,salaried,none,1,Low,2,Low,2100.0,4253.84,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00724,individual,gig,none,1,Low,1,Low,6500.0,740.49,segment:gig +1,False,,2029-07-31
+ENT-00725,individual,salaried,none,0,Low,0,Low,8200.0,4897.5,,False,,2029-07-31
+ENT-00726,individual,salaried,none,1,Low,1,Low,4000.0,3772.73,non_face_to_face +1,False,,2029-07-31
+ENT-00727,individual,self_employed,none,2,Low,2,Low,3500.0,4009.98,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00728,individual,salaried,none,1,Low,1,Low,3100.0,3556.17,non_face_to_face +1,False,,2029-07-31
+ENT-00729,individual,salaried,none,0,Low,0,Low,1900.0,2398.02,,False,,2029-07-31
+ENT-00730,individual,salaried,none,0,Low,1,Low,1900.0,2948.06,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00731,individual,self_employed,none,1,Low,1,Low,3800.0,3589.11,segment:self_employed +1,False,,2029-07-31
+ENT-00732,individual,salaried,none,0,Low,0,Low,5100.0,4904.8,,False,,2029-07-31
+ENT-00733,individual,salaried,none,1,Low,1,Low,9800.0,9495.99,non_face_to_face +1,False,,2029-07-31
+ENT-00734,individual,salaried,none,0,Low,0,Low,2500.0,2753.73,,False,,2029-07-31
+ENT-00735,individual,salaried,none,0,Low,0,Low,3400.0,2847.65,,False,,2029-07-31
+ENT-00736,individual,salaried,none,0,Low,0,Low,5200.0,5887.33,,False,,2029-07-31
+ENT-00737,individual,salaried,none,0,Low,1,Low,1000.0,1774.35,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00738,individual,salaried,none,0,Low,0,Low,3600.0,3688.57,,False,,2029-07-31
+ENT-00739,individual,salaried,none,0,Low,1,Low,4200.0,6578.54,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00740,individual,salaried,none,1,Low,1,Low,3700.0,3856.21,non_face_to_face +1,False,,2029-07-31
+ENT-00741,individual,self_employed,none,2,Low,2,Low,7300.0,8367.96,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00742,individual,salaried,none,1,Low,1,Low,6700.0,5916.21,non_face_to_face +1,False,,2029-07-31
+ENT-00743,individual,self_employed,none,2,Low,2,Low,5900.0,5923.08,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00744,individual,salaried,none,0,Low,0,Low,5000.0,3934.33,,False,,2029-07-31
+ENT-00745,individual,self_employed,none,1,Low,2,Low,2800.0,4958.59,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00746,individual,gig,none,2,Low,2,Low,800.0,1074.41,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00747,individual,salaried,none,0,Low,0,Low,4100.0,3904.8,,False,,2029-07-31
+ENT-00748,individual,salaried,none,0,Low,0,Low,7100.0,6971.79,,False,,2029-07-31
+ENT-00749,individual,salaried,none,0,Low,0,Low,10300.0,5634.0,,False,,2029-07-31
+ENT-00750,individual,salaried,none,0,Low,0,Low,8500.0,5920.67,,False,,2029-07-31
+ENT-00751,individual,salaried,none,0,Low,0,Low,3900.0,3274.71,,False,,2029-07-31
+ENT-00752,individual,retired,none,0,Low,0,Low,13400.0,2575.83,,False,,2029-07-31
+ENT-00753,individual,retired,none,1,Low,1,Low,5100.0,1723.81,non_face_to_face +1,False,,2029-07-31
+ENT-00754,individual,gig,none,1,Low,1,Low,4100.0,604.82,segment:gig +1,False,,2029-07-31
+ENT-00755,individual,salaried,none,1,Low,1,Low,4200.0,4986.84,non_face_to_face +1,False,,2029-07-31
+ENT-00756,individual,retired,none,1,Low,1,Low,9200.0,2095.04,non_face_to_face +1,False,,2029-07-31
+ENT-00757,individual,salaried,domestic_pep_or_hio,2,Low,2,Low,2100.0,2676.54,domestic_pep_or_hio +2,False,,2029-07-31
+ENT-00758,individual,retired,none,1,Low,1,Low,4100.0,1358.19,non_face_to_face +1,False,,2029-07-31
+ENT-00759,individual,retired,none,1,Low,1,Low,2600.0,1137.12,non_face_to_face +1,False,,2029-07-31
+ENT-00760,individual,salaried,none,0,Low,0,Low,3400.0,3823.34,,False,,2029-07-31
+ENT-00761,individual,self_employed,none,1,Low,1,Low,5500.0,5340.54,segment:self_employed +1,False,,2029-07-31
+ENT-00762,individual,self_employed,none,2,Low,2,Low,4000.0,3990.95,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00763,individual,retired,none,0,Low,0,Low,2500.0,1158.46,,False,,2029-07-31
+ENT-00764,individual,salaried,none,0,Low,0,Low,7500.0,7787.73,,False,,2029-07-31
+ENT-00765,individual,salaried,none,1,Low,1,Low,6300.0,6673.3,non_face_to_face +1,False,,2029-07-31
+ENT-00766,individual,salaried,none,0,Low,0,Low,2500.0,1912.3,,False,,2029-07-31
+ENT-00767,individual,self_employed,none,2,Low,2,Low,6400.0,2910.71,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00768,individual,retired,none,0,Low,0,Low,3000.0,1080.03,,False,,2029-07-31
+ENT-00769,individual,salaried,none,0,Low,1,Low,5800.0,9423.64,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00770,individual,salaried,none,1,Low,1,Low,7100.0,6008.2,non_face_to_face +1,False,,2029-07-31
+ENT-00771,individual,self_employed,none,1,Low,1,Low,4400.0,6556.06,segment:self_employed +1,False,,2029-07-31
+ENT-00772,individual,salaried,none,0,Low,0,Low,6300.0,6177.81,,False,,2029-07-31
+ENT-00773,individual,self_employed,none,1,Low,2,Low,3800.0,7053.81,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00774,individual,self_employed,none,1,Low,1,Low,4800.0,6408.52,segment:self_employed +1,False,,2029-07-31
+ENT-00775,individual,salaried,none,1,Low,1,Low,3600.0,4742.5,non_face_to_face +1,False,,2029-07-31
+ENT-00776,individual,salaried,none,1,Low,1,Low,6300.0,5641.52,non_face_to_face +1,False,,2029-07-31
+ENT-00777,individual,salaried,none,0,Low,0,Low,9900.0,5651.4,,False,,2029-07-31
+ENT-00778,individual,salaried,none,0,Low,0,Low,4400.0,5405.83,,False,,2029-07-31
+ENT-00779,individual,salaried,none,0,Low,0,Low,4200.0,3633.42,,False,,2029-07-31
+ENT-00780,individual,self_employed,none,1,Low,2,Low,2900.0,4634.53,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00781,individual,self_employed,none,1,Low,1,Low,7600.0,3835.1,segment:self_employed +1,False,,2029-07-31
+ENT-00782,individual,salaried,none,0,Low,1,Low,4600.0,7130.76,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00783,individual,self_employed,none,1,Low,1,Low,8800.0,4576.8,segment:self_employed +1,False,,2029-07-31
+ENT-00784,individual,salaried,none,0,Low,0,Low,7000.0,5033.5,,False,,2029-07-31
+ENT-00785,individual,salaried,none,1,Low,1,Low,3000.0,4361.52,non_face_to_face +1,False,,2029-07-31
+ENT-00786,individual,salaried,none,0,Low,0,Low,2100.0,2159.4,,False,,2029-07-31
+ENT-00787,individual,self_employed,none,1,Low,2,Low,2900.0,5542.98,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00788,individual,self_employed,none,1,Low,1,Low,15900.0,5186.16,segment:self_employed +1,False,,2029-07-31
+ENT-00789,individual,salaried,none,1,Low,1,Low,5400.0,3850.24,non_face_to_face +1,False,,2029-07-31
+ENT-00790,individual,self_employed,none,1,Low,2,Low,3300.0,5619.11,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00791,individual,salaried,none,0,Low,0,Low,5300.0,3116.2,,False,,2029-07-31
+ENT-00792,individual,salaried,none,0,Low,0,Low,4500.0,6338.37,,False,,2029-07-31
+ENT-00793,individual,gig,none,1,Low,1,Low,30500.0,822.31,segment:gig +1,False,,2029-07-31
+ENT-00794,individual,salaried,none,1,Low,1,Low,7300.0,4826.24,non_face_to_face +1,False,,2029-07-31
+ENT-00795,individual,salaried,none,1,Low,1,Low,2800.0,3082.15,non_face_to_face +1,False,,2029-07-31
+ENT-00796,individual,salaried,none,1,Low,1,Low,11400.0,5521.22,non_face_to_face +1,False,,2029-07-31
+ENT-00797,individual,self_employed,none,1,Low,3,Medium,2400.0,8154.91,segment:self_employed +1; activity_over_3x_declared +2,False,,2028-07-31
+ENT-00798,individual,salaried,none,0,Low,0,Low,6000.0,7090.33,,False,,2029-07-31
+ENT-00799,individual,gig,none,2,Low,2,Low,1900.0,760.33,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00800,individual,self_employed,none,2,Low,3,Medium,2500.0,6636.86,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-00801,individual,salaried,none,1,Low,1,Low,3300.0,3146.66,non_face_to_face +1,False,,2029-07-31
+ENT-00802,individual,salaried,none,1,Low,1,Low,6600.0,4272.86,non_face_to_face +1,False,,2029-07-31
+ENT-00803,individual,retired,none,0,Low,0,Low,4800.0,1125.24,,False,,2029-07-31
+ENT-00804,individual,self_employed,none,2,Low,2,Low,5400.0,7136.02,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00805,individual,self_employed,none,2,Low,3,Medium,3300.0,7349.02,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-00806,individual,retired,none,0,Low,0,Low,1800.0,855.53,,False,,2029-07-31
+ENT-00807,individual,salaried,none,0,Low,0,Low,3600.0,3309.18,,False,,2029-07-31
+ENT-00808,individual,salaried,none,0,Low,0,Low,8100.0,3989.67,,False,,2029-07-31
+ENT-00809,individual,retired,none,1,Low,1,Low,7300.0,1357.7,non_face_to_face +1,False,,2029-07-31
+ENT-00810,individual,salaried,none,0,Low,0,Low,9800.0,5744.3,,False,,2029-07-31
+ENT-00811,individual,salaried,none,0,Low,0,Low,14000.0,8541.07,,False,,2029-07-31
+ENT-00812,individual,self_employed,none,2,Low,2,Low,4200.0,5521.84,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00813,individual,salaried,none,1,Low,1,Low,2600.0,2666.09,non_face_to_face +1,False,,2029-07-31
+ENT-00814,individual,retired,none,1,Low,1,Low,6700.0,1807.96,non_face_to_face +1,False,,2029-07-31
+ENT-00815,individual,salaried,none,1,Low,1,Low,5200.0,6346.36,non_face_to_face +1,False,,2029-07-31
+ENT-00816,individual,salaried,none,0,Low,1,Low,1100.0,1903.44,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00817,individual,salaried,none,0,Low,0,Low,2600.0,3446.66,,False,,2029-07-31
+ENT-00818,individual,salaried,none,0,Low,0,Low,5600.0,3384.17,,False,,2029-07-31
+ENT-00819,individual,self_employed,none,2,Low,2,Low,5600.0,6021.6,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00820,individual,gig,none,2,Low,2,Low,2500.0,606.14,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00821,individual,retired,none,0,Low,0,Low,1500.0,550.95,,False,,2029-07-31
+ENT-00822,individual,retired,none,0,Low,0,Low,5600.0,1667.08,,False,,2029-07-31
+ENT-00823,individual,self_employed,none,1,Low,3,Medium,2600.0,9176.98,segment:self_employed +1; activity_over_3x_declared +2,False,,2028-07-31
+ENT-00824,individual,salaried,none,0,Low,0,Low,3700.0,4054.73,,False,,2029-07-31
+ENT-00825,individual,salaried,none,1,Low,1,Low,4200.0,4127.62,non_face_to_face +1,False,,2029-07-31
+ENT-00826,individual,self_employed,none,1,Low,1,Low,6400.0,4840.63,segment:self_employed +1,False,,2029-07-31
+ENT-00827,individual,salaried,none,1,Low,2,Low,5500.0,8629.08,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00828,individual,retired,none,1,Low,1,Low,4500.0,1560.39,non_face_to_face +1,False,,2029-07-31
+ENT-00829,individual,self_employed,none,1,Low,1,Low,2500.0,3441.13,segment:self_employed +1,False,,2029-07-31
+ENT-00830,individual,self_employed,none,1,Low,2,Low,2700.0,5408.44,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00831,individual,salaried,none,0,Low,0,Low,4200.0,4553.36,,False,,2029-07-31
+ENT-00832,individual,salaried,none,0,Low,1,Low,3000.0,5558.23,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00833,individual,salaried,none,1,Low,1,Low,4900.0,4757.9,non_face_to_face +1,False,,2029-07-31
+ENT-00834,individual,salaried,foreign_pep,0,High,0,High,6100.0,5294.22,,True,"foreign PEP: source of funds, senior management approval, enhanced ongoing monitoring | high risk: enhanced measures and enhanced ongoing monitoring",2027-07-31
+ENT-00835,individual,gig,none,1,Low,1,Low,6000.0,652.41,segment:gig +1,False,,2029-07-31
+ENT-00836,individual,self_employed,none,1,Low,1,Low,5600.0,4418.93,segment:self_employed +1,False,,2029-07-31
+ENT-00837,individual,salaried,none,1,Low,1,Low,7700.0,5346.88,non_face_to_face +1,False,,2029-07-31
+ENT-00838,individual,salaried,none,0,Low,0,Low,3900.0,4744.47,,False,,2029-07-31
+ENT-00839,individual,self_employed,none,1,Low,1,Low,4800.0,4771.29,segment:self_employed +1,False,,2029-07-31
+ENT-00840,individual,salaried,none,1,Low,1,Low,5800.0,3910.12,non_face_to_face +1,False,,2029-07-31
+ENT-00841,individual,salaried,none,1,Low,1,Low,8400.0,5791.7,non_face_to_face +1,False,,2029-07-31
+ENT-00842,individual,salaried,none,1,Low,1,Low,7700.0,5418.56,non_face_to_face +1,False,,2029-07-31
+ENT-00843,individual,salaried,none,1,Low,1,Low,2800.0,3615.35,non_face_to_face +1,False,,2029-07-31
+ENT-00844,individual,salaried,none,1,Low,1,Low,2100.0,2576.3,non_face_to_face +1,False,,2029-07-31
+ENT-00845,individual,self_employed,none,1,Low,2,Low,3100.0,6131.53,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00846,individual,self_employed,none,1,Low,2,Low,2300.0,4525.1,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00847,individual,gig,none,2,Low,2,Low,5500.0,966.42,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00848,individual,salaried,none,1,Low,1,Low,4000.0,5158.32,non_face_to_face +1,False,,2029-07-31
+ENT-00849,individual,salaried,none,1,Low,1,Low,6100.0,4529.47,non_face_to_face +1,False,,2029-07-31
+ENT-00850,individual,salaried,none,0,Low,0,Low,5000.0,5521.04,,False,,2029-07-31
+ENT-00851,individual,self_employed,none,1,Low,1,Low,4900.0,2709.0,segment:self_employed +1,False,,2029-07-31
+ENT-00852,individual,gig,none,2,Low,2,Low,3500.0,867.89,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00853,individual,self_employed,none,1,Low,2,Low,2500.0,6721.21,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00854,individual,salaried,none,0,Low,0,Low,6600.0,7192.03,,False,,2029-07-31
+ENT-00855,individual,self_employed,none,1,Low,1,Low,4000.0,3319.27,segment:self_employed +1,False,,2029-07-31
+ENT-00856,individual,gig,none,1,Low,1,Low,4600.0,719.59,segment:gig +1,False,,2029-07-31
+ENT-00857,individual,self_employed,none,1,Low,1,Low,7500.0,5545.38,segment:self_employed +1,False,,2029-07-31
+ENT-00858,individual,salaried,none,0,Low,0,Low,6800.0,4319.07,,False,,2029-07-31
+ENT-00859,individual,self_employed,none,1,Low,1,Low,5800.0,5212.1,segment:self_employed +1,False,,2029-07-31
+ENT-00860,individual,retired,none,1,Low,1,Low,4900.0,2766.66,non_face_to_face +1,False,,2029-07-31
+ENT-00861,individual,gig,none,1,Low,1,Low,11700.0,706.82,segment:gig +1,False,,2029-07-31
+ENT-00862,individual,salaried,none,1,Low,6,High,3600.0,12439.19,non_face_to_face +1; activity_over_3x_declared +2; wires_over_fifth_of_outflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-00863,individual,salaried,none,0,Low,0,Low,3400.0,3096.73,,False,,2029-07-31
+ENT-00864,individual,retired,none,1,Low,1,Low,13700.0,2558.95,non_face_to_face +1,False,,2029-07-31
+ENT-00865,individual,salaried,none,0,Low,0,Low,3700.0,3689.29,,False,,2029-07-31
+ENT-00866,individual,salaried,none,1,Low,1,Low,3700.0,5232.27,non_face_to_face +1,False,,2029-07-31
+ENT-00867,individual,salaried,none,1,Low,1,Low,5600.0,4317.2,non_face_to_face +1,False,,2029-07-31
+ENT-00868,individual,salaried,none,1,Low,3,Medium,4700.0,3527.87,non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-00869,individual,salaried,none,0,Low,1,Low,2800.0,4419.2,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00870,individual,salaried,none,0,Low,0,Low,3200.0,3839.43,,False,,2029-07-31
+ENT-00871,individual,salaried,none,1,Low,5,Medium,4500.0,8138.92,non_face_to_face +1; activity_over_1_5x_declared +1; cash_over_half_of_inflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00872,individual,salaried,none,0,Low,0,Low,5400.0,2994.26,,False,,2029-07-31
+ENT-00873,individual,self_employed,none,1,Low,1,Low,6500.0,4886.37,segment:self_employed +1,False,,2029-07-31
+ENT-00874,individual,self_employed,none,2,Low,2,Low,9700.0,6353.91,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00875,individual,self_employed,none,2,Low,2,Low,6600.0,2224.99,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00876,individual,salaried,none,0,Low,3,Medium,6600.0,5833.8,wires_over_fifth_of_outflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-00877,individual,gig,none,1,Low,1,Low,1200.0,803.4,segment:gig +1,False,,2029-07-31
+ENT-00878,individual,salaried,none,1,Low,2,Low,700.0,1223.48,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00879,individual,salaried,none,0,Low,0,Low,6200.0,5962.7,,False,,2029-07-31
+ENT-00880,individual,self_employed,none,1,Low,1,Low,3200.0,3679.09,segment:self_employed +1,False,,2029-07-31
+ENT-00881,individual,salaried,none,0,Low,0,Low,6300.0,4700.19,,False,,2029-07-31
+ENT-00882,individual,retired,none,0,Low,2,Low,8900.0,4099.17,monitoring_alert +2,False,,2029-07-31
+ENT-00883,individual,salaried,none,1,Low,1,Low,10900.0,3735.7,non_face_to_face +1,False,,2029-07-31
+ENT-00884,individual,salaried,none,1,Low,1,Low,5300.0,5575.0,non_face_to_face +1,False,,2029-07-31
+ENT-00885,individual,self_employed,none,2,Low,2,Low,4700.0,5003.37,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00886,individual,salaried,none,0,Low,0,Low,3600.0,3157.38,,False,,2029-07-31
+ENT-00887,individual,salaried,none,1,Low,1,Low,3300.0,3044.06,non_face_to_face +1,False,,2029-07-31
+ENT-00888,individual,salaried,domestic_pep_or_hio,3,Medium,3,Medium,5100.0,5850.32,domestic_pep_or_hio +2; non_face_to_face +1,False,,2028-07-31
+ENT-00889,individual,self_employed,none,2,Low,2,Low,6800.0,1815.78,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00890,individual,gig,none,1,Low,1,Low,5600.0,1021.05,segment:gig +1,False,,2029-07-31
+ENT-00891,individual,salaried,none,0,Low,3,Medium,4900.0,7927.69,activity_over_1_5x_declared +1; monitoring_alert +2,False,,2028-07-31
+ENT-00892,individual,gig,none,1,Low,1,Low,5800.0,584.71,segment:gig +1,False,,2029-07-31
+ENT-00893,individual,retired,none,1,Low,1,Low,6900.0,1076.29,non_face_to_face +1,False,,2029-07-31
+ENT-00894,individual,salaried,none,0,Low,0,Low,4400.0,3868.96,,False,,2029-07-31
+ENT-00895,individual,self_employed,none,2,Low,2,Low,5200.0,5994.6,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00896,individual,salaried,none,0,Low,1,Low,2500.0,4811.76,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00897,individual,self_employed,none,1,Low,1,Low,5900.0,3617.4,segment:self_employed +1,False,,2029-07-31
+ENT-00898,individual,salaried,none,0,Low,0,Low,3900.0,2880.79,,False,,2029-07-31
+ENT-00899,individual,salaried,none,0,Low,0,Low,6500.0,4916.96,,False,,2029-07-31
+ENT-00900,individual,self_employed,none,2,Low,2,Low,14600.0,6404.23,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00901,individual,salaried,none,0,Low,0,Low,6000.0,4983.32,,False,,2029-07-31
+ENT-00902,individual,self_employed,none,1,Low,3,Medium,9300.0,5519.93,segment:self_employed +1; monitoring_alert +2,False,,2028-07-31
+ENT-00903,individual,salaried,none,0,Low,1,Low,3700.0,5576.74,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00904,individual,salaried,domestic_pep_or_hio,2,Low,2,Low,6700.0,3643.37,domestic_pep_or_hio +2,False,,2029-07-31
+ENT-00905,individual,salaried,none,0,Low,0,Low,5500.0,5075.78,,False,,2029-07-31
+ENT-00906,individual,self_employed,none,1,Low,1,Low,12400.0,3248.8,segment:self_employed +1,False,,2029-07-31
+ENT-00907,individual,salaried,none,0,Low,2,Low,4600.0,5798.79,monitoring_alert +2,False,,2029-07-31
+ENT-00908,individual,retired,none,1,Low,1,Low,7100.0,2362.08,non_face_to_face +1,False,,2029-07-31
+ENT-00909,individual,salaried,none,0,Low,0,Low,2600.0,2340.33,,False,,2029-07-31
+ENT-00910,individual,salaried,none,0,Low,0,Low,9500.0,7007.22,,False,,2029-07-31
+ENT-00911,individual,salaried,none,1,Low,1,Low,3200.0,3165.04,non_face_to_face +1,False,,2029-07-31
+ENT-00912,individual,salaried,none,0,Low,0,Low,1300.0,883.87,,False,,2029-07-31
+ENT-00913,individual,gig,none,1,Low,1,Low,4000.0,856.86,segment:gig +1,False,,2029-07-31
+ENT-00914,individual,salaried,none,1,Low,1,Low,4700.0,5738.98,non_face_to_face +1,False,,2029-07-31
+ENT-00915,individual,salaried,none,0,Low,0,Low,1300.0,1501.56,,False,,2029-07-31
+ENT-00916,individual,salaried,none,0,Low,0,Low,4100.0,4312.68,,False,,2029-07-31
+ENT-00917,individual,salaried,none,0,Low,2,Low,8400.0,6944.89,monitoring_alert +2,False,,2029-07-31
+ENT-00918,individual,salaried,none,0,Low,2,Low,4200.0,3930.24,monitoring_alert +2,False,,2029-07-31
+ENT-00919,individual,self_employed,none,1,Low,1,Low,3800.0,4851.1,segment:self_employed +1,False,,2029-07-31
+ENT-00920,individual,salaried,none,0,Low,0,Low,8600.0,5218.78,,False,,2029-07-31
+ENT-00921,individual,retired,none,0,Low,0,Low,2200.0,1299.31,,False,,2029-07-31
+ENT-00922,individual,salaried,none,1,Low,1,Low,5800.0,5089.61,non_face_to_face +1,False,,2029-07-31
+ENT-00923,individual,salaried,none,0,Low,0,Low,2700.0,3908.93,,False,,2029-07-31
+ENT-00924,individual,salaried,none,1,Low,2,Low,2900.0,4772.87,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00925,individual,gig,none,2,Low,2,Low,3400.0,571.34,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00926,individual,self_employed,none,1,Low,1,Low,6100.0,5712.21,segment:self_employed +1,False,,2029-07-31
+ENT-00927,individual,self_employed,none,1,Low,1,Low,5500.0,3530.95,segment:self_employed +1,False,,2029-07-31
+ENT-00928,individual,self_employed,none,1,Low,3,Medium,1600.0,5497.16,segment:self_employed +1; activity_over_3x_declared +2,False,,2028-07-31
+ENT-00929,individual,salaried,none,0,Low,0,Low,3500.0,3093.52,,False,,2029-07-31
+ENT-00930,individual,self_employed,domestic_pep_or_hio,3,Medium,3,Medium,5700.0,5073.59,segment:self_employed +1; domestic_pep_or_hio +2,False,,2028-07-31
+ENT-00931,individual,self_employed,none,1,Low,2,Low,2800.0,6085.94,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00932,individual,gig,none,2,Low,2,Low,4700.0,775.21,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00933,individual,salaried,none,0,Low,0,Low,3100.0,2922.13,,False,,2029-07-31
+ENT-00934,individual,salaried,none,0,Low,0,Low,5200.0,4558.12,,False,,2029-07-31
+ENT-00935,individual,self_employed,none,1,Low,1,Low,4200.0,2815.67,segment:self_employed +1,False,,2029-07-31
+ENT-00936,individual,salaried,none,0,Low,0,Low,1500.0,2056.6,,False,,2029-07-31
+ENT-00937,individual,self_employed,none,2,Low,2,Low,6900.0,6065.97,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00938,individual,salaried,none,0,Low,1,Low,2300.0,4179.32,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00939,individual,salaried,none,1,Low,1,Low,4100.0,4082.54,non_face_to_face +1,False,,2029-07-31
+ENT-00940,individual,gig,none,2,Low,2,Low,3100.0,838.58,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-00941,individual,salaried,none,1,Low,1,Low,3900.0,2722.11,non_face_to_face +1,False,,2029-07-31
+ENT-00942,individual,salaried,none,0,Low,0,Low,4500.0,4640.84,,False,,2029-07-31
+ENT-00943,individual,salaried,none,0,Low,0,Low,4800.0,5823.9,,False,,2029-07-31
+ENT-00944,individual,self_employed,none,1,Low,1,Low,6500.0,3475.79,segment:self_employed +1,False,,2029-07-31
+ENT-00945,individual,self_employed,none,2,Low,2,Low,5400.0,6917.73,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00946,individual,self_employed,none,1,Low,2,Low,2300.0,4854.62,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00947,individual,retired,none,0,Low,0,Low,3000.0,1353.75,,False,,2029-07-31
+ENT-00948,individual,salaried,none,0,Low,0,Low,3600.0,3055.44,,False,,2029-07-31
+ENT-00949,individual,salaried,none,0,Low,0,Low,10500.0,10378.77,,False,,2029-07-31
+ENT-00950,individual,gig,none,1,Low,1,Low,3000.0,947.77,segment:gig +1,False,,2029-07-31
+ENT-00951,individual,salaried,none,1,Low,1,Low,6200.0,5363.88,non_face_to_face +1,False,,2029-07-31
+ENT-00952,individual,salaried,none,1,Low,1,Low,4900.0,7331.63,non_face_to_face +1,False,,2029-07-31
+ENT-00953,individual,salaried,none,0,Low,0,Low,5500.0,5960.32,,False,,2029-07-31
+ENT-00954,individual,salaried,none,0,Low,0,Low,3800.0,3556.67,,False,,2029-07-31
+ENT-00955,individual,salaried,none,1,Low,1,Low,3000.0,3297.66,non_face_to_face +1,False,,2029-07-31
+ENT-00956,individual,self_employed,none,1,Low,3,Medium,1500.0,5471.13,segment:self_employed +1; activity_over_3x_declared +2,False,,2028-07-31
+ENT-00957,individual,salaried,none,0,Low,0,Low,3700.0,3485.53,,False,,2029-07-31
+ENT-00958,individual,salaried,none,1,Low,1,Low,5200.0,3742.15,non_face_to_face +1,False,,2029-07-31
+ENT-00959,individual,salaried,none,0,Low,0,Low,6000.0,6561.42,,False,,2029-07-31
+ENT-00960,individual,salaried,none,0,Low,0,Low,10200.0,5128.61,,False,,2029-07-31
+ENT-00961,individual,salaried,none,1,Low,1,Low,3800.0,3939.52,non_face_to_face +1,False,,2029-07-31
+ENT-00962,individual,salaried,none,0,Low,1,Low,2000.0,3822.46,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00963,individual,gig,none,1,Low,1,Low,4500.0,770.79,segment:gig +1,False,,2029-07-31
+ENT-00964,individual,salaried,none,0,Low,0,Low,7100.0,5040.23,,False,,2029-07-31
+ENT-00965,individual,gig,none,1,Low,1,Low,4200.0,551.33,segment:gig +1,False,,2029-07-31
+ENT-00966,individual,gig,none,1,Low,1,Low,3800.0,709.95,segment:gig +1,False,,2029-07-31
+ENT-00967,individual,salaried,none,0,Low,0,Low,5700.0,4380.71,,False,,2029-07-31
+ENT-00968,individual,salaried,none,1,Low,2,Low,4100.0,6407.56,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00969,individual,salaried,none,0,Low,0,Low,5800.0,5027.62,,False,,2029-07-31
+ENT-00970,individual,self_employed,none,1,Low,2,Low,3100.0,6189.22,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00971,individual,salaried,none,0,Low,0,Low,4900.0,5642.19,,False,,2029-07-31
+ENT-00972,individual,salaried,none,1,Low,1,Low,4000.0,3985.82,non_face_to_face +1,False,,2029-07-31
+ENT-00973,individual,retired,none,0,Low,0,Low,4100.0,1916.58,,False,,2029-07-31
+ENT-00974,individual,self_employed,domestic_pep_or_hio,3,Medium,3,Medium,4100.0,5700.09,segment:self_employed +1; domestic_pep_or_hio +2,False,,2028-07-31
+ENT-00975,individual,salaried,none,0,Low,0,Low,3400.0,2591.45,,False,,2029-07-31
+ENT-00976,individual,gig,none,1,Low,1,Low,2100.0,795.68,segment:gig +1,False,,2029-07-31
+ENT-00977,individual,salaried,none,0,Low,0,Low,8100.0,9615.81,,False,,2029-07-31
+ENT-00978,individual,salaried,none,1,Low,1,Low,6900.0,5628.75,non_face_to_face +1,False,,2029-07-31
+ENT-00979,individual,gig,none,1,Low,1,Low,2400.0,708.67,segment:gig +1,False,,2029-07-31
+ENT-00980,individual,salaried,none,0,Low,2,Low,4700.0,3617.96,monitoring_alert +2,False,,2029-07-31
+ENT-00981,individual,salaried,none,1,Low,1,Low,5500.0,3941.44,non_face_to_face +1,False,,2029-07-31
+ENT-00982,individual,salaried,none,0,Low,3,Medium,2400.0,4156.57,activity_over_1_5x_declared +1; monitoring_alert +2,False,,2028-07-31
+ENT-00983,individual,salaried,none,0,Low,0,Low,5100.0,4306.36,,False,,2029-07-31
+ENT-00984,individual,salaried,none,0,Low,0,Low,7000.0,3955.61,,False,,2029-07-31
+ENT-00985,individual,salaried,none,1,Low,1,Low,2100.0,2946.16,non_face_to_face +1,False,,2029-07-31
+ENT-00986,individual,self_employed,none,1,Low,2,Low,2000.0,4318.86,segment:self_employed +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00987,individual,self_employed,none,2,Low,2,Low,3200.0,4022.44,segment:self_employed +1; non_face_to_face +1,False,,2029-07-31
+ENT-00988,individual,salaried,none,0,Low,0,Low,5400.0,5446.96,,False,,2029-07-31
+ENT-00989,individual,salaried,none,1,Low,1,Low,7700.0,6131.03,non_face_to_face +1,False,,2029-07-31
+ENT-00990,individual,salaried,none,0,Low,0,Low,2500.0,3127.67,,False,,2029-07-31
+ENT-00991,individual,gig,none,1,Low,1,Low,2500.0,699.03,segment:gig +1,False,,2029-07-31
+ENT-00992,individual,salaried,none,1,Low,1,Low,7300.0,3998.97,non_face_to_face +1,False,,2029-07-31
+ENT-00993,individual,retired,none,0,Low,0,Low,3300.0,943.19,,False,,2029-07-31
+ENT-00994,individual,salaried,none,1,Low,1,Low,2200.0,2673.38,non_face_to_face +1,False,,2029-07-31
+ENT-00995,individual,salaried,none,0,Low,0,Low,3000.0,2228.86,,False,,2029-07-31
+ENT-00996,individual,salaried,none,0,Low,1,Low,3500.0,5607.33,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-00997,individual,retired,none,1,Low,1,Low,2500.0,841.51,non_face_to_face +1,False,,2029-07-31
+ENT-00998,individual,salaried,none,1,Low,1,Low,2100.0,2376.68,non_face_to_face +1,False,,2029-07-31
+ENT-00999,individual,salaried,none,0,Low,0,Low,4400.0,3966.85,,False,,2029-07-31
+ENT-01000,individual,gig,none,1,Low,1,Low,4400.0,635.18,segment:gig +1,False,,2029-07-31
+ENT-01001,individual,salaried,none,1,Low,1,Low,2600.0,3303.1,non_face_to_face +1,False,,2029-07-31
+ENT-01002,individual,salaried,none,0,Low,0,Low,6800.0,5557.95,,False,,2029-07-31
+ENT-01003,individual,salaried,none,1,Low,1,Low,5500.0,3376.41,non_face_to_face +1,False,,2029-07-31
+ENT-01004,individual,salaried,none,1,Low,1,Low,4000.0,3968.85,non_face_to_face +1,False,,2029-07-31
+ENT-01005,individual,salaried,none,1,Low,1,Low,7400.0,7820.91,non_face_to_face +1,False,,2029-07-31
+ENT-01006,individual,self_employed,none,1,Low,1,Low,4700.0,4739.36,segment:self_employed +1,False,,2029-07-31
+ENT-01007,individual,salaried,none,0,Low,0,Low,5400.0,3449.92,,False,,2029-07-31
+ENT-01008,individual,salaried,none,1,Low,1,Low,5100.0,4068.24,non_face_to_face +1,False,,2029-07-31
+ENT-01009,individual,salaried,none,0,Low,0,Low,2500.0,3018.48,,False,,2029-07-31
+ENT-01010,individual,self_employed,none,2,Low,3,Medium,4600.0,7436.99,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-01011,individual,salaried,none,0,Low,0,Low,4300.0,4170.34,,False,,2029-07-31
+ENT-01012,individual,salaried,none,1,Low,1,Low,2600.0,3736.92,non_face_to_face +1,False,,2029-07-31
+ENT-01013,individual,salaried,none,0,Low,0,Low,2100.0,3042.22,,False,,2029-07-31
+ENT-01014,individual,salaried,none,0,Low,0,Low,3800.0,4630.31,,False,,2029-07-31
+ENT-01015,individual,salaried,none,1,Low,1,Low,6100.0,5150.02,non_face_to_face +1,False,,2029-07-31
+ENT-01016,individual,salaried,none,0,Low,0,Low,3400.0,4098.19,,False,,2029-07-31
+ENT-01017,individual,salaried,none,0,Low,0,Low,6700.0,7016.52,,False,,2029-07-31
+ENT-01018,individual,salaried,none,0,Low,0,Low,4000.0,2687.99,,False,,2029-07-31
+ENT-01019,individual,salaried,none,0,Low,0,Low,3400.0,3067.44,,False,,2029-07-31
+ENT-01020,individual,retired,none,0,Low,0,Low,3800.0,1655.03,,False,,2029-07-31
+ENT-01021,individual,salaried,none,1,Low,2,Low,3000.0,6377.6,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-01022,individual,gig,none,1,Low,1,Low,3000.0,690.91,segment:gig +1,False,,2029-07-31
+ENT-01023,individual,gig,none,1,Low,1,Low,2800.0,760.53,segment:gig +1,False,,2029-07-31
+ENT-01024,individual,salaried,none,0,Low,0,Low,4600.0,6167.97,,False,,2029-07-31
+ENT-01025,individual,salaried,none,0,Low,0,Low,3100.0,4515.93,,False,,2029-07-31
+ENT-01026,individual,salaried,none,0,Low,1,Low,2000.0,3578.19,activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-01027,individual,retired,none,0,Low,0,Low,2200.0,1321.48,,False,,2029-07-31
+ENT-01028,individual,salaried,none,0,Low,0,Low,3400.0,2991.78,,False,,2029-07-31
+ENT-01029,individual,salaried,none,0,Low,0,Low,5800.0,6177.51,,False,,2029-07-31
+ENT-01030,individual,salaried,none,0,Low,0,Low,4400.0,4582.33,,False,,2029-07-31
+ENT-01031,individual,salaried,none,0,Low,0,Low,2600.0,2927.98,,False,,2029-07-31
+ENT-01032,individual,gig,none,2,Low,2,Low,8100.0,592.83,segment:gig +1; non_face_to_face +1,False,,2029-07-31
+ENT-01033,individual,salaried,none,0,Low,0,Low,4100.0,4909.56,,False,,2029-07-31
+ENT-01034,individual,salaried,none,1,Low,1,Low,4300.0,5607.56,non_face_to_face +1,False,,2029-07-31
+ENT-01035,individual,salaried,none,0,Low,0,Low,7500.0,4868.74,,False,,2029-07-31
+ENT-01036,individual,salaried,none,0,Low,0,Low,5500.0,4764.96,,False,,2029-07-31
+ENT-01037,individual,salaried,none,1,Low,2,Low,2800.0,5779.2,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-01038,individual,salaried,none,0,Low,0,Low,4300.0,5308.7,,False,,2029-07-31
+ENT-01039,individual,self_employed,none,1,Low,1,Low,6300.0,5896.53,segment:self_employed +1,False,,2029-07-31
+ENT-01040,individual,self_employed,none,1,Low,1,Low,10600.0,5181.73,segment:self_employed +1,False,,2029-07-31
+ENT-01041,individual,salaried,none,1,Low,2,Low,2800.0,4642.26,non_face_to_face +1; activity_over_1_5x_declared +1,False,,2029-07-31
+ENT-01042,individual,salaried,none,0,Low,0,Low,4800.0,5539.33,,False,,2029-07-31
+ENT-01043,individual,retired,none,1,Low,1,Low,5200.0,1518.89,non_face_to_face +1,False,,2029-07-31
+ENT-01044,individual,retired,none,0,Low,0,Low,3500.0,1593.25,,False,,2029-07-31
+ENT-01045,individual,salaried,none,0,Low,0,Low,3400.0,3095.13,,False,,2029-07-31
+ENT-01046,individual,self_employed,none,2,Low,3,Medium,2600.0,5482.32,segment:self_employed +1; non_face_to_face +1; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-01047,individual,self_employed,none,1,Low,3,Medium,1100.0,5360.37,segment:self_employed +1; activity_over_3x_declared +2,False,,2028-07-31
+ENT-01048,individual,salaried,none,1,Low,1,Low,6000.0,5284.97,non_face_to_face +1,False,,2029-07-31
+ENT-01049,individual,salaried,none,0,Low,3,Medium,4800.0,2519.66,wires_over_fifth_of_outflows +1; monitoring_alert +2,False,,2028-07-31
+ENT-01050,individual,salaried,none,0,Low,0,Low,4000.0,5201.28,,False,,2029-07-31
+ENT-01051,business,wholesale,none,2,Low,2,Low,470200.0,32105.96,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01052,business,professional_services,none,3,Medium,3,Medium,24200.0,23910.42,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01053,business,retail_cash_intensive,none,4,Medium,5,Medium,415700.0,31452.19,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01054,business,ecommerce,none,2,Low,2,Low,53800.0,16529.01,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01055,business,wholesale,none,3,Medium,3,Medium,343600.0,39485.43,business +1; segment:wholesale +1; non_face_to_face +1,False,,2028-07-31
+ENT-01056,business,retail_cash_intensive,none,5,Medium,8,High,187700.0,28273.99,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01057,business,professional_services,none,4,Medium,4,Medium,563400.0,28311.41,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01058,business,professional_services,none,4,Medium,4,Medium,49600.0,29462.07,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01059,business,wholesale,none,2,Low,2,Low,257800.0,43424.1,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01060,business,wholesale,none,2,Low,2,Low,272100.0,37412.81,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01061,business,professional_services,none,7,High,7,High,487400.0,29046.69,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring | circular ownership: obtain the structure chart and confirm control,2027-07-31
+ENT-01062,business,wholesale,none,4,Medium,4,Medium,77500.0,37582.35,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01063,business,professional_services,none,3,Medium,3,Medium,139700.0,22573.62,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01064,business,retail_cash_intensive,none,5,Medium,6,High,84000.0,30193.19,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01065,business,professional_services,none,3,Medium,3,Medium,96900.0,25671.74,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01066,business,professional_services,none,3,Medium,3,Medium,71900.0,24982.35,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01067,business,wholesale,none,2,Low,2,Low,72900.0,27639.33,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01068,business,professional_services,none,4,Medium,4,Medium,73900.0,17494.22,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01069,business,wholesale,none,5,Medium,5,Medium,52200.0,34425.32,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01070,business,professional_services,none,3,Medium,3,Medium,79200.0,22430.56,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01071,business,ecommerce,none,5,Medium,5,Medium,38300.0,10752.86,business +1; segment:ecommerce +1; layered_ownership +2; no_25pct_owner +1,True,no individual owns or controls 25%: verify the most senior managing officer,2028-07-31
+ENT-01072,business,retail_cash_intensive,none,8,High,9,High,52600.0,30460.34,business +1; segment:retail_cash_intensive +3; layered_ownership +2; opaque_jurisdiction +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01073,business,professional_services,none,6,High,6,High,78100.0,19492.54,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01074,business,professional_services,none,6,High,6,High,27000.0,21493.54,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01075,business,ecommerce,none,2,Low,2,Low,19400.0,13000.82,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01076,business,professional_services,none,3,Medium,3,Medium,101000.0,20286.58,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01077,business,professional_services,none,3,Medium,3,Medium,144100.0,18902.35,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01078,business,professional_services,none,3,Medium,3,Medium,67100.0,23212.72,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01079,business,wholesale,none,2,Low,2,Low,371000.0,42916.62,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01080,business,ecommerce,none,4,Medium,4,Medium,25900.0,15382.78,business +1; segment:ecommerce +1; layered_ownership +2,False,,2028-07-31
+ENT-01081,business,wholesale,none,4,Medium,4,Medium,158600.0,23257.73,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01082,business,retail_cash_intensive,none,4,Medium,5,Medium,68400.0,25163.24,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01083,business,ecommerce,none,3,Medium,3,Medium,110600.0,12741.36,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01084,business,ecommerce,none,5,Medium,5,Medium,273600.0,10841.72,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01085,business,professional_services,none,4,Medium,4,Medium,57100.0,27333.23,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01086,business,ecommerce,none,2,Low,2,Low,66700.0,11111.32,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01087,business,professional_services,none,5,Medium,5,Medium,133700.0,27884.94,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01088,business,ecommerce,none,3,Medium,3,Medium,88700.0,12897.7,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01089,business,ecommerce,none,2,Low,2,Low,78200.0,11989.82,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01090,business,retail_cash_intensive,none,7,High,8,High,205900.0,33654.21,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01091,business,retail_cash_intensive,none,6,High,7,High,338200.0,29861.07,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01092,business,wholesale,none,2,Low,2,Low,66800.0,39913.04,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01093,business,wholesale,none,2,Low,2,Low,83900.0,56978.68,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01094,business,wholesale,none,2,Low,2,Low,47700.0,35283.38,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01095,business,retail_cash_intensive,none,6,High,7,High,96500.0,35294.6,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01096,business,ecommerce,none,5,Medium,5,Medium,190500.0,10714.9,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01097,business,retail_cash_intensive,none,4,Medium,5,Medium,487400.0,34489.99,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01098,business,professional_services,none,3,Medium,3,Medium,220000.0,25213.0,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01099,business,ecommerce,none,2,Low,2,Low,121700.0,13796.36,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01100,business,wholesale,none,3,Medium,3,Medium,119100.0,55955.99,business +1; segment:wholesale +1; non_face_to_face +1,False,,2028-07-31
+ENT-01101,business,retail_cash_intensive,none,4,Medium,5,Medium,70600.0,25551.89,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01102,business,ecommerce,none,2,Low,2,Low,23400.0,9139.94,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01103,business,professional_services,none,3,Medium,3,Medium,46900.0,21858.46,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01104,business,professional_services,none,8,High,8,High,169500.0,23795.86,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01105,business,professional_services,none,3,Medium,3,Medium,28200.0,28800.33,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01106,business,ecommerce,none,7,High,7,High,55700.0,11782.43,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01107,business,wholesale,none,6,High,6,High,47300.0,20278.78,business +1; segment:wholesale +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01108,business,wholesale,none,2,Low,2,Low,59200.0,59301.45,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01109,business,ecommerce,none,2,Low,2,Low,51600.0,10394.25,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01110,business,professional_services,none,5,Medium,5,Medium,148600.0,22193.71,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01111,business,wholesale,none,3,Medium,3,Medium,573000.0,54700.76,business +1; segment:wholesale +1; non_face_to_face +1,False,,2028-07-31
+ENT-01112,business,professional_services,none,4,Medium,4,Medium,167900.0,17913.94,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01113,business,professional_services,none,3,Medium,3,Medium,201800.0,21560.85,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01114,business,retail_cash_intensive,none,6,High,7,High,20700.0,25413.96,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01115,business,ecommerce,none,4,Medium,4,Medium,41700.0,11523.04,business +1; segment:ecommerce +1; layered_ownership +2,False,,2028-07-31
+ENT-01116,business,professional_services,none,3,Medium,3,Medium,321000.0,26439.77,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01117,business,ecommerce,none,6,High,6,High,183100.0,16322.94,business +1; segment:ecommerce +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01118,business,professional_services,none,5,Medium,5,Medium,118100.0,14116.84,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01119,business,wholesale,none,2,Low,4,Medium,39100.0,41171.6,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01120,business,wholesale,none,4,Medium,6,High,138600.0,35003.08,business +1; segment:wholesale +1; layered_ownership +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01121,business,retail_cash_intensive,none,5,Medium,8,High,133700.0,24266.99,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01122,business,wholesale,none,6,High,8,High,66100.0,41547.34,business +1; segment:wholesale +1; layered_ownership +2; opaque_jurisdiction +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01123,business,ecommerce,none,5,Medium,5,Medium,80200.0,12105.28,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01124,business,retail_cash_intensive,none,6,High,7,High,80200.0,29689.74,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01125,business,wholesale,none,4,Medium,4,Medium,77800.0,48457.22,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01126,business,wholesale,none,4,Medium,6,High,61000.0,29372.18,business +1; segment:wholesale +1; layered_ownership +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01127,business,professional_services,none,5,Medium,5,Medium,82000.0,21668.68,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01128,business,retail_cash_intensive,none,5,Medium,6,High,54400.0,30618.43,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01129,business,ecommerce,none,6,High,6,High,60300.0,7624.54,business +1; segment:ecommerce +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01130,business,wholesale,none,3,Medium,5,Medium,60400.0,24861.33,business +1; segment:wholesale +1; non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-01131,business,wholesale,none,4,Medium,4,Medium,560500.0,37012.48,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01132,business,wholesale,none,5,Medium,5,Medium,169500.0,28630.96,business +1; segment:wholesale +1; adverse_media +3,False,,2028-07-31
+ENT-01133,business,wholesale,none,2,Low,2,Low,195900.0,30467.37,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01134,business,professional_services,none,7,High,7,High,70000.0,25649.02,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01135,business,wholesale,none,2,Low,4,Medium,42500.0,30374.47,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01136,business,wholesale,none,2,Low,2,Low,56900.0,26148.18,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01137,business,wholesale,none,4,Medium,4,Medium,147900.0,25220.34,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01138,business,retail_cash_intensive,none,5,Medium,6,High,54600.0,28644.38,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01139,business,professional_services,none,5,Medium,5,Medium,316500.0,17989.42,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01140,business,wholesale,none,5,Medium,5,Medium,51300.0,33156.54,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01141,business,wholesale,none,2,Low,2,Low,177300.0,34252.79,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01142,business,ecommerce,none,3,Medium,3,Medium,218300.0,15099.22,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01143,business,retail_cash_intensive,none,4,Medium,5,Medium,140700.0,33204.36,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01144,business,ecommerce,none,2,Low,2,Low,346500.0,12672.13,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01145,business,ecommerce,none,2,Low,2,Low,259000.0,12932.96,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01146,business,wholesale,none,2,Low,2,Low,61300.0,41684.92,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01147,business,professional_services,none,5,Medium,5,Medium,94600.0,32195.21,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01148,business,wholesale,none,7,High,7,High,54800.0,41114.43,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01149,business,professional_services,none,6,High,6,High,93200.0,32673.05,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01150,business,ecommerce,none,3,Medium,5,Medium,20800.0,16868.33,business +1; segment:ecommerce +1; non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-01151,business,wholesale,none,4,Medium,6,High,109800.0,35000.76,business +1; segment:wholesale +1; layered_ownership +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01152,business,professional_services,none,3,Medium,3,Medium,221400.0,29381.97,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01153,business,ecommerce,none,6,High,6,High,558900.0,13700.52,business +1; segment:ecommerce +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01154,business,professional_services,none,6,High,6,High,170200.0,26605.47,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01155,business,professional_services,none,6,High,6,High,89300.0,24354.86,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01156,business,professional_services,none,8,High,8,High,276200.0,23211.6,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01157,business,ecommerce,none,7,High,7,High,367500.0,11601.9,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01158,business,professional_services,none,3,Medium,3,Medium,226800.0,23290.56,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01159,business,wholesale,none,2,Low,4,Medium,71100.0,36949.07,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01160,business,professional_services,none,3,Medium,3,Medium,84400.0,26276.74,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01161,business,wholesale,none,2,Low,2,Low,41700.0,40205.32,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01162,business,ecommerce,none,5,Medium,5,Medium,18300.0,10755.72,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01163,business,retail_cash_intensive,none,6,High,7,High,52000.0,32837.3,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01164,business,ecommerce,none,2,Low,2,Low,124400.0,16539.59,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01165,business,ecommerce,none,2,Low,2,Low,55400.0,13805.35,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01166,business,professional_services,none,4,Medium,4,Medium,278500.0,25038.21,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01167,business,professional_services,none,5,Medium,5,Medium,223000.0,16860.84,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01168,business,retail_cash_intensive,none,6,High,7,High,28300.0,38122.71,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01169,business,professional_services,none,3,Medium,3,Medium,99400.0,26722.76,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01170,business,wholesale,none,3,Medium,3,Medium,66600.0,44909.94,business +1; segment:wholesale +1; non_face_to_face +1,False,,2028-07-31
+ENT-01171,business,professional_services,none,4,Medium,4,Medium,66700.0,25604.69,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01172,business,ecommerce,none,3,Medium,3,Medium,160100.0,14147.58,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01173,business,retail_cash_intensive,none,6,High,7,High,123300.0,25457.87,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01174,business,professional_services,none,5,Medium,5,Medium,324700.0,17922.1,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01175,business,professional_services,none,7,High,9,High,34300.0,23755.65,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01176,business,wholesale,none,7,High,7,High,142400.0,64000.51,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01177,business,ecommerce,none,2,Low,2,Low,42300.0,15656.06,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01178,business,wholesale,none,2,Low,2,Low,72600.0,30337.96,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01179,business,professional_services,none,4,Medium,4,Medium,21400.0,24555.44,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01180,business,retail_cash_intensive,none,4,Medium,5,Medium,40400.0,26037.46,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01181,business,professional_services,none,3,Medium,3,Medium,52600.0,22817.94,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01182,business,wholesale,none,8,High,10,High,14400.0,43471.77,business +1; segment:wholesale +1; non_face_to_face +1; adverse_media +3; layered_ownership +2; activity_over_3x_declared +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01183,business,professional_services,none,5,Medium,5,Medium,115200.0,26567.12,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01184,business,wholesale,none,2,Low,4,Medium,81900.0,37577.04,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01185,business,retail_cash_intensive,none,6,High,7,High,137200.0,29977.66,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01186,business,professional_services,none,3,Medium,3,Medium,171800.0,20496.36,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01187,business,professional_services,none,5,Medium,5,Medium,56600.0,27907.84,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01188,business,wholesale,none,3,Medium,5,Medium,111500.0,44014.96,business +1; segment:wholesale +1; non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-01189,business,wholesale,none,2,Low,2,Low,76600.0,49781.43,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01190,business,wholesale,none,2,Low,2,Low,159000.0,31085.29,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01191,business,professional_services,none,5,Medium,5,Medium,223800.0,27829.92,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01192,business,professional_services,none,3,Medium,3,Medium,209100.0,19631.28,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01193,business,retail_cash_intensive,none,6,High,7,High,74400.0,24588.27,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01194,business,wholesale,none,4,Medium,4,Medium,70600.0,23678.34,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01195,business,professional_services,none,3,Medium,3,Medium,41700.0,18562.76,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01196,business,wholesale,none,4,Medium,4,Medium,75300.0,31359.98,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01197,business,ecommerce,none,6,High,6,High,111500.0,10571.3,business +1; segment:ecommerce +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01198,business,professional_services,none,3,Medium,4,Medium,13300.0,29193.74,business +1; segment:professional_services +2; activity_over_1_5x_declared +1,False,,2028-07-31
+ENT-01199,business,professional_services,none,7,High,9,High,70000.0,26496.84,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01200,business,wholesale,none,4,Medium,4,Medium,81500.0,44191.7,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01201,business,wholesale,none,5,Medium,5,Medium,162800.0,40747.97,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01202,business,professional_services,none,6,High,6,High,51900.0,31081.53,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01203,business,wholesale,none,3,Medium,5,Medium,180900.0,59705.06,business +1; segment:wholesale +1; non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-01204,business,wholesale,none,2,Low,2,Low,80800.0,43629.8,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01205,business,professional_services,none,4,Medium,4,Medium,145500.0,14250.75,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01206,business,ecommerce,none,2,Low,2,Low,130000.0,14520.15,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01207,business,retail_cash_intensive,none,8,High,9,High,172900.0,28076.21,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; layered_ownership +2; no_25pct_owner +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring | no individual owns or controls 25%: verify the most senior managing officer,2027-07-31
+ENT-01208,business,ecommerce,none,7,High,7,High,187200.0,12169.35,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01209,business,ecommerce,none,7,High,7,High,104700.0,10277.96,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01210,business,retail_cash_intensive,none,6,High,7,High,96700.0,24588.53,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01211,business,professional_services,none,3,Medium,3,Medium,201800.0,17349.6,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01212,business,ecommerce,none,7,High,7,High,34600.0,15569.95,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01213,business,retail_cash_intensive,none,4,Medium,5,Medium,122600.0,25001.76,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01214,business,professional_services,none,7,High,7,High,108200.0,26614.45,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01215,business,ecommerce,none,5,Medium,5,Medium,190300.0,12511.56,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01216,business,retail_cash_intensive,none,7,High,10,High,124900.0,33442.31,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; layered_ownership +2; cash_over_half_of_inflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01217,business,ecommerce,none,4,Medium,4,Medium,106800.0,15203.89,business +1; segment:ecommerce +1; layered_ownership +2,False,,2028-07-31
+ENT-01218,business,professional_services,none,4,Medium,4,Medium,134700.0,26032.27,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01219,business,ecommerce,none,3,Medium,3,Medium,147900.0,11601.93,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01220,business,wholesale,none,2,Low,2,Low,79100.0,26216.1,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01221,business,ecommerce,none,2,Low,2,Low,80600.0,13590.39,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01222,business,wholesale,none,2,Low,2,Low,241000.0,39825.62,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01223,business,professional_services,none,8,High,8,High,92200.0,20356.07,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01224,business,professional_services,none,3,Medium,3,Medium,64900.0,19321.15,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01225,business,wholesale,none,2,Low,2,Low,82300.0,42943.63,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01226,business,wholesale,none,2,Low,2,Low,114400.0,23011.43,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01227,business,retail_cash_intensive,none,4,Medium,5,Medium,214500.0,25671.62,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01228,business,wholesale,none,2,Low,4,Medium,46500.0,35979.52,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01229,business,wholesale,none,2,Low,2,Low,39500.0,33307.66,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01230,business,professional_services,none,8,High,10,High,30900.0,25457.09,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01231,business,ecommerce,none,2,Low,2,Low,231400.0,14237.6,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01232,business,ecommerce,none,2,Low,2,Low,49100.0,15910.97,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01233,business,wholesale,none,2,Low,2,Low,175500.0,33317.59,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01234,business,professional_services,none,3,Medium,3,Medium,82700.0,19647.68,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01235,business,professional_services,none,3,Medium,3,Medium,170800.0,18309.5,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01236,business,professional_services,none,3,Medium,3,Medium,89900.0,28209.06,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01237,business,wholesale,none,2,Low,2,Low,64500.0,36869.62,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01238,business,professional_services,none,5,Medium,5,Medium,76500.0,20599.19,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01239,business,ecommerce,none,5,Medium,6,High,215500.0,14392.27,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2; wires_over_fifth_of_outflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01240,business,professional_services,none,4,Medium,4,Medium,145200.0,21599.26,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01241,business,professional_services,none,5,Medium,5,Medium,70700.0,21959.46,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01242,business,wholesale,none,2,Low,2,Low,125900.0,31194.82,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01243,business,professional_services,none,3,Medium,3,Medium,302700.0,15934.62,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01244,business,professional_services,none,4,Medium,4,Medium,60600.0,24770.88,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01245,business,wholesale,none,5,Medium,5,Medium,58800.0,37107.05,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01246,business,retail_cash_intensive,none,5,Medium,6,High,101600.0,18507.47,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01247,business,wholesale,none,4,Medium,4,Medium,150600.0,41395.47,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01248,business,professional_services,none,4,Medium,4,Medium,58400.0,21677.79,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01249,business,retail_cash_intensive,none,4,Medium,5,Medium,30100.0,24012.43,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01250,business,retail_cash_intensive,none,6,High,7,High,249400.0,28106.0,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01251,business,ecommerce,none,2,Low,2,Low,174300.0,10289.58,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01252,business,wholesale,none,3,Medium,5,Medium,54900.0,25775.26,business +1; segment:wholesale +1; non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-01253,business,ecommerce,none,5,Medium,5,Medium,49400.0,11048.36,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01254,business,professional_services,none,5,Medium,5,Medium,88800.0,19654.18,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01255,business,professional_services,none,3,Medium,3,Medium,63500.0,27822.74,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01256,business,professional_services,none,5,Medium,5,Medium,79800.0,25717.8,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01257,business,wholesale,none,2,Low,2,Low,128800.0,28032.52,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01258,business,professional_services,none,5,Medium,5,Medium,38100.0,23556.63,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01259,business,wholesale,none,4,Medium,4,Medium,100400.0,28882.73,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01260,business,wholesale,none,2,Low,2,Low,63900.0,31423.71,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01261,business,ecommerce,none,4,Medium,4,Medium,39800.0,14970.16,business +1; segment:ecommerce +1; layered_ownership +2,False,,2028-07-31
+ENT-01262,business,ecommerce,none,2,Low,2,Low,77100.0,9631.84,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01263,business,wholesale,none,2,Low,2,Low,19300.0,28774.87,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01264,business,ecommerce,none,3,Medium,3,Medium,420800.0,13935.88,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01265,business,wholesale,none,2,Low,2,Low,374800.0,44613.86,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01266,business,professional_services,none,3,Medium,3,Medium,65600.0,29651.67,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01267,business,professional_services,none,7,High,7,High,169100.0,18084.27,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01268,business,retail_cash_intensive,none,6,High,7,High,45600.0,29338.68,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01269,business,retail_cash_intensive,none,7,High,8,High,277600.0,26282.37,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01270,business,retail_cash_intensive,none,7,High,10,High,63000.0,29232.6,business +1; segment:retail_cash_intensive +3; layered_ownership +2; no_25pct_owner +1; cash_over_half_of_inflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring | no individual owns or controls 25%: verify the most senior managing officer,2027-07-31
+ENT-01271,business,retail_cash_intensive,none,6,High,7,High,131400.0,28655.67,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01272,business,ecommerce,none,2,Low,2,Low,18600.0,14021.93,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01273,business,retail_cash_intensive,none,5,Medium,6,High,46700.0,28505.44,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01274,business,professional_services,none,3,Medium,3,Medium,167200.0,18144.92,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01275,business,retail_cash_intensive,none,6,High,7,High,57700.0,31404.92,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01276,business,retail_cash_intensive,none,4,Medium,5,Medium,159000.0,26385.43,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01277,business,wholesale,none,5,Medium,5,Medium,72200.0,36028.94,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01278,business,wholesale,none,3,Medium,3,Medium,76400.0,29941.0,business +1; segment:wholesale +1; non_face_to_face +1,False,,2028-07-31
+ENT-01279,business,ecommerce,none,4,Medium,4,Medium,65800.0,10132.75,business +1; segment:ecommerce +1; layered_ownership +2,False,,2028-07-31
+ENT-01280,business,professional_services,none,3,Medium,3,Medium,150700.0,25262.45,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01281,business,ecommerce,none,6,High,6,High,258500.0,14024.36,business +1; segment:ecommerce +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01282,business,ecommerce,none,3,Medium,3,Medium,311000.0,12836.02,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01283,business,ecommerce,none,2,Low,2,Low,113600.0,10970.8,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01284,business,professional_services,none,7,High,7,High,21800.0,25956.02,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01285,business,professional_services,none,3,Medium,3,Medium,44800.0,18519.58,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01286,business,ecommerce,none,2,Low,2,Low,109800.0,11327.56,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01287,business,wholesale,none,4,Medium,4,Medium,138500.0,35389.34,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01288,business,retail_cash_intensive,none,4,Medium,5,Medium,119900.0,32274.06,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01289,business,wholesale,none,4,Medium,6,High,303400.0,48028.18,business +1; segment:wholesale +1; layered_ownership +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01290,business,retail_cash_intensive,none,5,Medium,6,High,135800.0,36016.81,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01291,business,wholesale,none,7,High,7,High,105600.0,30867.97,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01292,business,professional_services,none,5,Medium,7,High,101800.0,27316.65,business +1; segment:professional_services +2; layered_ownership +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01293,business,ecommerce,none,2,Low,2,Low,245600.0,10497.15,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01294,business,professional_services,none,4,Medium,4,Medium,171400.0,28682.48,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01295,business,professional_services,none,4,Medium,4,Medium,106200.0,26538.19,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01296,business,ecommerce,none,2,Low,2,Low,25600.0,11259.49,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01297,business,professional_services,none,9,High,9,High,67600.0,28269.99,business +1; segment:professional_services +2; non_face_to_face +1; adverse_media +3; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01298,business,professional_services,none,4,Medium,4,Medium,39900.0,23056.67,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01299,business,professional_services,none,3,Medium,3,Medium,59700.0,27157.63,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01300,business,ecommerce,none,2,Low,2,Low,174600.0,10932.05,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01301,business,retail_cash_intensive,none,4,Medium,5,Medium,115600.0,31810.71,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01302,business,professional_services,none,8,High,8,High,51700.0,19864.42,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2; no_25pct_owner +1,True,high risk: enhanced measures and enhanced ongoing monitoring | no individual owns or controls 25%: verify the most senior managing officer,2027-07-31
+ENT-01303,business,ecommerce,none,5,Medium,5,Medium,67000.0,9455.0,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01304,business,retail_cash_intensive,none,8,High,11,High,29300.0,33749.22,business +1; segment:retail_cash_intensive +3; layered_ownership +2; opaque_jurisdiction +2; cash_over_half_of_inflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01305,business,wholesale,none,3,Medium,3,Medium,147400.0,32975.85,business +1; segment:wholesale +1; non_face_to_face +1,False,,2028-07-31
+ENT-01306,business,professional_services,none,5,Medium,5,Medium,60200.0,26481.0,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01307,business,professional_services,none,3,Medium,3,Medium,70600.0,26463.52,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01308,business,professional_services,none,5,Medium,5,Medium,132500.0,33301.78,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01309,business,ecommerce,none,4,Medium,4,Medium,96200.0,14102.8,business +1; segment:ecommerce +1; layered_ownership +2,False,,2028-07-31
+ENT-01310,business,ecommerce,none,2,Low,2,Low,15300.0,11039.85,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01311,business,wholesale,none,4,Medium,4,Medium,34300.0,41180.64,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01312,business,professional_services,none,3,Medium,3,Medium,69000.0,24649.42,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01313,business,retail_cash_intensive,none,5,Medium,6,High,33100.0,30410.7,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01314,business,professional_services,none,3,Medium,3,Medium,201400.0,23910.62,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01315,business,ecommerce,none,2,Low,2,Low,127700.0,12058.48,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01316,business,wholesale,none,2,Low,2,Low,94100.0,42886.66,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01317,business,retail_cash_intensive,none,5,Medium,8,High,62100.0,32079.89,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01318,business,wholesale,none,2,Low,2,Low,141400.0,33482.41,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01319,business,professional_services,none,3,Medium,3,Medium,154500.0,37932.06,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01320,business,wholesale,none,6,High,6,High,86400.0,28318.91,business +1; segment:wholesale +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01321,business,professional_services,none,5,Medium,5,Medium,32200.0,28861.47,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01322,business,professional_services,none,5,Medium,5,Medium,109000.0,20240.1,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01323,business,ecommerce,none,3,Medium,3,Medium,166600.0,16703.02,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01324,business,professional_services,none,3,Medium,3,Medium,56400.0,27022.97,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01325,business,wholesale,none,2,Low,2,Low,200100.0,24968.31,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01326,business,retail_cash_intensive,none,6,High,7,High,184200.0,35918.07,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01327,business,ecommerce,none,3,Medium,3,Medium,14800.0,14720.6,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01328,business,wholesale,none,5,Medium,7,High,57400.0,24967.45,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01329,business,professional_services,none,5,Medium,5,Medium,55500.0,28035.99,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01330,business,professional_services,none,7,High,7,High,96500.0,17050.37,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01331,business,ecommerce,none,2,Low,2,Low,124200.0,14190.35,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01332,business,professional_services,none,5,Medium,5,Medium,53700.0,26140.03,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01333,business,professional_services,none,5,Medium,5,Medium,121000.0,32293.46,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01334,business,professional_services,none,4,Medium,4,Medium,70000.0,42623.46,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01335,business,professional_services,none,5,Medium,5,Medium,66900.0,22977.2,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01336,business,professional_services,none,7,High,7,High,22600.0,20324.43,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01337,business,professional_services,none,4,Medium,4,Medium,117900.0,18400.48,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01338,business,professional_services,none,3,Medium,3,Medium,135800.0,29965.78,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01339,business,professional_services,none,3,Medium,3,Medium,268600.0,22073.42,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01340,business,ecommerce,none,2,Low,2,Low,96600.0,13358.8,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01341,business,ecommerce,none,2,Low,2,Low,108000.0,13215.94,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01342,business,professional_services,none,5,Medium,5,Medium,151100.0,23826.45,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01343,business,professional_services,none,5,Medium,5,Medium,109600.0,18930.8,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01344,business,retail_cash_intensive,none,4,Medium,5,Medium,312600.0,35497.91,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01345,business,wholesale,none,2,Low,2,Low,62300.0,36458.8,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01346,business,wholesale,none,6,High,6,High,80500.0,39119.14,business +1; segment:wholesale +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01347,business,professional_services,none,8,High,8,High,201100.0,18995.12,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01348,business,professional_services,none,5,Medium,5,Medium,175300.0,24526.76,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01349,business,professional_services,none,7,High,7,High,46600.0,24270.05,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01350,business,ecommerce,none,2,Low,2,Low,43300.0,11356.07,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01351,business,wholesale,none,4,Medium,4,Medium,148300.0,31205.38,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01352,business,wholesale,none,2,Low,4,Medium,48200.0,44406.68,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01353,business,wholesale,none,3,Medium,3,Medium,368300.0,38419.91,business +1; segment:wholesale +1; non_face_to_face +1,False,,2028-07-31
+ENT-01354,business,wholesale,none,4,Medium,4,Medium,82500.0,32386.58,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01355,business,ecommerce,none,3,Medium,3,Medium,325700.0,11239.41,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01356,business,wholesale,none,2,Low,2,Low,389200.0,39217.16,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01357,business,retail_cash_intensive,none,5,Medium,6,High,50300.0,34393.5,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01358,business,wholesale,none,5,Medium,5,Medium,225400.0,45027.91,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01359,business,wholesale,none,3,Medium,3,Medium,63900.0,26954.35,business +1; segment:wholesale +1; non_face_to_face +1,False,,2028-07-31
+ENT-01360,business,professional_services,none,5,Medium,5,Medium,698900.0,30061.8,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01361,business,wholesale,none,2,Low,2,Low,54800.0,37942.83,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01362,business,wholesale,none,2,Low,2,Low,59600.0,31903.5,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01363,business,professional_services,none,3,Medium,3,Medium,52600.0,39133.13,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01364,business,professional_services,none,4,Medium,4,Medium,64200.0,21020.1,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01365,business,wholesale,none,5,Medium,5,Medium,73100.0,35804.89,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01366,business,wholesale,none,2,Low,2,Low,91100.0,28088.98,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01367,business,wholesale,none,3,Medium,3,Medium,113000.0,26437.48,business +1; segment:wholesale +1; non_face_to_face +1,False,,2028-07-31
+ENT-01368,business,professional_services,none,6,High,6,High,104800.0,25451.42,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01369,business,ecommerce,none,2,Low,2,Low,51900.0,14692.38,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01370,business,retail_cash_intensive,none,6,High,9,High,116200.0,34764.52,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01371,business,ecommerce,none,6,High,6,High,43200.0,10061.2,business +1; segment:ecommerce +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01372,business,professional_services,none,7,High,7,High,28600.0,24021.25,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01373,business,retail_cash_intensive,none,4,Medium,7,High,192700.0,30122.19,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01374,business,wholesale,none,2,Low,2,Low,53500.0,26384.3,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01375,business,wholesale,none,6,High,8,High,248600.0,42709.38,business +1; segment:wholesale +1; layered_ownership +2; opaque_jurisdiction +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01376,business,professional_services,none,3,Medium,3,Medium,81500.0,32903.29,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01377,business,wholesale,none,7,High,7,High,81600.0,28026.63,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01378,business,professional_services,none,8,High,8,High,141200.0,27057.44,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01379,business,wholesale,none,2,Low,2,Low,24200.0,34580.45,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01380,business,ecommerce,none,2,Low,2,Low,93100.0,13163.73,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01381,business,retail_cash_intensive,none,4,Medium,5,Medium,196300.0,30608.73,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01382,business,retail_cash_intensive,none,4,Medium,5,Medium,140500.0,24298.06,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01383,business,ecommerce,none,2,Low,2,Low,78200.0,13395.96,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01384,business,retail_cash_intensive,none,4,Medium,5,Medium,32900.0,33864.22,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01385,business,wholesale,none,5,Medium,5,Medium,129400.0,55993.38,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01386,business,professional_services,none,5,Medium,5,Medium,84900.0,24461.54,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01387,business,wholesale,none,4,Medium,6,High,303600.0,45496.04,business +1; segment:wholesale +1; layered_ownership +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01388,business,retail_cash_intensive,none,6,High,7,High,92000.0,31775.08,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01389,business,professional_services,none,4,Medium,4,Medium,99600.0,26379.12,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01390,business,professional_services,none,5,Medium,5,Medium,352000.0,23486.43,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01391,business,retail_cash_intensive,none,5,Medium,6,High,119600.0,35602.4,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01392,business,professional_services,none,6,High,6,High,50600.0,30239.82,business +1; segment:professional_services +2; adverse_media +3,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01393,business,wholesale,none,4,Medium,7,High,65100.0,15770.63,business +1; segment:wholesale +1; layered_ownership +2; wires_over_fifth_of_outflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01394,business,professional_services,none,6,High,6,High,83700.0,24074.55,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01395,business,professional_services,none,3,Medium,3,Medium,342600.0,19284.88,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01396,business,professional_services,none,3,Medium,3,Medium,34400.0,22844.63,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01397,business,professional_services,none,3,Medium,3,Medium,212500.0,27640.24,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01398,business,wholesale,none,2,Low,4,Medium,98700.0,37067.96,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01399,business,retail_cash_intensive,none,5,Medium,6,High,138800.0,30555.57,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01400,business,ecommerce,none,6,High,6,High,199000.0,16511.38,business +1; segment:ecommerce +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01401,business,retail_cash_intensive,none,6,High,7,High,50600.0,35613.6,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01402,business,wholesale,none,2,Low,4,Medium,21200.0,27987.98,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01403,business,wholesale,none,4,Medium,4,Medium,83200.0,40605.36,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01404,business,professional_services,none,7,High,7,High,141700.0,23848.89,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01405,business,professional_services,none,3,Medium,3,Medium,142900.0,30268.3,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01406,business,ecommerce,none,2,Low,2,Low,123500.0,13810.85,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01407,business,wholesale,none,2,Low,2,Low,66900.0,34365.5,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01408,business,wholesale,none,2,Low,4,Medium,127800.0,22374.3,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01409,business,ecommerce,none,7,High,7,High,51700.0,12111.65,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01410,business,professional_services,none,4,Medium,4,Medium,156300.0,19544.96,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01411,business,ecommerce,none,4,Medium,4,Medium,16500.0,14956.72,business +1; segment:ecommerce +1; layered_ownership +2,False,,2028-07-31
+ENT-01412,business,professional_services,none,4,Medium,4,Medium,33000.0,29335.55,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01413,business,retail_cash_intensive,none,6,High,7,High,140900.0,25682.36,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01414,business,wholesale,none,7,High,9,High,145200.0,37030.03,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01415,business,wholesale,none,4,Medium,4,Medium,56900.0,40219.88,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01416,business,retail_cash_intensive,none,6,High,7,High,95100.0,32370.6,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01417,business,retail_cash_intensive,none,6,High,7,High,32500.0,32558.02,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01418,business,retail_cash_intensive,none,5,Medium,6,High,292500.0,30298.92,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01419,business,professional_services,none,5,Medium,5,Medium,187900.0,28419.57,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01420,business,professional_services,none,4,Medium,4,Medium,98500.0,31865.88,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01421,business,retail_cash_intensive,none,9,High,10,High,80200.0,26638.06,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01422,business,professional_services,none,7,High,7,High,104400.0,26577.12,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01423,business,wholesale,none,2,Low,4,Medium,87100.0,46595.39,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01424,business,wholesale,none,4,Medium,4,Medium,24800.0,35732.77,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01425,business,ecommerce,none,2,Low,2,Low,138000.0,12418.37,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01426,business,wholesale,none,3,Medium,5,Medium,123500.0,36631.52,business +1; segment:wholesale +1; non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-01427,business,ecommerce,none,7,High,7,High,54200.0,9590.55,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01428,business,retail_cash_intensive,none,5,Medium,6,High,54000.0,25444.63,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01429,business,professional_services,none,4,Medium,4,Medium,121700.0,17514.92,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01430,business,retail_cash_intensive,none,5,Medium,6,High,39300.0,36544.82,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01431,business,professional_services,none,5,Medium,5,Medium,59700.0,23679.79,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01432,business,professional_services,none,3,Medium,3,Medium,57600.0,19537.36,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01433,business,ecommerce,none,2,Low,2,Low,61700.0,11056.84,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01434,business,professional_services,none,3,Medium,3,Medium,540900.0,28340.42,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01435,business,wholesale,none,2,Low,2,Low,19700.0,14659.81,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01436,business,professional_services,none,5,Medium,7,High,257400.0,23991.08,business +1; segment:professional_services +2; layered_ownership +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01437,business,professional_services,none,3,Medium,3,Medium,65700.0,24435.69,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01438,business,wholesale,none,4,Medium,4,Medium,91400.0,39056.29,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01439,business,wholesale,none,4,Medium,4,Medium,75600.0,27142.02,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01440,business,professional_services,none,4,Medium,4,Medium,112600.0,18387.11,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01441,business,wholesale,none,2,Low,2,Low,214400.0,19922.37,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01442,business,professional_services,none,3,Medium,3,Medium,61400.0,20800.94,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01443,business,professional_services,none,5,Medium,5,Medium,41000.0,23834.6,business +1; segment:professional_services +2; layered_ownership +2,False,,2028-07-31
+ENT-01444,business,professional_services,none,6,High,6,High,145000.0,18839.36,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01445,business,professional_services,none,7,High,7,High,382900.0,19224.89,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01446,business,retail_cash_intensive,none,8,High,9,High,168200.0,34868.05,business +1; segment:retail_cash_intensive +3; layered_ownership +2; opaque_jurisdiction +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01447,business,professional_services,none,3,Medium,3,Medium,73600.0,15657.99,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01448,business,wholesale,none,2,Low,2,Low,112000.0,24313.51,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01449,business,professional_services,none,4,Medium,4,Medium,167400.0,25234.59,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01450,business,retail_cash_intensive,none,4,Medium,5,Medium,120300.0,25885.49,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01451,business,ecommerce,none,3,Medium,3,Medium,441200.0,11569.43,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01452,business,wholesale,none,4,Medium,4,Medium,67300.0,34915.23,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01453,business,wholesale,none,5,Medium,5,Medium,67000.0,32816.12,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01454,business,wholesale,none,5,Medium,5,Medium,210000.0,78731.17,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01455,business,ecommerce,none,5,Medium,5,Medium,93500.0,12069.19,business +1; segment:ecommerce +1; non_face_to_face +1; layered_ownership +2,False,,2028-07-31
+ENT-01456,business,ecommerce,none,3,Medium,3,Medium,80100.0,9584.52,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01457,business,retail_cash_intensive,none,4,Medium,5,Medium,145100.0,30220.24,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01458,business,ecommerce,none,3,Medium,3,Medium,83100.0,10409.95,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01459,business,wholesale,none,4,Medium,4,Medium,216000.0,34803.78,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01460,business,wholesale,none,2,Low,4,Medium,80500.0,41755.31,business +1; segment:wholesale +1; monitoring_alert +2,False,,2028-07-31
+ENT-01461,business,ecommerce,none,2,Low,2,Low,69900.0,11411.02,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01462,business,wholesale,none,2,Low,2,Low,261700.0,52092.14,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01463,business,ecommerce,none,6,High,6,High,127200.0,14224.45,business +1; segment:ecommerce +1; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01464,business,retail_cash_intensive,none,4,Medium,5,Medium,33100.0,28454.65,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01465,business,wholesale,none,3,Medium,3,Medium,77700.0,33139.99,business +1; segment:wholesale +1; non_face_to_face +1,False,,2028-07-31
+ENT-01466,business,professional_services,none,3,Medium,3,Medium,198000.0,36864.82,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01467,business,wholesale,none,2,Low,2,Low,38200.0,32662.13,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01468,business,wholesale,none,5,Medium,7,High,113300.0,43602.48,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01469,business,professional_services,none,4,Medium,4,Medium,91600.0,25919.8,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01470,business,ecommerce,none,2,Low,2,Low,94100.0,16325.2,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01471,business,wholesale,none,4,Medium,4,Medium,234100.0,36023.9,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01472,business,wholesale,none,4,Medium,4,Medium,402700.0,46863.78,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01473,business,professional_services,none,3,Medium,3,Medium,183000.0,23264.47,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01474,business,retail_cash_intensive,none,6,High,7,High,43800.0,29467.0,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01475,business,wholesale,none,2,Low,2,Low,119500.0,28474.27,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01476,business,professional_services,none,7,High,7,High,105800.0,28491.88,business +1; segment:professional_services +2; layered_ownership +2; opaque_jurisdiction +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01477,business,retail_cash_intensive,none,5,Medium,6,High,132500.0,24758.95,business +1; segment:retail_cash_intensive +3; non_face_to_face +1; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01478,business,professional_services,none,3,Medium,3,Medium,177900.0,24045.41,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01479,business,retail_cash_intensive,none,4,Medium,5,Medium,42300.0,35263.85,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01480,business,retail_cash_intensive,none,6,High,7,High,38100.0,28110.88,business +1; segment:retail_cash_intensive +3; layered_ownership +2; cash_over_half_of_inflows +1,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01481,business,professional_services,none,4,Medium,4,Medium,46000.0,20018.02,business +1; segment:professional_services +2; non_face_to_face +1,False,,2028-07-31
+ENT-01482,business,professional_services,none,6,High,6,High,87100.0,22784.92,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01483,business,wholesale,none,3,Medium,5,Medium,121700.0,40180.49,business +1; segment:wholesale +1; non_face_to_face +1; monitoring_alert +2,False,,2028-07-31
+ENT-01484,business,wholesale,none,2,Low,2,Low,27200.0,30224.43,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01485,business,retail_cash_intensive,none,4,Medium,5,Medium,381500.0,32453.6,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01486,business,wholesale,none,2,Low,2,Low,114000.0,31580.42,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01487,business,retail_cash_intensive,none,4,Medium,7,High,72400.0,33904.06,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01488,business,professional_services,none,6,High,6,High,56100.0,28233.56,business +1; segment:professional_services +2; non_face_to_face +1; layered_ownership +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01489,business,retail_cash_intensive,none,4,Medium,5,Medium,69000.0,26228.29,business +1; segment:retail_cash_intensive +3; cash_over_half_of_inflows +1,False,,2028-07-31
+ENT-01490,business,ecommerce,none,3,Medium,3,Medium,82300.0,12837.86,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31
+ENT-01491,business,ecommerce,none,2,Low,2,Low,101800.0,10823.94,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01492,business,wholesale,none,4,Medium,4,Medium,101500.0,25471.6,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01493,business,wholesale,none,2,Low,2,Low,72300.0,41130.95,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01494,business,wholesale,none,5,Medium,8,High,128600.0,26134.25,business +1; segment:wholesale +1; non_face_to_face +1; layered_ownership +2; wires_over_fifth_of_outflows +1; monitoring_alert +2,True,high risk: enhanced measures and enhanced ongoing monitoring,2027-07-31
+ENT-01495,business,wholesale,none,2,Low,2,Low,329600.0,28995.2,business +1; segment:wholesale +1,False,,2029-07-31
+ENT-01496,business,wholesale,none,4,Medium,4,Medium,28200.0,38854.19,business +1; segment:wholesale +1; layered_ownership +2,False,,2028-07-31
+ENT-01497,business,ecommerce,none,2,Low,2,Low,101100.0,14050.91,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01498,business,ecommerce,none,2,Low,2,Low,118000.0,14319.88,business +1; segment:ecommerce +1,False,,2029-07-31
+ENT-01499,business,professional_services,none,3,Medium,3,Medium,147000.0,14538.55,business +1; segment:professional_services +2,False,,2028-07-31
+ENT-01500,business,ecommerce,none,3,Medium,3,Medium,81500.0,11023.76,business +1; segment:ecommerce +1; non_face_to_face +1,False,,2028-07-31

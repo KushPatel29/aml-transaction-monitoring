@@ -55,6 +55,16 @@ required if the entity knows they share a conductor. Structuring that defeats
 one institution's window can trip another's, which is one reason the STR
 question has to be asked separately.
 
+## Know your client: what `src/kyc.py` maps to
+
+| Obligation (PCMLTFA and its regulations, as FINTRAC describes them) | Where it is implemented | Where it stops |
+|---|---|---|
+| Assess and document the money laundering and terrorist financing risk of each client, as part of a risk-based approach | `rate()`: points on stated factors, Low, Medium or High, every rating with its reasons; re-assessed at a periodic refresh with twelve months of activity | The weights, bands and review cycle are this project's policy, not FINTRAC's |
+| Enhanced measures for high-risk clients, including enhanced ongoing monitoring | Every High rating is flagged for enhanced measures and a 12-month review | Flags the requirement; the measures themselves are people's work |
+| Politically exposed foreign persons: high risk; establish the source of funds, obtain senior management approval, enhanced ongoing monitoring | A foreign PEP is High whatever the points, with those three measures named | PEP status is a synthetic flag; there is no PEP list or screening here |
+| Domestic PEPs and heads of international organizations: the enhanced measures apply once they are assessed as high risk | Treated as a weighted factor in the score, not an automatic High | Same as above |
+| Beneficial ownership: obtain the names of every person who directly or indirectly owns or controls 25% or more of a corporation or other entity, and the ownership, control and structure; if that cannot be obtained or confirmed, verify the identity of the most senior managing officer | `effective_ownership()` multiplies shares down every chain of holdings and sums a person's chains; the 25% line is inclusive; a business with no one at 25% is flagged for the senior managing officer step; loops are detected and reported | Ownership is synthetic and complete; real registries are neither, and control by means other than shares is not modelled |
+
 ## What this project does not cover
 
 - **Know-your-client and beneficial ownership.** The synthetic data has no
