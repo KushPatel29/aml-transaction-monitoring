@@ -10,4 +10,6 @@ networkx==3.2.1
 streamlit==1.59.2
 altair==6.2.2
 matplotlib==3.8.2
+# Jaro-Winkler for sanctions name screening (src/sanctions_screening.py).
+rapidfuzz==3.14.1
 pytest==9.1.1

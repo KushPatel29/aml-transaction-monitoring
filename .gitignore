@@ -18,3 +18,7 @@ env/
 Thumbs.db
 .vscode/
 .idea/
+
+# The sanctions list names real people. It is downloaded at run time by
+# src/sanctions_screening.py and never committed; only aggregates are.
+data/raw/

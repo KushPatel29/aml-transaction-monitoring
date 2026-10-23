@@ -1,7 +1,7 @@
 # Transaction Monitoring & Anomaly Detection
 
 [![CI](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml)
-![Tests](https://img.shields.io/badge/tests-183%20passing-3B8C6E)
+![Tests](https://img.shields.io/badge/tests-206%20passing-3B8C6E)
 ![SQL](https://img.shields.io/badge/SQL-window%20functions%20%2B%20parity%20contract-CC2927)
 ![Python](https://img.shields.io/badge/Python-scikit--learn%20%2B%20Streamlit-3776AB?logo=python&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
@@ -285,11 +285,44 @@ structuring.
 [`docs/CANADIAN_REGULATORY_MAPPING.md`](docs/CANADIAN_REGULATORY_MAPPING.md)
 maps each rule to FINTRAC's indicator categories and the report it relates to,
 and lists what the project does not cover (KYC and beneficial ownership,
-sanctions and PEP screening, both legs of a transfer, the filing decision).
+PEP screening, both legs of a transfer, the filing decision). Sanctions
+screening is covered for one list, [below](#sanctions-screening-on-canadas-real-list).
 [`results/analytic_brief_INV-ENT-01216.md`](results/analytic_brief_INV-ENT-01216.md)
 works one structuring case the way an analyst would hand it to a reviewer:
 bottom line, key judgments with confidence levels, alternatives considered,
 reporting position and the gaps that decide it.
+
+---
+
+## Sanctions screening, on Canada's real list
+
+Everything above is synthetic. Name screening is the one place a synthetic list
+would prove nothing, because the hard part is the names: Cyrillic aliases, the
+five ways one surname is romanised, patronymics customers leave out.
+[`src/sanctions_screening.py`](src/sanctions_screening.py) screens against the
+[Consolidated Canadian Autonomous Sanctions List](https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng)
+published by Global Affairs Canada. The list names real people, and nothing in
+this repository may, so it is **downloaded at run time and never committed**: the
+monthly [workflow](.github/workflows/sanctions-screening.yml) commits only counts,
+rates and the list's checksum, and a test checks that no listed name reaches the
+result.
+
+Each name and alias is transliterated, stripped of accents and legal forms, and
+folded across romanisations (kh/h, ks/x, iy/y); candidates come from blocking keys
+and are scored by aligning tokens with Jaro-Winkler, discounted when a birth year
+disagrees. The evaluation splits the list in half by a hash of each entry. Customer
+names are generated from the development half as they reach a screening desk, and
+the alert threshold is the highest that still catches 95% of the standard variants
+there, a rule fixed before the first run. The held-out half reports it:
+
+<!-- sanctions-screening:begin -->
+_The list has not been screened yet._
+<!-- sanctions-screening:end -->
+
+What it is not: one list, not every list a reporting entity screens (the UN and
+Criminal Code lists, for a start); names only, with no beneficial ownership, PEP
+screening or ongoing monitoring; and no decision on whether a match is true, which
+belongs to a person.
 
 ---
 

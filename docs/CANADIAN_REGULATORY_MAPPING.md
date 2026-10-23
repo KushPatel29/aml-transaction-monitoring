@@ -60,8 +60,11 @@ question has to be asked separately.
 - **Know-your-client and beneficial ownership.** The synthetic data has no
   conductor identity per deposit, no onboarding profile and no ownership
   records, all of which a real STR decision leans on.
-- **Sanctions, politically exposed persons and terrorist property.** No
-  screening lists, no Terrorist Property Reports, no ministerial directives.
+- **Most sanctions and all PEP and terrorist-property work.** Customer names
+  are screened against one list, the Consolidated Canadian Autonomous Sanctions
+  List ([README](../README.md#sanctions-screening-on-canadas-real-list)); not the
+  UN or Criminal Code lists, not politically exposed persons, and no Terrorist
+  Property Reports or ministerial directives.
 - **Both legs of a transfer.** Counterparties are external, so the system sees
   one side of every payment.
 - **The filing decision.** Every case ends at `HUMAN DECISION REQUIRED`. The
@@ -70,6 +73,7 @@ question has to be asked separately.
 
 ## Sources
 
+- Global Affairs Canada, [Consolidated Canadian Autonomous Sanctions List](https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng)
 - FINTRAC, [Reporting large cash transactions to FINTRAC](https://fintrac-canafe.canada.ca/guidance-directives/transaction-operation/lctr-doie/lctr-doie-eng)
 - FINTRAC, [Reporting transactions to FINTRAC: the 24-hour rule](https://fintrac-canafe.canada.ca/guidance-directives/transaction-operation/24hour/1-eng)
 - FINTRAC, [Money laundering and terrorist financing indicators — Financial entities](https://fintrac-canafe.canada.ca/guidance-directives/transaction-operation/indicators-indicateurs/fin_mltf-eng)
