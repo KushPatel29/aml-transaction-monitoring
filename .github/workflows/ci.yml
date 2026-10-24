@@ -64,6 +64,11 @@ jobs:
       - name: Run the test suite
         run: pytest -q
 
+      - name: Rebuild the non-decisional investigation quality handoff
+        run: |
+          python -m governance.review_quality
+          git diff --exit-code -- results/review_quality.json
+
       # The README badge is a claim about this suite, and nothing used to
       # compare the two. healthcare's badge sat at 182 while its suite had
       # grown to 345 -- the number was counting test functions, not collected
