@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/ci.yml)
 [![Streaming on Kubernetes](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/streaming.yml/badge.svg)](https://github.com/KushPatel29/aml-transaction-monitoring/actions/workflows/streaming.yml)
-![Tests](https://img.shields.io/badge/tests-270%20passing-3B8C6E)
+![Tests](https://img.shields.io/badge/tests-279%20passing-3B8C6E)
 ![SQL](https://img.shields.io/badge/SQL-window%20functions%20%2B%20parity%20contract-CC2927)
 ![Python](https://img.shields.io/badge/Python-scikit--learn%20%2B%20Streamlit-3776AB?logo=python&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
@@ -24,6 +24,8 @@
 **Canadian context:** [how each rule maps to FINTRAC's reporting regime](docs/CANADIAN_REGULATORY_MAPPING.md) · [a two-page analytic brief on one structuring case](results/analytic_brief_INV-ENT-01216.md) · [a privacy impact assessment under PIPEDA](docs/PRIVACY_IMPACT_ASSESSMENT.md)
 
 ---
+
+**Challenge the investigation handoff:** [review-quality exercise](docs/INVESTIGATION_QUALITY_REVIEW.md) separates observed evidence, a lawful alternative, discriminating evidence, unresolved requests and a proposed next step. The executable gate rejects unsupported references and premature closure/approval assertions. Passing means ready for human review; there are still zero independent dispositions or filings.
 
 ## The numbers
 

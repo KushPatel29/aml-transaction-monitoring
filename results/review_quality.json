@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "classification": "synthetic_training_quality",
+  "source_sha256": {
+    "investigation_case_register.csv": "04d74d76da890db9f400e7d789682b49ef281ddadf24816bd8756876de2b2f54",
+    "investigation_entity_graph.csv": "04b2b6696ec026746c78160792bf44498afbdd859593c85d14cf84851eb44acf"
+  },
+  "training_note": {
+    "schema_version": 1,
+    "classification": "synthetic_training_draft",
+    "investigation_id": "INV-ENT-00060",
+    "observed_facts": [
+      {
+        "observation": "R2_LAYERING: $146,627.62 inbound dispersed to 6 counterparties in 6 transfers within 28h, 97% passed through",
+        "source_ref": "register:INV-ENT-00060"
+      }
+    ],
+    "alternative_explanation": "A wholesale receipt followed by a scheduled supplier-payment batch could produce a similar fund flow.",
+    "discriminator": "Compare invoices, the payment schedule, counterparty purpose and the expected customer profile.",
+    "analysis": "The observed rapid movement warrants clarification. The current analytical register does not establish the economic purpose or source of funds; its score is prioritization evidence only.",
+    "missing_evidence": [
+      "invoice support",
+      "source of funds",
+      "counterparty purpose",
+      "expected activity"
+    ],
+    "recommendation": "request_information",
+    "recommended_next_step": "Request the missing support, reconcile the fund-flow timeline, and route the response to an authorized reviewer.",
+    "human_approved": false,
+    "filing_status": "NOT FILED"
+  },
+  "quality": {
+    "investigation_id": "INV-ENT-00060",
+    "structural_quality": "READY FOR HUMAN REVIEW",
+    "problems": [],
+    "decision_authorized": false,
+    "independent_review": "PENDING",
+    "boundary": "Completeness and reference checks do not verify narrative truth, determine suspicion, close a case or meet legal reporting obligations."
+  },
+  "human_reviews_recorded": 0,
+  "case_dispositions_recorded": 0,
+  "regulatory_filings_recorded": 0
+}
