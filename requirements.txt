@@ -7,7 +7,9 @@ scikit-learn==1.4.0
 scipy==1.12.0
 Faker==40.28.1
 networkx==3.2.1
-streamlit==1.59.2
+streamlit==1.66.1
+# Pillow 13 fixes the image decoder advisories affecting earlier releases.
+pillow==13.0.0
 altair==6.2.2
 matplotlib==3.8.2
 # Jaro-Winkler for sanctions name screening (src/sanctions_screening.py).
