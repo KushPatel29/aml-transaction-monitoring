@@ -151,7 +151,7 @@ contract is sharp about:
 
 ### 4. Test the claim
 
-**183 tests.** The floors in [`config.py`](config.py) are regression guards set
+**The full test suite checks these claims.** The floors in [`config.py`](config.py) are regression guards set
 at ~90% of what the first clean run produced, written down *after* measuring —
 nothing was tuned to clear them. Three habits do the real work:
 
@@ -565,7 +565,7 @@ window can still reach. Two rules, not five.
 ```bash
 pip install -r requirements.txt
 python run_pipeline.py          # regenerates everything, ~46s
-pytest                          # 270 tests
+pytest                          # full suite; the badge above tracks collection
 streamlit run app/streamlit_app.py
 ```
 
@@ -646,7 +646,7 @@ docs/make_figures.py          the charts above, from results/
 results/metrics.json          every number in this README
 results/investigation_decision_packet.md  concise reviewer brief
 results/investigation_manifest.json       input hashes + register fingerprint
-tests/                        270 tests
+tests/                        the full regression suite
 ```
 
 ## Constraint traceability
