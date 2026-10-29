@@ -6,10 +6,7 @@
 > indicator categories, genericized. Nothing here references a real institution,
 > a real case, or a real regulatory filing.
 
-Repo: `aml-transaction-monitoring` (proposed name — say the word if you want
-`transaction-monitoring-analytics` instead; it's a one-line change before Phase 1).
-Local path: `C:\Users\kush2\Claude\portfolio-projects\aml-transaction-monitoring`.
-Branch: `main`.
+Repo: `aml-transaction-monitoring`. Branch: `main`.
 
 ---
 
@@ -19,7 +16,6 @@ Branch: `main`.
 aml-transaction-monitoring/
 ├── README.md                     # five-step narrative, numbers from results/metrics.json
 ├── PLAN.md                       # this file
-├── PORTFOLIO_CARD.md             # 2–3 line blurb for kushpatel29.github.io
 ├── LICENSE                       # MIT (matches your other repos)
 ├── requirements.txt              # pinned, free-tier only
 ├── config.py                     # ALL tunable constants in one place (C9)
