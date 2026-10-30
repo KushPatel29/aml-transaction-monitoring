@@ -345,6 +345,24 @@ def render_network(graph: nx.Graph, entity_id: str):
 def main() -> None:
     st.set_page_config(page_title="Transaction Monitoring Triage",
                        page_icon=":material/policy:", layout="wide")
+    # KPI tiles wrap instead of ending in an ellipsis: five tiles beside the sidebar
+    # cut "$65,025" and "+41 vs capacity" short at laptop width.
+    st.markdown(
+        """<style>
+        [data-testid="stMetricValue"] {font-size: clamp(1.35rem, 2.3vw, 2.25rem)}
+        :is([data-testid="stMetricLabel"], [data-testid="stMetricValue"],
+            [data-testid="stMetricDelta"]),
+        :is([data-testid="stMetricLabel"], [data-testid="stMetricValue"],
+            [data-testid="stMetricDelta"]) :is(div, p, span, label) {
+            white-space: normal !important; overflow: visible !important;
+            text-overflow: clip !important; overflow-wrap: anywhere;
+            height: auto !important; max-height: none !important;
+            -webkit-line-clamp: unset !important; line-height: 1.25}
+        div[data-testid="stMetric"] div:has(> [data-testid="stMetricDelta"]) {
+            overflow: visible; height: auto}
+        </style>""",
+        unsafe_allow_html=True,
+    )
 
     if not cfg.SCORED_PATH.exists():
         render_disclaimer()
@@ -402,7 +420,9 @@ def main() -> None:
     columns[4].metric(
         "Alerts / week", f"{alerts_per_week:.1f}",
         delta=f"{capacity - alerts_per_week:+.0f} vs capacity",
-        delta_color="normal" if alerts_per_week <= capacity else "inverse",
+        # The delta is headroom: positive reads green, an over-capacity queue goes
+        # negative and reads red. "inverse" here turned that shortfall green.
+        delta_color="normal",
     )
 
     queue_tab, investigation_tab, performance_tab, entity_tab, method_tab = st.tabs(

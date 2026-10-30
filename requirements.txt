@@ -3,6 +3,11 @@
 # no paid services, no API keys, no database server.
 pandas==2.2.0
 numpy==1.26.3
+# Streamlit renders every dataframe and chart through pyarrow and accepts any
+# release from 10.0.1 up to 26 except 25. pyarrow 26 refuses NumPy 1.x at import,
+# so left unpinned a fresh install (any Community Cloud rebuild) crashes the app
+# on its first table. 24.0.0 is the newest release both NumPy 1.26 and Streamlit take.
+pyarrow==24.0.0
 scikit-learn==1.4.0
 scipy==1.12.0
 Faker==40.28.1
