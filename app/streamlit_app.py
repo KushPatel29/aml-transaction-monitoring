@@ -302,7 +302,7 @@ def show_table(frame: pd.DataFrame, **kwargs) -> None:
     identifier in full by forgetting to. tests/test_dashboard_masks_identifiers
     asserts this function is the sole caller of st.dataframe in the file.
     """
-    st.dataframe(masking.mask_frame(frame), use_container_width=True, **kwargs)
+    st.dataframe(masking.mask_frame(frame), width="stretch", **kwargs)
 
 
 def render_disclaimer() -> None:
@@ -587,7 +587,7 @@ def main() -> None:
                 )
                 .properties(height=320)
             )
-            st.altair_chart(chart, use_container_width=True)
+            st.altair_chart(chart, width="stretch")
             st.caption(
                 f"Entity level. PR-AUC at transaction level is "
                 f"{metrics['ranking']['pr_auc']:.3f} "
@@ -612,7 +612,7 @@ def main() -> None:
                 .mark_rule(color="#1f6f43", strokeDash=[5, 4])
                 .encode(x="threshold:Q")
             )
-            st.altair_chart(cost_chart + marker, use_container_width=True)
+            st.altair_chart(cost_chart + marker, width="stretch")
             st.caption(
                 "The curve steps wherever a case crosses the threshold, which is "
                 "why the sweep runs at 0.1 resolution -- an integer grid reported "
@@ -678,7 +678,7 @@ def main() -> None:
                 )
                 .properties(height=240)
             )
-            st.altair_chart(spark, use_container_width=True)
+            st.altair_chart(spark, width="stretch")
             show_table(timeline, height=280, hide_index=True)
 
             left, right = st.columns([3, 2])
