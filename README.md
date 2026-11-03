@@ -319,7 +319,7 @@ the alert threshold is the highest that still catches 95% of the standard varian
 there, a rule fixed before the first run. The held-out half reports it:
 
 <!-- sanctions-screening:begin -->
-List retrieved 2026-10-23 (1,450 entities, 3,527 individuals, 731 ships; 9,604 names including aliases; SHA-256 `61a9064720d9`). Threshold **0.950**, chosen on the development half by the fixed rule (catch 95.0% of standard variants) and reported unchanged on the held-out half:
+List retrieved 2026-11-03 (1,450 entities, 3,527 individuals, 731 ships; 9,604 names including aliases; SHA-256 `61a9064720d9`). Threshold **0.950**, chosen on the development half by the fixed rule (catch 95.0% of standard variants) and reported unchanged on the held-out half:
 
 | Customer name typed as | Names (held out) | Alerted |
 |---|---:|---:|
